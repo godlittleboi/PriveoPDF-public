@@ -1,0 +1,67 @@
+name: Public source review
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: public-source-review-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    env:
+      QT_QPA_PLATFORM: offscreen
+      UV_FROZEN: "1"
+      UV_NO_PROGRESS: "1"
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          fetch-depth: 1
+          persist-credentials: false
+      - uses: actions/setup-python@42375524e23c412d93fb67b49958b491fce71c38
+        with:
+          python-version: "3.12"
+      - uses: astral-sh/setup-uv@bd01e18f51369d5a26f1651c3cb451d3417e3bba
+        with:
+          version: "0.11.28"
+          enable-cache: false
+      - name: Install native Qt libraries
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            libegl1 libgl1 libxkbcommon-x11-0 libxcb-cursor0
+      - name: Verify snapshot checksums
+        run: sha256sum --check SHA256SUMS
+      - name: Verify technical publication contract
+        run: |
+          python3 tools/check_public_source_contract.py \
+            --snapshot . \
+            --technical-only \
+            --repository-checkout
+      - name: Install locked dependencies
+        run: uv sync --frozen --dev
+      - name: Lint
+        run: uv run ruff check .
+      - name: Type check
+        run: uv run pyright
+      - name: Tests
+        run: uv run pytest
+      - name: Dependency audit
+        run: |
+          uv export --frozen --all-groups --no-emit-project \
+            --output-file "$RUNNER_TEMP/priveopdf-audit-requirements.txt"
+          uv run pip-audit --strict --disable-pip --require-hashes \
+            --requirement "$RUNNER_TEMP/priveopdf-audit-requirements.txt"
+      - name: Static security scan
+        run: |
+          uv run bandit -q -r src \
+            --severity-level high \
+            --confidence-level high

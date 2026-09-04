@@ -1,0 +1,67 @@
+:root {
+  color-scheme: light dark;
+  --priveo-bg: #f6f7fb;
+  --priveo-surface: #ffffff;
+  --priveo-text: #172033;
+  --priveo-muted: #59657a;
+  --priveo-blue: #006fc9;
+  --priveo-green: #147a4b;
+  --priveo-red: #c5283d;
+  --priveo-yellow: #9a6800;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --priveo-bg: #0b0d12;
+    --priveo-surface: #151923;
+    --priveo-text: #f5f7fb;
+    --priveo-muted: #aab2c0;
+    --priveo-blue: #67b7ff;
+    --priveo-green: #66d99b;
+    --priveo-red: #ff6f7a;
+    --priveo-yellow: #ffda66;
+  }
+}
+
+body {
+  background: var(--priveo-bg);
+  color: var(--priveo-text);
+}
+
+.navbar,
+.bs-sidebar .nav > li > a.active,
+.bs-sidebar .nav > li > a:hover {
+  background: var(--priveo-surface);
+}
+
+a,
+.navbar-brand {
+  color: var(--priveo-blue);
+}
+
+a:hover {
+  color: var(--priveo-green);
+}
+
+pre,
+code,
+.admonition {
+  background: var(--priveo-surface);
+  color: var(--priveo-text);
+  border-color: var(--priveo-blue);
+}
+
+h1 {
+  border-bottom: 3px solid var(--priveo-red);
+  padding-bottom: 0.35rem;
+}
+
+h2 {
+  border-left: 4px solid var(--priveo-yellow);
+  padding-left: 0.6rem;
+}
+
+.text-muted,
+.bs-sidebar {
+  color: var(--priveo-muted);
+}

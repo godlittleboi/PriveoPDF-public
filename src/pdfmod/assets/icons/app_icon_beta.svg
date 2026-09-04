@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256"
+  viewBox="0 0 256 256" shape-rendering="crispEdges">
+  <title>PriveoPDF BETA</title>
+  <rect width="256" height="256" fill="#000000"/>
+  <rect x="8" y="24" width="224" height="224" fill="none" stroke="#FF2D20" stroke-width="8"/>
+  <rect x="24" y="24" width="224" height="224" fill="none" stroke="#FFD43B" stroke-width="8"/>
+  <rect x="16" y="32" width="224" height="224" fill="none" stroke="#7ED957" stroke-width="8"/>
+  <rect x="16" y="16" width="224" height="224" fill="none" stroke="#2BB7E5" stroke-width="8"/>
+  <g fill="#F5F5F0">
+    <rect x="72" y="56" width="24" height="168"/>
+    <rect x="96" y="56" width="72" height="24"/>
+    <rect x="168" y="80" width="24" height="48"/>
+    <rect x="96" y="128" width="72" height="24"/>
+  </g>
+  <g id="beta-badge" aria-label="BETA">
+    <rect x="24" y="176" width="216" height="64" fill="#FF2D20" stroke="#000000" stroke-width="4"/>
+    <g fill="#F5F5F0">
+      <path d="M63 187h6v6h-6z M69 187h6v6h-6z M75 187h6v6h-6z M81 187h6v6h-6z M63 193h6v6h-6z M87 193h6v6h-6z M63 199h6v6h-6z M87 199h6v6h-6z M63 205h6v6h-6z M69 205h6v6h-6z M75 205h6v6h-6z M81 205h6v6h-6z M63 211h6v6h-6z M87 211h6v6h-6z M63 217h6v6h-6z M87 217h6v6h-6z M63 223h6v6h-6z M69 223h6v6h-6z M75 223h6v6h-6z M81 223h6v6h-6z"/>
+      <path d="M99 187h6v6h-6z M105 187h6v6h-6z M111 187h6v6h-6z M117 187h6v6h-6z M123 187h6v6h-6z M99 193h6v6h-6z M99 199h6v6h-6z M99 205h6v6h-6z M105 205h6v6h-6z M111 205h6v6h-6z M117 205h6v6h-6z M99 211h6v6h-6z M99 217h6v6h-6z M99 223h6v6h-6z M105 223h6v6h-6z M111 223h6v6h-6z M117 223h6v6h-6z M123 223h6v6h-6z"/>
+      <path d="M135 187h6v6h-6z M141 187h6v6h-6z M147 187h6v6h-6z M153 187h6v6h-6z M159 187h6v6h-6z M147 193h6v6h-6z M147 199h6v6h-6z M147 205h6v6h-6z M147 211h6v6h-6z M147 217h6v6h-6z M147 223h6v6h-6z"/>
+      <path d="M177 187h6v6h-6z M183 187h6v6h-6z M189 187h6v6h-6z M171 193h6v6h-6z M195 193h6v6h-6z M171 199h6v6h-6z M195 199h6v6h-6z M171 205h6v6h-6z M177 205h6v6h-6z M183 205h6v6h-6z M189 205h6v6h-6z M195 205h6v6h-6z M171 211h6v6h-6z M195 211h6v6h-6z M171 217h6v6h-6z M195 217h6v6h-6z M171 223h6v6h-6z M195 223h6v6h-6z"/>
+    </g>
+  </g>
+</svg>

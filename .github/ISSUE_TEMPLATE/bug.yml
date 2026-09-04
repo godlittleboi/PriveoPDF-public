@@ -1,0 +1,103 @@
+name: Bug
+description: Signaler un comportement reproductible de PriveoPDF
+title: "[Bug] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        N’ajoutez jamais de PDF confidentiel, mot de passe, chemin personnel ou capture contenant des données sensibles.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problème observé
+      description: Décrivez ce qui s’est passé et son impact utilisateur.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Étapes de reproduction
+      description: Donnez une suite d’actions minimale et reproductible.
+      placeholder: |
+        1. Ouvrir…
+        2. Choisir…
+        3. Constater…
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Résultat attendu
+      description: Décrivez le comportement observable qui aurait dû se produire.
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environnement
+      description: Version PriveoPDF, distribution Linux, version et mode d’installation.
+    validations:
+      required: true
+
+  - type: textarea
+    id: diagnostic_report
+    attributes:
+      label: Rapport de diagnostic Bêta
+      description: "Depuis Options > Diagnostic Bêta, exportez puis relisez le ZIP avant de le joindre ici. Sinon, indiquez pourquoi il n’est pas disponible."
+      placeholder: "Glissez ici le ZIP relu ou indiquez : non disponible."
+    validations:
+      required: false
+
+  - type: textarea
+    id: pdf_profile
+    attributes:
+      label: Profil du PDF
+      description: "Indiquez uniquement des caractéristiques non sensibles : nombre de pages, taille, scanné, chiffré, formulaires, rotations ou signets."
+    validations:
+      required: false
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Critères de correction
+      description: Listez les résultats observables qui prouveront que le bug est corrigé.
+      placeholder: |
+        - [ ] …
+        - [ ] …
+    validations:
+      required: true
+
+  - type: textarea
+    id: manual_test
+    attributes:
+      label: Scénario de validation manuelle
+      description: Expliquez comment vérifier la correction sans document sensible.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: data_risk
+    attributes:
+      label: Risque principal
+      options:
+        - Perte de données ou écrasement de source
+        - Sécurité ou confidentialité
+        - Crash ou blocage
+        - Sortie incorrecte ou corrompue
+        - UX ou compréhension
+        - Performance
+        - Aucun de ces risques
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: safe_report
+    attributes:
+      label: Rapport sûr
+      options:
+        - label: Je confirme n’avoir joint aucun document, mot de passe, chemin ou contenu sensible.
+          required: true

@@ -1,0 +1,86 @@
+LICENCE FREEWARE PRIVEOPDF — VERSION FRANÇAISE CANONIQUE
+
+Copyright © 2026 godlittleboi
+
+Version de préparation du 7 août 2026. Cette licence est destinée aux
+exécutables officiels de PriveoPDF. Elle doit faire l'objet d'une validation
+du titulaire avant toute distribution publique.
+
+1. Objet
+
+La présente licence régit uniquement la version de l'exécutable officiel
+PriveoPDF que vous avez effectivement obtenue avec cette licence (le
+« Logiciel »). Elle ne régit pas le code source publié séparément et ne
+promet aucun droit sur une version, fonction ou offre future.
+
+2. Licence d'utilisation
+
+Sous réserve du respect de la présente licence, le titulaire vous accorde un
+droit non exclusif d'installer et d'utiliser gratuitement le Logiciel :
+
+- à titre personnel ;
+- pour les besoins professionnels internes de votre activité ou de votre
+  organisation.
+
+Vous pouvez réaliser les copies techniques, d'installation et de sauvegarde
+raisonnablement nécessaires à ces usages. Ces droits portent sur la version
+normalement licenciée que vous avez obtenue et ne peuvent pas être retirés de
+façon arbitraire. Ils cessent en cas de violation substantielle non corrigée
+dans les trente-deux jours suivant une notification écrite suffisamment
+précise, sans préjudice des droits que la loi rend impératifs.
+
+3. Limites de la licence
+
+Sauf autorisation écrite distincte ou droit impératif, la présente licence
+n'autorise pas à distribuer le Logiciel à des tiers, le vendre, le louer, le
+sous-licencier, le mettre à disposition comme service, le modifier ou créer
+une œuvre dérivée. Elle ne limite pas l'observation, l'étude, le test, la copie
+de sauvegarde, l'interopérabilité, la correction ou toute autre opération que
+la loi applicable autorise malgré une stipulation contractuelle.
+
+4. Composants tiers
+
+Le Logiciel utilise des composants et ressources tiers qui restent régis par
+leurs propres licences et notices. La présente licence ne les couvre pas et ne
+réduit aucun droit qu'ils accordent. En particulier, elle n'interdit pas la
+modification, le remplacement, la rétro-ingénierie ou la reliaison des
+composants Qt, PySide6 et Shiboken lorsque la GNU LGPL applicable l'autorise ou
+l'exige. Les textes et notices tiers sont fournis avec la distribution.
+
+5. Gratuité, support et offres futures
+
+Cette version peut être utilisée sans redevance selon les conditions ci-dessus.
+La licence ne promet ni gratuité à vie des versions futures, ni maintenance,
+support, disponibilité continue, compatibilité ou ajout d'une fonction de
+feuille de route. Un support ou de futures offres payantes pourront être
+proposés séparément sans retirer les droits accordés sur cette version.
+
+6. Propriété intellectuelle
+
+Le Logiciel est propriétaire. La présente licence n'opère aucune cession de
+droit d'auteur, de brevet, de marque ou d'autre droit, en dehors du droit
+d'utilisation expressément accordé. Les droits non accordés sont réservés.
+
+7. Garantie et responsabilité
+
+Le Logiciel est fourni sans garantie volontaire supplémentaire, sous réserve
+des garanties, responsabilités et recours qui ne peuvent pas être exclus ou
+limités par le droit applicable. Dans la mesure permise par ce droit, le
+titulaire ne répond que des dommages directs raisonnablement prévisibles qui
+lui sont juridiquement imputables. Aucune clause de la présente licence
+n'exclut une responsabilité qui ne peut légalement l'être, notamment en cas de
+faute lourde ou dolosive, de dommage corporel, ou au titre d'une garantie
+légale impérative.
+
+8. Intégralité et droits impératifs
+
+Si une stipulation est inapplicable, les autres restent en vigueur dans la
+mesure permise. La présente licence ne prive jamais un utilisateur des droits
+et exceptions que le droit applicable rend impératifs.
+
+9. Langue
+
+La version française est canonique. Toute traduction, notamment la version
+anglaise fournie avec le Logiciel, est informative. En cas de divergence, la
+version française prévaut dans la mesure autorisée par le droit applicable.
+

@@ -1,0 +1,91 @@
+# PriveoPDF — source review snapshot
+
+PriveoPDF is a local desktop PDF application. PDF files and their contents are
+processed locally and are not uploaded. Telemetry is disabled by default.
+Optional update checks may contact GitHub after an explicit action or consent;
+they send no document, document contents, or document path.
+
+## Status of this copy
+
+This repository is a cleaned, non-canonical publication of one selected
+version. It starts from a single root commit and contains no private Git
+history, old branch, private pull request, issue, or Actions log. Development
+remains in a separate private canonical repository.
+
+The PriveoPDF-owned source in this snapshot is **source available, not open
+source**. Its root `LICENSE` is the PriveoPDF Proprietary License — Free Use
+and Source Review, version 1.0. It permits personal and internal business use
+of an unmodified version, plus source review and security audit. It does not
+permit modification, redistribution, resale, sublicensing, or offering the
+software as a service without separate written permission. The informative
+French and English summaries under `docs/legal/` are not contractual.
+
+Official executables use a separate proprietary freeware license. The French
+text under `licenses/PriveoPDF-Freeware-License-FR.txt` is canonical and the
+English version is informative. Third-party components retain their own
+licenses and are described in `THIRD_PARTY_NOTICES.md`.
+
+For the Qt 6.11.2 baseline, this snapshot also carries the LGPL/GPL texts, the
+Qt notice, the exact corresponding-source lock and offline bundle verifier.
+These files prepare compliance; they do not assert that an executable or the
+one-gigabyte verified source bundle has already been published.
+
+## Downloads
+
+Official Linux beta packages will be published in this repository's **GitHub
+Releases** area once the `.deb` packaging gate is qualified. Each downloadable
+package will be tied to a published source snapshot and accompanied by its
+version, SHA-256 checksum, release notes, and provenance. Until such a release
+exists, this repository must not present a placeholder or an internal test
+artifact as an installable `.deb`.
+
+## Feedback
+
+GitHub Discussions is the single entry point for normal user feedback. Questions,
+ideas, general feedback, and reproducible problems can start there; the maintainer
+moves sufficiently scoped work into Issues when needed. Security reports never
+belong in a public Discussion.
+
+## Privacy, network, and security
+
+`docs/compliance/NETWORK_ACTIVITY.md` is the exact inventory of prepared network
+paths. Core PDF processing remains local; PDFs are not uploaded and telemetry is
+disabled by default. Dependency installation is not an offline operation.
+
+The public repository is only considered ready for announcement when its branch
+protection, read-only default Actions permissions, secret scanning with push
+protection, Discussions, and GitHub Private Vulnerability Reporting have been
+configured successfully. The DEV publisher reverts an incomplete first setup to
+private instead of leaving a partially configured public mirror.
+
+Potential vulnerabilities must follow `SECURITY.md`. No security email or postal
+address is invented by this project. The CRA playbook is conditional preparation,
+not a declaration of conformity.
+
+## Build for local review
+
+Requirements: Python 3.12 and the pinned `uv` version used by the release
+process.
+
+```bash
+uv sync --frozen --dev
+uv run pdfmod
+```
+
+The source-checkout update path and internal PR beta history are deliberately
+disabled in this review snapshot. This does not affect ordinary local PDF
+processing.
+
+## Contribution policy
+
+The initial public phase accepts comments only. Do not send patches, diffs,
+substantial source files, third-party code, sensitive PDFs, secrets, personal
+paths, confidential information, or details of an unpatched vulnerability.
+See `CONTRIBUTING.md`, `FEEDBACK.md`, and `SECURITY.md`.
+
+## Provenance
+
+`PUBLIC_SOURCE_MANIFEST.json` records the exact private source commit, export
+schema, deterministic build date, generated files, license mapping, exclusions
+by category, and SHA-256 of each payload file. `SHA256SUMS` covers the payload
+and the manifest. The ZIP checksum is supplied as a sidecar file.

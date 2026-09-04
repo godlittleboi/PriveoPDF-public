@@ -1,0 +1,85 @@
+PRIVEOPDF FREEWARE LICENSE — INFORMATIVE ENGLISH TRANSLATION
+
+Copyright © 2026 godlittleboi
+
+Preparation version dated 7 August 2026. This license is intended for official
+PriveoPDF executables. It must be approved by the rightsholder before any
+public distribution. The French version is canonical; this translation is
+informative only.
+
+1. Scope
+
+This license applies only to the version of the official PriveoPDF executable
+that you actually received with this license (the “Software”). It does not
+govern source code published separately and grants no rights in, or promise
+about, any future version, feature, or offer.
+
+2. License to use
+
+Subject to compliance with this license, the rightsholder grants you a
+non-exclusive right to install and use the Software free of charge:
+
+- for personal use; and
+- for the internal professional needs of your business or organization.
+
+You may make the technical, installation, and backup copies reasonably needed
+for those uses. These rights apply to the normally licensed version you
+received and may not be withdrawn arbitrarily. They terminate upon a material
+breach that remains uncured thirty-two days after sufficiently specific
+written notice, without prejudice to mandatory statutory rights.
+
+3. Limits
+
+Unless separately authorized in writing or allowed by mandatory law, this
+license does not permit you to distribute the Software to third parties, sell,
+rent, sublicense or provide it as a service, modify it, or create derivative
+works. It does not restrict observation, study, testing, backup,
+interoperability, correction, or any other operation that applicable law
+permits despite a contractual term.
+
+4. Third-party components
+
+The Software uses third-party components and resources governed by their own
+licenses and notices. This license does not cover them and does not reduce any
+rights they grant. In particular, it does not prohibit modification,
+replacement, reverse engineering, or relinking of Qt, PySide6, and Shiboken
+components where the applicable GNU LGPL permits or requires those actions.
+The relevant third-party texts and notices accompany the distribution.
+
+5. Free version, support, and future offers
+
+This version may be used without a license fee under the terms above. This
+license does not promise that future versions will always be free or that
+maintenance, support, continuous availability, compatibility, or roadmap
+features will be provided. Support or paid offers may be made available
+separately in the future without withdrawing the rights granted for this
+version.
+
+6. Intellectual property
+
+The Software is proprietary. This license transfers no copyright, patent,
+trademark, or other right beyond the express right to use. All rights not
+granted are reserved.
+
+7. Warranty and liability
+
+The Software is supplied without an additional voluntary warranty, subject to
+any warranties, liabilities, and remedies that applicable law does not allow
+to be excluded or limited. To the extent permitted by that law, the
+rightsholder is liable only for direct, reasonably foreseeable harm legally
+attributable to it. Nothing in this license excludes liability that cannot
+lawfully be excluded, including liability for gross or intentional fault,
+personal injury, or a mandatory statutory warranty.
+
+8. Severability and mandatory rights
+
+If a term is unenforceable, the remaining terms continue to the extent
+permitted. This license never deprives a user of rights or exceptions made
+mandatory by applicable law.
+
+9. Language
+
+The French version is canonical. This English translation is informative. If
+they differ, the French version prevails to the extent allowed by applicable
+law.
+

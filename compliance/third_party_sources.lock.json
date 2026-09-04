@@ -1,0 +1,75 @@
+{
+  "archive_timestamp_utc": "2026-08-18T07:17:57Z",
+  "bundle_name": "PriveoPDF-third-party-sources-qt-6.11.2",
+  "license_files": [
+    {
+      "path": "licenses/GPL-3.0.txt",
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+    },
+    {
+      "path": "licenses/LGPL-3.0.txt",
+      "sha256": "e3a994d82e644b03a792a930f574002658412f62407f5fee083f2555c5f23118"
+    },
+    {
+      "path": "licenses/QT-NOTICE.txt",
+      "sha256": "959a63c18352db994c6e099bde05289029140d0a9a9fa86298ef427a92b1d610"
+    }
+  ],
+  "qt_import_modules": [
+    "PySide6.QtCore",
+    "PySide6.QtGui",
+    "PySide6.QtPdf",
+    "PySide6.QtPdfWidgets",
+    "PySide6.QtWidgets"
+  ],
+  "runtime_packages": [
+    {
+      "name": "PySide6",
+      "version": "6.11.2"
+    },
+    {
+      "name": "PySide6-Addons",
+      "version": "6.11.2"
+    },
+    {
+      "name": "PySide6-Essentials",
+      "version": "6.11.2"
+    },
+    {
+      "name": "Shiboken6",
+      "version": "6.11.2"
+    }
+  ],
+  "schema_version": 1,
+  "sources": [
+    {
+      "component": "Qt",
+      "filename": "qt-everywhere-src-6.11.2.tar.xz",
+      "last_modified_utc": "2026-08-18T04:26:27Z",
+      "license_context": [
+        "LGPL-3.0-only",
+        "GPL and other terms by module and embedded component"
+      ],
+      "official_metadata_url": "https://download.qt.io/official_releases/qt/6.11/6.11.2/single/qt-everywhere-src-6.11.2.tar.xz.mirrorlist",
+      "official_source_url": "https://download.qt.io/official_releases/qt/6.11/6.11.2/single/qt-everywhere-src-6.11.2.tar.xz",
+      "sha256": "6dcfbca271d76a6502741a2c0dc6fc98ef7dd0b7b4cfd0abcebb285a86a26f33",
+      "size_bytes": 1019661552,
+      "version": "6.11.2"
+    },
+    {
+      "component": "Qt for Python (PySide6 and Shiboken6)",
+      "filename": "pyside-setup-everywhere-src-6.11.2.tar.xz",
+      "last_modified_utc": "2026-08-18T07:17:57Z",
+      "license_context": [
+        "LGPL-3.0-only",
+        "GPL-3.0-only",
+        "other terms for embedded components"
+      ],
+      "official_metadata_url": "https://download.qt.io/official_releases/QtForPython/pyside6/PySide6-6.11.2-src/pyside-setup-everywhere-src-6.11.2.tar.xz.mirrorlist",
+      "official_source_url": "https://download.qt.io/official_releases/QtForPython/pyside6/PySide6-6.11.2-src/pyside-setup-everywhere-src-6.11.2.tar.xz",
+      "sha256": "cba47efbaad1bedd529725cbc14e21f156c7a19366f07b3edfbb076ffd7afdf8",
+      "size_bytes": 18053248,
+      "version": "6.11.2"
+    }
+  ]
+}

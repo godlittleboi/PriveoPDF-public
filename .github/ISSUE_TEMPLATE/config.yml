@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+
+# Aucun lien de sécurité n'est inventé. Le propriétaire doit activer et tester
+# Private Vulnerability Reporting avant la publication ; SECURITY.md bloque
+# explicitement toute divulgation publique tant que ce canal n'est pas prêt.

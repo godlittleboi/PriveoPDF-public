@@ -1,0 +1,42 @@
+{
+  "include": [
+    "src/pdfmod/app",
+    "src/pdfmod/domain",
+    "src/pdfmod/engine",
+    "src/pdfmod/workers",
+    "src/pdfmod/ui/app_store.py",
+    "src/pdfmod/ui/controllers",
+    "src/pdfmod/ui/first_run_dialog.py",
+    "src/pdfmod/ui/job_registry.py",
+    "src/pdfmod/ui/main_window.py",
+    "src/pdfmod/ui/options_dialog.py",
+    "src/pdfmod/ui/page_contracts.py",
+    "src/pdfmod/ui/workspace_state.py",
+    "src/pdfmod/ui/tool_specs.py"
+  ],
+  "exclude": [
+    "**/__pycache__",
+    ".uv-cache",
+    ".venv",
+    "src/pdfmod/ui/about_dialog.py",
+    "src/pdfmod/ui/branding.py",
+    "src/pdfmod/ui/components",
+    "src/pdfmod/ui/dashboard.py",
+    "src/pdfmod/ui/document_workspace.py",
+    "src/pdfmod/ui/i18n.py",
+    "src/pdfmod/ui/theme",
+    "src/pdfmod/ui/tool_pages"
+  ],
+  "typeCheckingMode": "basic",
+  "pythonVersion": "3.12",
+  "venvPath": ".",
+  "venv": ".venv",
+  "reportMissingTypeStubs": "none",
+  "reportUnknownMemberType": "none",
+  "executionEnvironments": [
+    {
+      "root": "src",
+      "extraPaths": ["src"]
+    }
+  ]
+}

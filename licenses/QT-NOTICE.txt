@@ -1,0 +1,69 @@
+Qt, PySide6 and Shiboken third-party notice
+============================================
+
+This notice applies to an official PriveoPDF executable only when that
+distribution actually contains the components recorded in its accompanying
+QT_RUNTIME_INVENTORY.json file.
+
+PriveoPDF is proprietary software. That status does not replace, absorb or
+restrict the licenses of Qt, PySide6, Shiboken or other third-party material.
+The separate PriveoPDF freeware license expressly preserves all mandatory and
+third-party rights, including rights granted by the GNU Lesser General Public
+License version 3.
+
+Version baseline prepared for qualification
+-------------------------------------------
+
+- Qt: 6.11.2
+- PySide6: 6.11.2
+- PySide6-Addons: 6.11.2
+- PySide6-Essentials: 6.11.2
+- Shiboken6: 6.11.2
+
+The current application source imports use QtCore, QtGui, QtWidgets, QtPdf and
+QtPdfWidgets. QtTest is used only by development tests and is not a runtime
+application import. No GPL-only Qt module was identified in the runtime
+source-level import inventory. This statement is not a substitute for
+inspecting the libraries and plugins actually shipped for each platform.
+
+License basis and recipient rights
+----------------------------------
+
+The community editions of Qt for Python are offered under licenses that
+include the GNU Lesser General Public License version 3 and the GNU General
+Public License version 3; individual Qt modules and bundled third-party code
+may carry additional or alternative terms. PriveoPDF's planned community-Qt
+distribution relies on the LGPL option for the components for which that
+option is available. The upstream license files and the inventory of the
+particular distribution remain authoritative.
+
+The qualified distribution must use shared libraries and must not prevent a
+recipient from replacing or relinking the LGPL-covered libraries with a
+compatible modified version. Reverse engineering necessary to debug such
+modifications is not prohibited by the PriveoPDF freeware terms. Any required
+installation information must accompany the distribution.
+
+License texts shipped with PriveoPDF
+------------------------------------
+
+- licenses/LGPL-3.0.txt
+- licenses/GPL-3.0.txt
+- this notice
+- THIRD_PARTY_NOTICES.md
+
+Corresponding source material
+-----------------------------
+
+For the 6.11.2 baseline, the corresponding-source bundle is built from the
+official Qt source archives named and hashed in
+compliance/third_party_sources.lock.json. It contains the complete upstream
+Qt 6.11.2 source archive and the complete Qt for Python 6.11.2 source archive
+covering PySide6 and Shiboken6. The verified source bundle, its checksum and
+the binary distribution must be made available together.
+
+If the deployed wheels, Qt build, modules, plugins, patches or versions differ
+from this baseline, the distribution gate must fail until the inventory,
+notices, corresponding sources and checksums are updated and reviewed.
+
+Qt and related marks belong to their respective owners. No affiliation or
+endorsement is claimed.

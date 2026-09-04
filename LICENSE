@@ -1,0 +1,211 @@
+LICENCE PROPRIÉTAIRE PRIVEOPDF — UTILISATION GRATUITE ET CODE CONSULTABLE
+Version 1.0 — 3 septembre 2026
+
+Copyright © 2026 godlittleboi
+
+La version française ci-dessous est le texte contractuel de référence. La
+traduction anglaise qui suit est informative.
+
+1. Définitions
+
+« Code PriveoPDF » désigne les fichiers de ce dépôt sur lesquels le titulaire
+détient les droits, à l'exclusion des composants et ressources tiers.
+
+« Version non modifiée » désigne le Code PriveoPDF obtenu depuis une révision
+publiée par le titulaire, sans changement autre que les opérations techniques
+strictement nécessaires à sa compilation ou à son exécution.
+
+« Exécutable officiel » désigne un paquet binaire publié comme officiel par le
+titulaire. Il peut être accompagné d'une licence freeware distincte.
+
+2. Droit d'utiliser PriveoPDF
+
+Sous réserve du respect de cette licence, le titulaire accorde gratuitement un
+droit non exclusif d'installer et d'utiliser une Version non modifiée de
+PriveoPDF, à titre personnel ou pour les besoins professionnels internes d'une
+personne ou d'une organisation.
+
+Ce droit comprend les copies techniques, d'installation et de sauvegarde
+raisonnablement nécessaires. Il ne promet ni support, ni maintenance, ni
+gratuité ou disponibilité d'une version future.
+
+3. Consultation du code
+
+Le Code PriveoPDF est rendu consultable afin de permettre son étude, son audit
+de sécurité et l'évaluation de son fonctionnement. Vous pouvez le consulter,
+le télécharger ou le cloner, et conserver les copies privées raisonnablement
+nécessaires à ces seules finalités ou à l'utilisation autorisée à l'article 2.
+
+Les copies et forks techniques fournis par la plateforme d'hébergement sont
+autorisés uniquement pour consulter ou auditer une Version non modifiée. Les
+mentions de droit d'auteur, cette licence et les notices tierces doivent rester
+intactes.
+
+Cette mise à disposition est « source available » / « code source
+consultable ». Elle n'est pas une licence open source.
+
+4. Usages non accordés
+
+Sauf autorisation écrite distincte du titulaire ou droit impératif, cette
+licence n'autorise pas à :
+
+- modifier le Code PriveoPDF ou créer une œuvre dérivée ;
+- publier ou redistribuer le Code PriveoPDF, une Version modifiée ou un binaire
+  compilé par un tiers, au-delà des copies techniques autorisées à l'article 3 ;
+- vendre, louer, sous-licencier ou céder PriveoPDF ;
+- fournir PriveoPDF ou une fonction substantiellement équivalente comme
+  service à des tiers ;
+- supprimer ou altérer les mentions de propriété, de licence ou d'attribution ;
+- utiliser la marque, le nom ou les éléments visuels PriveoPDF pour laisser
+  croire qu'une version tierce est officielle.
+
+Aucun droit de contribution, de distribution commerciale, de brevet ou de
+marque n'est accordé implicitement. Tous les droits non expressément accordés
+sont réservés.
+
+5. Composants et ressources tiers
+
+Les composants, bibliothèques, polices, corpus, exemples et autres ressources
+tiers restent régis exclusivement par leurs licences et notices propres. Cette
+licence ne réduit aucun droit accordé par ces textes, notamment les droits
+applicables aux composants Qt, PySide6 et Shiboken sous la GNU LGPL. Consultez
+THIRD_PARTY_NOTICES.md, le dossier licenses/ et les notices incluses avec toute
+distribution.
+
+6. Contributions et signalements
+
+La visibilité du dépôt n'autorise pas l'envoi de code. Les contributions de code
+externes ne sont acceptées que si des conditions distinctes sont publiées par le
+titulaire. Les retours factuels et signalements de bugs suivent CONTRIBUTING.md.
+Les vulnérabilités potentielles suivent exclusivement SECURITY.md.
+
+7. Cessation
+
+Les droits accordés cessent en cas de violation substantielle non corrigée dans
+les trente jours suivant une notification écrite suffisamment précise. La
+cessation n'affecte pas les droits que les licences tierces ou la loi applicable
+accordent indépendamment.
+
+8. Garantie et responsabilité
+
+PriveoPDF est fourni sans garantie volontaire supplémentaire, sous réserve des
+garanties, responsabilités et recours qui ne peuvent pas être exclus ou limités
+par le droit applicable. Dans la mesure permise par ce droit, le titulaire ne
+répond que des dommages directs raisonnablement prévisibles qui lui sont
+juridiquement imputables. Aucune clause n'exclut une responsabilité qui ne peut
+légalement l'être.
+
+9. Droits impératifs et divisibilité
+
+Cette licence ne limite pas l'observation, l'étude, le test, la copie de
+sauvegarde, l'interopérabilité, la correction ou toute autre opération que la
+loi applicable autorise malgré une stipulation contractuelle. Si une clause est
+inapplicable, les autres restent en vigueur dans la mesure permise.
+
+10. Langue
+
+La version française est canonique. La traduction anglaise est informative. En
+cas de divergence, la version française prévaut dans la mesure autorisée par le
+droit applicable.
+
+------------------------------------------------------------------------
+
+PRIVEOPDF PROPRIETARY LICENSE — FREE USE AND SOURCE REVIEW
+Version 1.0 — 3 September 2026
+Informative English translation
+
+Copyright © 2026 godlittleboi
+
+1. Definitions
+
+“PriveoPDF Code” means the files in this repository in which the rightsholder
+owns the relevant rights, excluding third-party components and resources.
+
+“Unmodified Version” means PriveoPDF Code obtained from a revision published by
+the rightsholder, without changes other than technical operations strictly
+necessary to compile or run it.
+
+“Official Executable” means a binary package published as official by the
+rightsholder. It may be accompanied by a separate freeware license.
+
+2. Right to use PriveoPDF
+
+Subject to this license, the rightsholder grants a royalty-free, non-exclusive
+right to install and use an Unmodified Version of PriveoPDF for personal use or
+the internal professional needs of a person or organization.
+
+This right includes reasonably necessary technical, installation, and backup
+copies. It promises no support, maintenance, or availability or free licensing
+of any future version.
+
+3. Source review
+
+PriveoPDF Code is made viewable so that its operation can be studied, evaluated,
+and audited for security. You may view, download, or clone it and keep private
+copies reasonably necessary only for those purposes or for the use permitted by
+section 2.
+
+Technical copies and forks provided by the hosting platform are permitted only
+to review or audit an Unmodified Version. Copyright notices, this license, and
+third-party notices must remain intact.
+
+This is a source-available license. It is not an open-source license.
+
+4. Rights not granted
+
+Unless separately authorized in writing by the rightsholder or allowed by
+mandatory law, this license does not permit you to:
+
+- modify PriveoPDF Code or create a derivative work;
+- publish or redistribute PriveoPDF Code, a modified version, or a binary
+  compiled by a third party beyond the technical copies allowed by section 3;
+- sell, rent, sublicense, or transfer PriveoPDF;
+- provide PriveoPDF, or a substantially equivalent function, as a service to
+  third parties;
+- remove or alter ownership, license, or attribution notices; or
+- use the PriveoPDF name, marks, or visual assets to imply that a third-party
+  version is official.
+
+No contribution, commercial distribution, patent, or trademark right is
+granted by implication. All rights not expressly granted are reserved.
+
+5. Third-party components and resources
+
+Third-party components, libraries, fonts, corpora, examples, and other resources
+remain governed solely by their own licenses and notices. This license does not
+reduce rights granted by those terms, including applicable GNU LGPL rights for
+Qt, PySide6, and Shiboken components. See THIRD_PARTY_NOTICES.md, the licenses/
+directory, and the notices supplied with any distribution.
+
+6. Contributions and reports
+
+Repository visibility does not authorize code submissions. External code is
+accepted only if the rightsholder publishes separate terms. Factual feedback
+and bug reports follow CONTRIBUTING.md. Potential vulnerabilities must follow
+SECURITY.md.
+
+7. Termination
+
+The rights granted terminate upon a material breach that remains uncured thirty
+days after sufficiently specific written notice. Termination does not affect
+rights independently granted by third-party licenses or applicable law.
+
+8. Warranty and liability
+
+PriveoPDF is supplied without an additional voluntary warranty, subject to any
+warranties, liabilities, and remedies that applicable law does not allow to be
+excluded or limited. To the extent permitted by that law, the rightsholder is
+liable only for direct, reasonably foreseeable harm legally attributable to it.
+Nothing excludes liability that cannot lawfully be excluded.
+
+9. Mandatory rights and severability
+
+This license does not restrict observation, study, testing, backup,
+interoperability, correction, or any other operation that applicable law permits
+despite a contractual term. If a term is unenforceable, the remaining terms
+continue to the extent permitted.
+
+10. Language
+
+The French text is canonical. This English translation is informative. If they
+differ, the French text prevails to the extent allowed by applicable law.

@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Application
+Name=PriveoPDF
+Comment=Traitement PDF local, sans upload
+Exec=@@PROJECT@@/tools/launch_priveopdf.sh %F
+Path=@@PROJECT@@
+Terminal=false
+Icon=priveopdf
+Categories=Office;Utility;
+MimeType=application/pdf;
+StartupNotify=true
+StartupWMClass=priveopdf

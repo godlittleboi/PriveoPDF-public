@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256"
+  viewBox="0 0 256 256" shape-rendering="crispEdges">
+  <title>PriveoPDF DEV</title>
+  <rect width="256" height="256" fill="#000000"/>
+  <rect x="8" y="24" width="224" height="224" fill="none" stroke="#FF2D20" stroke-width="8"/>
+  <rect x="24" y="24" width="224" height="224" fill="none" stroke="#FFD43B" stroke-width="8"/>
+  <rect x="16" y="32" width="224" height="224" fill="none" stroke="#7ED957" stroke-width="8"/>
+  <rect x="16" y="16" width="224" height="224" fill="none" stroke="#2BB7E5" stroke-width="8"/>
+  <g fill="#F5F5F0">
+    <rect x="72" y="56" width="24" height="112"/>
+    <rect x="96" y="56" width="72" height="24"/>
+    <rect x="168" y="80" width="24" height="48"/>
+    <rect x="96" y="128" width="72" height="24"/>
+  </g>
+  <g id="dev-badge" aria-label="DEV">
+    <rect x="48" y="178" width="144" height="60" fill="#10212A" stroke="#2BB7E5" stroke-width="4"/>
+    <g fill="#2BB7E5">
+      <rect x="68" y="190" width="6" height="6"/><rect x="74" y="190" width="6" height="6"/><rect x="80" y="190" width="6" height="6"/><rect x="86" y="190" width="6" height="6"/><rect x="68" y="196" width="6" height="6"/><rect x="92" y="196" width="6" height="6"/><rect x="68" y="202" width="6" height="6"/><rect x="92" y="202" width="6" height="6"/><rect x="68" y="208" width="6" height="6"/><rect x="92" y="208" width="6" height="6"/><rect x="68" y="214" width="6" height="6"/><rect x="92" y="214" width="6" height="6"/><rect x="68" y="220" width="6" height="6"/><rect x="92" y="220" width="6" height="6"/><rect x="68" y="226" width="6" height="6"/><rect x="74" y="226" width="6" height="6"/><rect x="80" y="226" width="6" height="6"/><rect x="86" y="226" width="6" height="6"/>
+      <rect x="104" y="190" width="6" height="6"/><rect x="110" y="190" width="6" height="6"/><rect x="116" y="190" width="6" height="6"/><rect x="122" y="190" width="6" height="6"/><rect x="128" y="190" width="6" height="6"/><rect x="104" y="196" width="6" height="6"/><rect x="104" y="202" width="6" height="6"/><rect x="104" y="208" width="6" height="6"/><rect x="110" y="208" width="6" height="6"/><rect x="116" y="208" width="6" height="6"/><rect x="122" y="208" width="6" height="6"/><rect x="104" y="214" width="6" height="6"/><rect x="104" y="220" width="6" height="6"/><rect x="104" y="226" width="6" height="6"/><rect x="110" y="226" width="6" height="6"/><rect x="116" y="226" width="6" height="6"/><rect x="122" y="226" width="6" height="6"/><rect x="128" y="226" width="6" height="6"/>
+      <rect x="140" y="190" width="6" height="6"/><rect x="164" y="190" width="6" height="6"/><rect x="140" y="196" width="6" height="6"/><rect x="164" y="196" width="6" height="6"/><rect x="140" y="202" width="6" height="6"/><rect x="164" y="202" width="6" height="6"/><rect x="140" y="208" width="6" height="6"/><rect x="164" y="208" width="6" height="6"/><rect x="146" y="214" width="6" height="6"/><rect x="158" y="214" width="6" height="6"/><rect x="146" y="220" width="6" height="6"/><rect x="158" y="220" width="6" height="6"/><rect x="152" y="226" width="6" height="6"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,81 @@
+name: Fonctionnalité
+description: Cadrer un nouveau résultat utilisateur testable
+title: "[Feature] "
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problème utilisateur
+      description: Quel obstacle réel cette évolution doit-elle supprimer, et pour qui ?
+    validations:
+      required: true
+
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Résultat attendu
+      description: Décrivez le comportement observable, pas la solution technique présumée.
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: Périmètre
+      description: Ce que cette Issue doit livrer.
+    validations:
+      required: true
+
+  - type: textarea
+    id: out_of_scope
+    attributes:
+      label: Hors périmètre
+      description: Ce qui sera explicitement laissé à une autre Issue.
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Critères d’acceptation
+      placeholder: |
+        - [ ] …
+        - [ ] …
+    validations:
+      required: true
+
+  - type: textarea
+    id: manual_test
+    attributes:
+      label: Scénario de validation manuelle
+      description: Décrivez le parcours réel qui prouvera le résultat.
+    validations:
+      required: true
+
+  - type: textarea
+    id: risks
+    attributes:
+      label: Sécurité, confidentialité, réseau et licences
+      description: Qualifiez les PDF hostiles, données, temporaires, connexions, dépendances et licences. Écrivez « Sans objet » avec justification si nécessaire.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: size
+    attributes:
+      label: Taille estimée
+      options:
+        - Une session
+        - Deux sessions
+        - Trois sessions
+        - À découper avant Ready
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: ready
+    attributes:
+      label: Prêt à être priorisé
+      options:
+        - label: Le résultat tient dans une à trois sessions et ne mélange pas plusieurs fonctionnalités indépendantes.
+          required: true
