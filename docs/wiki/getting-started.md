@@ -4,16 +4,12 @@ Le menu affiche **PriveoPDF** séparément de **PriveoPDF DEV** et de la bêta i
 
 ## Installation Linux
 
-L'installateur `.deb` pour Ubuntu 24.04 / Linux Mint 22 en 64 bits est en cours
-de qualification et n'est pas encore publié. Il embarque Python et les
-dépendances de l'application. Les futurs téléchargements officiels seront dans
-**Releases**, accompagnés de leur SHA-256.
+L'installateur `.deb` pour Ubuntu 24.04 / Linux Mint 22 en 64 bits est qualifié pour la première bêta mais sa Release reste volontairement privée tant que l'ouverture aux testeurs n'est pas décidée. Les téléchargements officiels apparaîtront dans **Releases**, accompagnés de leur SHA-256.
 
 Après installation d'un paquet validé, **PriveoPDF** apparaît dans le menu.
-Les mises à jour de ce paquet passent par l'installation d'un nouveau `.deb` ;
-l'updater Git de développement ne s'applique pas. La désinstallation du paquet
-conserve vos documents et préférences. Le lancement est refusé si l'isolation
-réseau obligatoire n'est pas disponible.
+Dans une installation `.deb`, **Rechercher les mises à jour** consulte uniquement les Releases publiques de `PriveoPDF-public` après votre confirmation. Une nouvelle version détectée affiche ses notes et permet d'ouvrir directement sa Release exacte ; vous installez ensuite le nouveau `.deb` par-dessus l'ancien avec le gestionnaire de paquets. L'updater Git de développement ne s'applique jamais au paquet public.
+
+La désinstallation du paquet conserve vos documents et préférences. Le lancement est refusé si l'isolation réseau obligatoire n'est pas disponible.
 
 ## Ouvrir un PDF
 

@@ -1,7 +1,7 @@
 {
-  "artifact": "PriveoPDF-source-review-0.1.0-75cf3de285d4",
+  "artifact": "PriveoPDF-source-review-0.1.0-95e7e9eee449",
   "binary_license": "LicenseRef-PriveoPDF-Freeware",
-  "build_date": "2026-09-06T13:21:33Z",
+  "build_date": "2026-09-06T13:54:53Z",
   "excluded_categories": [
     {
       "category": "corpus_and_private_tests",
@@ -21,7 +21,7 @@
     },
     {
       "category": "not_allowlisted",
-      "count": 131
+      "count": 133
     },
     {
       "category": "private_history_and_workflow",
@@ -137,14 +137,14 @@
       "sha256": "0de0a67507065b4af08b64efe6295b4878ff708047a5c93dc9ad784435e601bd"
     },
     {
-      "bytes": 6874,
+      "bytes": 7685,
       "generated": true,
       "generated_from": "public_source/README.public.md",
       "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": "README.md",
-      "sha256": "1346a2333ef6065ab65d03be4ff7b8bede32a7bb18d02893e305064dd2264437"
+      "sha256": "afcf8b8060b86aa647e7b223537a86468aa66c83312587f680fcab17f09908b8"
     },
     {
       "bytes": 4369,
@@ -534,13 +534,13 @@
       "sha256": "0ce2f09882793634dc106b36bf3415b8b6c2c81b7beeedadc93e0e6f68025ea0"
     },
     {
-      "bytes": 1240,
+      "bytes": 1538,
       "generated": false,
       "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": "docs/wiki/en/getting-started.md",
-      "sha256": "2645d8e05a34ebd617253215454543721297d8175938daa04972144cc5767f48"
+      "sha256": "6c05eac665ca3d472f59afb1ac40e0bbc657d703673b16c175d90fba959efd10"
     },
     {
       "bytes": 467,
@@ -678,13 +678,13 @@
       "sha256": "93e5146644e013d08daee6df46f03c71dbdfc2ecdfc642e89ac8046faaed1703"
     },
     {
-      "bytes": 1381,
+      "bytes": 1694,
       "generated": false,
       "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": "docs/wiki/getting-started.md",
-      "sha256": "51027a2175bd921abedfb8aae0757b019b0887b6478bd96f109a904b5fa8cbde"
+      "sha256": "832cc0905d79dc8d5d2035fe57f45e5e8949dee256ed85d3903e544251e5c53b"
     },
     {
       "bytes": 537,
@@ -869,13 +869,13 @@
       "sha256": "8b79af86015ebbe7b0a165a98c7fff84bdc6babf4c6cba4c620ae2eb7b26cb32"
     },
     {
-      "bytes": 1072,
+      "bytes": 1380,
       "generated": false,
       "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": "src/pdfmod/app/frozen_main.py",
-      "sha256": "9aeb7ac5a82f0c4850a8ce6a7db99230affd5c19a30dc3bba4ef47416a453969"
+      "sha256": "4360e69ae0ace29509ce78423b3991667c47c30427333451c365ccf73c9b02ab"
     },
     {
       "bytes": 3939,
@@ -1942,9 +1942,9 @@
     "src/pdfmod/app/beta_versions.py",
     "src/pdfmod/app/source_update.py"
   ],
-  "private_source_commit": "75cf3de285d4bf3d8b075ed41c50a80d02026a92",
+  "private_source_commit": "95e7e9eee4497c098ee28db90573afc772630e79",
   "schema_version": 1,
   "source_license": "LicenseRef-PriveoPDF-Source-Available-1.0",
-  "source_ref": "75cf3de285d4bf3d8b075ed41c50a80d02026a92",
+  "source_ref": "95e7e9eee4497c098ee28db90573afc772630e79",
   "version": "0.1.0"
 }

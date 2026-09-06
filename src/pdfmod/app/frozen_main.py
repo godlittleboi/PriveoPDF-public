@@ -4,14 +4,21 @@ from __future__ import annotations
 
 import sys
 from collections.abc import Sequence
+from functools import partial
 
 
 def main(arguments: Sequence[str] | None = None) -> int:
     args = list(sys.argv[1:] if arguments is None else arguments)
     if args and args[0] == "--network-broker":
-        from pdfmod.app.network_broker import main as broker_main
+        from pdfmod.app import network_broker
+        from pdfmod.app.update_checker import GitHubRepository, check_for_updates
 
-        return broker_main(args[1:])
+        network_broker.check_for_updates = partial(
+            check_for_updates,
+            repository=GitHubRepository("godlittleboi", "PriveoPDF-public"),
+            source="github_releases",
+        )
+        return network_broker.main(args[1:])
     if args == ["--version"]:
         from pdfmod.app.app_info import get_app_version
 

@@ -18,7 +18,9 @@ Pour installer la bêta publique :
 
 ### Mettre à jour
 
-Fermez PriveoPDF puis installez le nouveau `.deb` par-dessus la version déjà présente. Il n’est normalement pas nécessaire de désinstaller l’ancienne version. Si Linux propose **Réinstaller le paquet** parce que le numéro est identique, utilisez cette option uniquement lorsque la release PriveoPDF le demande. Les documents personnels et les préférences utilisateur ne sont pas supprimés par une mise à niveau normale.
+Dans une installation `.deb`, **Rechercher les mises à jour** consulte uniquement les Releases de ce dépôt public après votre confirmation. Les releases Draft restent invisibles et sont ignorées. Si une version plus récente est disponible, PriveoPDF affiche les notes de version et le bouton de mise à jour ouvre directement la Release exacte dans votre navigateur.
+
+Fermez ensuite PriveoPDF et installez le nouveau `.deb` par-dessus la version déjà présente. Il n’est normalement pas nécessaire de désinstaller l’ancienne version. PriveoPDF ne lance pas d’installation système privilégiée automatiquement et n’utilise jamais l’updater Git privé dans une installation `.deb`. Les documents personnels et les préférences utilisateur ne sont pas supprimés par une mise à niveau normale.
 
 ### Désinstaller
 
@@ -62,7 +64,7 @@ Qt notice, the exact corresponding-source lock and offline bundle verifier.
 These files prepare compliance; they do not assert that an executable or the
 one-gigabyte verified source bundle has already been published.
 
-## Downloads
+## Downloads and updates
 
 The first Linux `.deb` beta has passed its packaging qualification, but its
 installation release is intentionally still private. Once opened to users, the
@@ -71,6 +73,13 @@ area. Each downloadable package will be tied to a published source snapshot and
 accompanied by its version, SHA-256 checksum, release notes, and provenance.
 Internal Actions artifacts or packages copied elsewhere are not official
 releases.
+
+An installed `.deb` checks only this repository's public GitHub Releases after
+user consent. Draft releases are ignored. When a newer version is found, the
+application shows its notes and opens that exact Release page; the user then
+installs the new `.deb` through the system package manager. The installed build
+does not use the private Git updater and does not perform privileged package
+installation automatically.
 
 ## Feedback
 

@@ -4,15 +4,11 @@ The menu shows **PriveoPDF** separately from **PriveoPDF DEV** and the internal 
 
 ## Linux installation
 
-The 64-bit `.deb` installer for Ubuntu 24.04 / Linux Mint 22 is undergoing
-qualification and has not been published yet. It includes Python and the
-application dependencies. Official downloads will appear under **Releases**,
-alongside their SHA-256 checksums.
+The 64-bit `.deb` installer for Ubuntu 24.04 / Linux Mint 22 is qualified for the first beta, but its Release intentionally remains private until external testing is opened. Official downloads will appear under **Releases**, alongside their SHA-256 checksums.
 
-After installing a validated package, **PriveoPDF** appears in the application
-menu. Package updates require installing a newer `.deb`; the development Git
-updater does not apply. Removing the package preserves your documents and
-preferences. Launch is refused when mandatory network isolation is unavailable.
+After installing a validated package, **PriveoPDF** appears in the application menu. In a `.deb` installation, **Check for updates** queries only the public `PriveoPDF-public` Releases after your confirmation. When a newer version is detected, PriveoPDF shows its notes and lets you open that exact Release page; you then install the new `.deb` over the existing package with the system package manager. The private development Git updater is never used by the public package.
+
+Removing the package preserves your documents and preferences. Launch is refused when mandatory network isolation is unavailable.
 
 ## Open a PDF
 
