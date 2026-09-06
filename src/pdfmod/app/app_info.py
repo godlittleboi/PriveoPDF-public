@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import os
+import sys
 import tomllib
 from importlib import metadata
 from pathlib import Path
@@ -37,6 +38,8 @@ def is_dev_runtime() -> bool:
 
 
 def get_runtime_app_id() -> str:
+    if getattr(sys, "frozen", False):
+        return "priveopdf-installed"
     return BETA_APP_ID if is_beta_runtime() else APP_ID
 
 

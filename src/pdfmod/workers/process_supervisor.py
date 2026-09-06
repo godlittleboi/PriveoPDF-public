@@ -21,6 +21,7 @@ from typing import Literal
 from pdfmod.domain.errors import UserCancelledError
 from pdfmod.domain.jobs import JobRequest, JobResult
 from pdfmod.engine.document_inspection import DocumentInspection
+from pdfmod.workers.network_isolation import document_namespace_verified
 from pdfmod.workers.pdf_protocol import (
     MAX_RESPONSE_BYTES,
     InspectionResponse,
@@ -255,6 +256,8 @@ class ProcessSupervisor:
                 # the freshly-created private directory above.
                 visible_temp = Path("/tmp") if use_bwrap else temp_dir  # noqa: S108
                 environment = _minimal_environment(visible_temp)
+                if document_namespace or use_bwrap:
+                    environment["PRIVEOPDF_DOCUMENT_SANDBOX"] = "1"
                 command = self._base_command()
                 if use_bwrap:
                     command = _bubblewrap_command(
@@ -537,6 +540,8 @@ class ProcessSupervisor:
     def _base_command(self) -> tuple[str, ...]:
         if self._worker_command is not None:
             return self._worker_command
+        if getattr(sys, "frozen", False):
+            return (sys.executable, "--pdf-worker", *self._limits.command_arguments())
         return (
             sys.executable,
             "-P",
@@ -707,24 +712,7 @@ def _network_isolation_unavailable() -> ProcessSupervisorError:
 
 
 def _document_namespace_verified() -> bool:
-    if os.environ.get("PRIVEOPDF_DOCUMENT_SANDBOX") != "1":
-        return False
-    if not sys.platform.startswith("linux"):
-        return False
-    try:
-        lines = _PROC_NET_DEV.read_text(encoding="utf-8").splitlines()
-    except OSError:
-        return False
-    interfaces: set[str] = set()
-    for line in lines[2:]:
-        if not line.strip():
-            continue
-        name, separator, _statistics = line.partition(":")
-        interface = name.strip()
-        if not separator or not interface:
-            return False
-        interfaces.add(interface)
-    return bool(interfaces) and interfaces <= {"lo"}
+    return document_namespace_verified(_PROC_NET_DEV)
 
 
 def _unsandboxed_development_allowed() -> bool:

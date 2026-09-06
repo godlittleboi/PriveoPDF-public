@@ -1,5 +1,20 @@
 # Bien démarrer
 
+Le menu affiche **PriveoPDF** séparément de **PriveoPDF DEV** et de la bêta interne, avec le logo officiel inclus dans le paquet.
+
+## Installation Linux
+
+L'installateur `.deb` pour Ubuntu 24.04 / Linux Mint 22 en 64 bits est en cours
+de qualification et n'est pas encore publié. Il embarque Python et les
+dépendances de l'application. Les futurs téléchargements officiels seront dans
+**Releases**, accompagnés de leur SHA-256.
+
+Après installation d'un paquet validé, **PriveoPDF** apparaît dans le menu.
+Les mises à jour de ce paquet passent par l'installation d'un nouveau `.deb` ;
+l'updater Git de développement ne s'applique pas. La désinstallation du paquet
+conserve vos documents et préférences. Le lancement est refusé si l'isolation
+réseau obligatoire n'est pas disponible.
+
 ## Ouvrir un PDF
 
 Déposez un fichier sur l’accueil ou choisissez **Visualiser un PDF**. Une fois

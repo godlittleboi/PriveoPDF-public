@@ -64,6 +64,22 @@ selection figure dans `tests/pdf_corpus/ATTRIBUTIONS.md` et `manifest.json`.
 
 ## Composants natifs et outils systeme
 
+Le constructeur `.deb` utilise PyInstaller 6.22.2 et ses dépendances de build
+épinglées avec hashes dans `packaging/linux/build-requirements.txt`. Cet outil
+reste réservé à la construction. Son exception à la GPL autorise les exécutables
+distribués sous une licence propriétaire ; elle ne remplace aucune licence des
+composants embarqués. Le bootloader amont n'est pas modifié. Référence officielle :
+https://pyinstaller.org/en/v6.22.2/license.html.
+
+Le candidat `.deb` conserve Qt sous forme de bibliothèques partagées remplaçables.
+Le plugin optionnel Qt Virtual Keyboard et ses bibliothèques sont exclus de la
+collecte PyInstaller : l'application ne les utilise pas et leur licence est
+commerciale ou GPLv3, sans option LGPL. Le validateur de payload les refuse aussi.
+Référence : https://doc.qt.io/qt-6/qtvirtualkeyboard-index.html.
+La redistribution officielle reste soumise à l'inventaire effectif, aux notices
+natives, aux sources Qt et au test de remplacement décrits dans la documentation
+de conformité. Un candidat construit n'est pas une preuve de conformité finale.
+
 L'archive source beta ne redistribue ni `bubblewrap`, ni `qpdf`, ni les bibliotheques Qt du
 systeme. Les wheels verrouillees de PySide6, pikepdf et cryptography peuvent en revanche
 embarquer leurs composants natifs conformement a leurs licences respectives. `bubblewrap`

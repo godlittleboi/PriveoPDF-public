@@ -36,7 +36,6 @@ build-backend = "hatchling.build"
 packages = ["src/pdfmod"]
 
 [tool.hatch.build.targets.wheel.force-include]
-"src/pdfmod/assets/icons" = "pdfmod/assets/icons"
 "docs/wiki" = "pdfmod/assets/wiki"
 
 [tool.pytest.ini_options]

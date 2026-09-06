@@ -1,4 +1,36 @@
-# PriveoPDF — source review snapshot
+# PriveoPDF — PDF sur votre ordinateur
+
+PriveoPDF permet d’ouvrir et d’organiser vos PDF localement, sans compte ni envoi de documents.
+
+## Télécharger et installer — Linux Mint / Ubuntu
+
+**La première bêta Linux `.deb` est qualifiée, mais sa release d’installation reste volontairement privée pour le moment.**
+
+Quand elle sera rendue visible aux utilisateurs, le téléchargement officiel sera disponible uniquement dans [Releases](/godlittleboi/PriveoPDF-public/releases). Ne téléchargez pas un paquet PriveoPDF provenant d’un autre emplacement.
+
+Pour installer la bêta publique :
+
+1. Ouvrez la dernière release et descendez jusqu’à **Assets** (fichiers à télécharger).
+2. Téléchargez **`priveopdf_<version>_amd64.deb`**. Ce paquet est destiné aux PC Intel/AMD 64 bits sous **Linux Mint 22** ou **Ubuntu 24.04**. Les archives **Source code** servent uniquement à consulter le code source publié.
+3. Facultatif mais recommandé : téléchargez aussi le fichier **`.deb.sha256`** associé pour vérifier l’intégrité du paquet.
+4. Double-cliquez sur le fichier `.deb`, puis choisissez **Installer le paquet**. Linux peut demander votre mot de passe et installer des dépendances système nécessaires.
+5. Une fois l’installation terminée, ouvrez **PriveoPDF** depuis le menu des applications. La version distribuée aux utilisateurs utilise le logo PriveoPDF normal, sans marqueur DEV ou BETA interne.
+
+### Mettre à jour
+
+Fermez PriveoPDF puis installez le nouveau `.deb` par-dessus la version déjà présente. Il n’est normalement pas nécessaire de désinstaller l’ancienne version. Si Linux propose **Réinstaller le paquet** parce que le numéro est identique, utilisez cette option uniquement lorsque la release PriveoPDF le demande. Les documents personnels et les préférences utilisateur ne sont pas supprimés par une mise à niveau normale.
+
+### Désinstaller
+
+Utilisez le gestionnaire de logiciels de Linux Mint / Ubuntu ou le gestionnaire de paquets du système. La désinstallation de l’application ne supprime pas vos PDF personnels.
+
+### Vérifier le téléchargement
+
+Chaque release officielle doit fournir au minimum le paquet `.deb`, son checksum SHA-256, les notes de version et les éléments de provenance prévus pour cette version. Le fichier `.sha256` permet de vérifier que le paquet téléchargé correspond exactement à celui publié.
+
+Le lancement et les traitements PDF imposent l’isolation réseau Linux. Si elle est indisponible, consultez les limites indiquées dans la release avant installation.
+
+---
 
 PriveoPDF is a local desktop PDF application. PDF files and their contents are
 processed locally and are not uploaded. Telemetry is disabled by default.
@@ -32,12 +64,13 @@ one-gigabyte verified source bundle has already been published.
 
 ## Downloads
 
-Official Linux beta packages will be published in this repository's **GitHub
-Releases** area once the `.deb` packaging gate is qualified. Each downloadable
-package will be tied to a published source snapshot and accompanied by its
-version, SHA-256 checksum, release notes, and provenance. Until such a release
-exists, this repository must not present a placeholder or an internal test
-artifact as an installable `.deb`.
+The first Linux `.deb` beta has passed its packaging qualification, but its
+installation release is intentionally still private. Once opened to users, the
+only official download location will be this repository's **GitHub Releases**
+area. Each downloadable package will be tied to a published source snapshot and
+accompanied by its version, SHA-256 checksum, release notes, and provenance.
+Internal Actions artifacts or packages copied elsewhere are not official
+releases.
 
 ## Feedback
 

@@ -484,6 +484,8 @@ def check_source_contract(
     content = read_snapshot(snapshot, ignore_repository_metadata=repository_checkout)
     _check_paths(content)
     manifest = _check_integrity(content)
+    if expected_source is not None and manifest.get("private_source_commit") != expected_source:
+        raise SourceContractError("snapshot source commit differs from expected source")
     _check_text_policy(content)
     _check_governance(content)
     if not technical_only:
