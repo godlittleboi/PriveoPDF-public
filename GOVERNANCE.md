@@ -4,20 +4,20 @@
 
 `godlittleboi`, titulaire déclaré dans le dépôt, conserve la décision finale sur
 la direction, les versions, les licences, la marque, les canaux officiels et
-toute publication. Ce dépôt reste privé et constitue la source canonique de
-développement. Un dépôt public propre et non canonique pourra être créé depuis
-un SHA approuvé, sans historique privé. Sa publication permettra la consultation
-et l'audit sans ouvrir les droits de modification, de redistribution ou de
-contribution.
+toute publication. Le développement canonique reste privé. Le dépôt public
+est une copie de publication non canonique : il reçoit des snapshots depuis
+un SHA approuvé, sans historique privé. Apache License 2.0 autorise usage,
+étude, modification et redistribution sous ses conditions,
+avec conservation de la licence et des notices applicables. Ces permissions
+ne changent pas la politique d'acceptation des contributions externes.
 
-Les documents de décision vivent dans `docs/adr/`, les exigences et risques dans
-leurs registres, et les fonctions réellement disponibles dans `main`, les tests
-et la documentation utilisateur. La roadmap est indicative et ne constitue pas
-un engagement de livraison.
+Les décisions de développement restent dans le dépôt canonique. Le contenu
+publié, ses tests et sa documentation décrivent chaque snapshot public. La
+roadmap est indicative et ne constitue pas un engagement de livraison.
 
 ## Phase communautaire initiale
 
-Les espaces publics sont préparés pour des commentaires via Discussions et
+Les espaces publics accueillent des commentaires via Discussions et
 Issues. Les mainteneurs peuvent qualifier, regrouper, fermer ou différer un
 retour. Ils ne promettent ni implémentation, ni délai, ni rémunération.
 
@@ -28,21 +28,24 @@ nouvelles conditions publiées avant l’envoi de code.
 
 ## Publication et licences
 
-Le code détenu par PriveoPDF relève de la licence propriétaire source-available
-du fichier racine `LICENSE`. Les exécutables officiels peuvent utiliser la
-licence freeware propriétaire distincte. Les licences tierces restent
-applicables à leurs composants.
+Le code, la documentation détenus par PriveoPDF et les exécutables officiels
+relèvent d'Apache License 2.0, licence open source du fichier racine `LICENSE`
+(`Apache-2.0`), accompagnée de `NOTICE`. Les versions déjà publiées
+gardent leur licence d'origine. Les licences tierces restent applicables,
+notamment Qt/LGPL. Le nom et le logo restent séparés selon la section 6 de la
+licence et [la politique de marques](docs/legal/TRADEMARKS.md).
 
 ---
 
 ## English summary
 
 The declared owner retains final authority over direction, releases, licenses,
-branding, official channels, and publication. This repository remains the
-private canonical development source. A clean, non-canonical public repository
-may be created from an approved commit without private history. Publication
-permits source review and security auditing; it does not grant modification,
-redistribution, or contribution rights.
+branding, official channels, and publication. Canonical development remains
+private. The public repository is a non-canonical publication copy containing
+selected snapshots from approved commits, without private development history.
+Apache License 2.0 permits use, review, modification and redistribution under its
+terms, including the applicable license and attribution notices. These rights
+do not require the maintainer to accept external contributions.
 
 The initial public phase accepts comments through Discussions and Issues, not
 external code. External Pull Requests are not merged, cherry-picked, copied, or

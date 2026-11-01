@@ -1,14 +1,21 @@
-# English source-license summary
+# English license summary
 
-> Informative summary. Only the root `LICENSE` file is contractual.
+> Informative summary. The full English text in the root `LICENSE` is authoritative.
 
-PriveoPDF is proprietary and source available, not open source.
+PriveoPDF-owned code, documentation and official executables are open source
+under Apache License 2.0 (`Apache-2.0`). You may use, modify and redistribute
+them, including commercially.
 
-You may install and use an unmodified version free of charge for personal use
-or internal professional purposes. You may also view, download, or clone the
-code to study, evaluate, or audit it and keep reasonably necessary private
-copies.
+When redistributing, you must provide the license, identify modified files and
+retain applicable notices and attributions, including those in `NOTICE`, as
+specified in section 4. The license also includes a patent grant within the
+limits of section 3 and a disclaimer of warranty.
 
-Without separate written permission, you may not modify, redistribute, sell,
-sublicense, or provide PriveoPDF as a service. Mandatory rights and
-third-party licenses remain applicable.
+The PriveoPDF name and logo are not covered by the license (section 6).
+See `TRADEMARKS.md` for customary identification of the software's origin.
+Third-party components retain their own licenses, including Qt/LGPL; see
+`THIRD_PARTY_NOTICES.md`.
+
+Previously published versions retain their original license. The comments-only
+policy is unchanged: external code contributions are not accepted, as stated
+in `CONTRIBUTING.md`.

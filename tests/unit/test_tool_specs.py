@@ -2,27 +2,28 @@ from __future__ import annotations
 
 import pytest
 
-from pdfmod.domain.jobs import OperationType
-from pdfmod.ui import i18n
-from pdfmod.ui.components.tool_icons import TOOL_ICON_BY_ID, tool_icon_signature
-from pdfmod.ui.dashboard import (
+from priveopdf.domain.jobs import OperationType
+from priveopdf.ui import i18n
+from priveopdf.ui.components.tool_icons import TOOL_ICON_BY_ID, tool_icon_signature
+from priveopdf.ui.dashboard import (
+    CATALOG_COLUMNS,
+    _available_dashboard_groups,
     _available_dashboard_specs,
+    _catalog_placement,
     _document_summary_text,
     _pending_dashboard_groups,
     _planned_dashboard_groups,
-    _ready_action_keys,
-    _ready_available_action_keys,
-    _ready_primary_action_key,
-    _ready_secondary_action_keys,
+    _recommended_tool_key,
 )
-from pdfmod.ui.tool_specs import (
+from priveopdf.ui.i18n import tr
+from priveopdf.ui.tool_specs import (
     TOOL_SPECS,
     TOOL_SPECS_BY_KEY,
     TOOL_SPECS_BY_OPERATION,
     ToolSpec,
     tool_spec_for_operation,
 )
-from pdfmod.ui.workspace_state import WorkspaceDocument
+from priveopdf.ui.workspace_state import WorkspaceDocument
 
 VISIBLE_CATEGORIES = {
     "base",
@@ -54,8 +55,10 @@ def test_page_operation_specs_define_expected_modes() -> None:
     assert reorder.help_key == "page.reorder.help"
 
     assert rotate.requires_rotation_angle
-    assert extract.default_output_suffix == "_extrait"
-    assert remove.default_output_suffix == "_sans-pages"
+    for spec in (extract, remove):
+        # Output suffixes live in the catalogue, in every language (UX contract, rule 10).
+        assert tr(f"output.suffix.{spec.key}", "fr") != f"output.suffix.{spec.key}"
+        assert tr(f"output.suffix.{spec.key}", "en") != f"output.suffix.{spec.key}"
     assert insert.input_kind == "pdf_multiple"
     assert insert.allows_multiple_inputs
 
@@ -84,8 +87,9 @@ def test_pending_specs_do_not_define_pdf_operations() -> None:
     pending = [spec for spec in TOOL_SPECS if spec.status == "pending"]
 
     pending_keys = {spec.key for spec in pending}
-    assert "compress" in pending_keys
-    assert "ocr_pdf" in pending_keys
+    assert "compress" not in pending_keys
+    assert "ocr_pdf" not in pending_keys
+    assert "redact_pdf" not in pending_keys
     assert "sign_pdf" in pending_keys
     assert "summarize_pdf_ai" in pending_keys
     assert "searchable_scan" in pending_keys
@@ -113,13 +117,18 @@ def test_dashboard_catalog_is_limited_to_ilovepdf_categories() -> None:
         "reorder",
         "insert",
         "blank_page",
+        "compress",
+        "ocr_pdf",
+        "protect",
+        "unlock_pdf",
+        "share_check",
+        "redact_pdf",
+        "watermark",
     }
     assert all(spec.dashboard_visibility == "primary" for spec in available)
     assert {spec.key for spec in pending_dashboard} == {
         "scan_to_pdf",
-        "compress",
         "repair_pdf",
-        "ocr_pdf",
         "jpg_to_pdf",
         "word_to_pdf",
         "powerpoint_to_pdf",
@@ -131,14 +140,10 @@ def test_dashboard_catalog_is_limited_to_ilovepdf_categories() -> None:
         "pdf_to_excel",
         "pdf_to_pdfa",
         "page_numbers",
-        "watermark",
         "crop",
         "edit_pdf",
         "pdf_forms",
-        "unlock_pdf",
-        "protect",
         "sign_pdf",
-        "redact_pdf",
         "compare_pdf",
     }
     assert {spec.key for spec in roadmap_only} == {
@@ -154,7 +159,9 @@ def test_dashboard_catalog_is_limited_to_ilovepdf_categories() -> None:
 
 
 def test_ocr_and_signature_wording_avoid_duplicate_or_legal_promise() -> None:
-    assert TOOL_SPECS_BY_KEY["ocr_pdf"].dashboard_visibility == "pending_dashboard"
+    ocr = TOOL_SPECS_BY_KEY["ocr_pdf"]
+    assert ocr.available and ocr.operation is OperationType.OCR_PDF
+    assert ocr.dashboard_group == "dashboard.group.optimize_pdf"
     assert TOOL_SPECS_BY_KEY["searchable_scan"].dashboard_visibility == "hidden"
 
     sign = TOOL_SPECS_BY_KEY["sign_pdf"]
@@ -178,6 +185,13 @@ def test_dashboard_helpers_exclude_hidden_and_roadmap_only_tools() -> None:
         "reorder",
         "insert",
         "blank_page",
+        "compress",
+        "ocr_pdf",
+        "protect",
+        "unlock_pdf",
+        "share_check",
+        "redact_pdf",
+        "watermark",
     }
     assert "summarize_pdf_ai" not in pending_keys
     assert "translate_pdf_ai" not in pending_keys
@@ -205,24 +219,69 @@ def test_compose_pdf_is_a_later_non_executable_planned_item() -> None:
     )
 
 
-def test_dashboard_ready_actions_are_contextual_and_available_only() -> None:
-    assert _ready_primary_action_key(1) == "view"
-    assert _ready_secondary_action_keys(1) == ("extract", "remove", "rotate", "reorder")
-    assert _ready_action_keys(1) == ("view", "extract", "remove", "rotate", "reorder")
-    assert _ready_available_action_keys(1) == ("view", "extract", "remove", "rotate", "reorder")
-    assert "add_files" not in _ready_action_keys(1)
+def test_dashboard_groups_follow_the_registry_and_pack_short_groups() -> None:
+    groups = _available_dashboard_groups()
 
-    assert _ready_primary_action_key(2) == "merge"
-    assert _ready_secondary_action_keys(2) == ("insert", "view")
-    assert _ready_action_keys(2) == ("merge", "insert", "view")
-    assert _ready_available_action_keys(2) == ("merge", "insert", "view")
-
-    assert "reorder" not in _ready_action_keys(2)
-    assert "add_files" not in _ready_action_keys(2)
-    assert all(TOOL_SPECS_BY_KEY[key].available for key in _ready_available_action_keys(2))
-    assert not any(
-        TOOL_SPECS_BY_KEY[key].status == "pending" for key in _ready_available_action_keys(1)
+    assert [key for key, _specs in groups] == [
+        "dashboard.group.organize_pdf",
+        "dashboard.group.edit_pdf",
+        "dashboard.group.optimize_pdf",
+        "dashboard.group.security_pdf",
+    ]
+    assert {spec.key for _key, specs in groups for spec in specs} == {
+        spec.key for spec in _available_dashboard_specs()
+    }
+    # Organize fills its band; rotate and compress share one; security starts the last.
+    assert _catalog_placement(
+        tuple((key, len(specs)) for key, specs in groups), CATALOG_COLUMNS
+    ) == (
+        ("dashboard.group.organize_pdf", 0, 0, 4),
+        ("dashboard.group.edit_pdf", 1, 0, 1),
+        ("dashboard.group.optimize_pdf", 1, 1, 2),
+        ("dashboard.group.security_pdf", 2, 0, 4),
     )
+    assert _catalog_placement((("a", 2), ("b", 2), ("c", 1)), 4) == (
+        ("a", 0, 0, 2),
+        ("b", 0, 2, 2),
+        ("c", 1, 0, 1),
+    )
+
+
+def test_dashboard_recommends_the_next_step_for_the_open_documents(tmp_path) -> None:
+    documents = tuple(
+        WorkspaceDocument(
+            document_id=f"doc-{index}",
+            path=tmp_path / f"{index}.pdf",
+            resolved_path=tmp_path / f"{index}.pdf",
+        )
+        for index in range(2)
+    )
+
+    assert _recommended_tool_key(()) is None
+    # One readable PDF opens in the viewer, the base tool.
+    assert _recommended_tool_key(documents[:1]) == "view"
+    assert _recommended_tool_key(documents) == "merge"
+    unreadable = WorkspaceDocument(
+        document_id="doc-error",
+        path=tmp_path / "error.pdf",
+        resolved_path=tmp_path / "error.pdf",
+        page_count_status="error",
+    )
+    assert _recommended_tool_key((unreadable,), unreadable) is None
+
+    locked = WorkspaceDocument(
+        document_id="doc-locked",
+        path=tmp_path / "locked.pdf",
+        resolved_path=tmp_path / "locked.pdf",
+        page_count_status="locked",
+    )
+    # A protected selected PDF must be unlocked before any other tool can read it.
+    assert _recommended_tool_key((locked,), locked) == "unlock_pdf"
+    assert _recommended_tool_key((locked, *documents), locked) == "unlock_pdf"
+    # L5: Merge takes the open documents only when all are readable; otherwise the
+    # selected readable PDF opens in the viewer.
+    assert _recommended_tool_key((locked, *documents), documents[0]) == "view"
+    assert _document_summary_text(locked, False, "en") == "locked.pdf - protected"
 
 
 def test_dashboard_ready_file_summary_marks_selection_and_known_pages(tmp_path) -> None:
@@ -250,30 +309,16 @@ def test_dashboard_ready_i18n_labels_exist_in_fr_and_en() -> None:
     keys = {
         "dashboard.ready.single_title",
         "dashboard.ready.multi_title",
-        "dashboard.ready.help",
-        "dashboard.ready.privacy",
-        "dashboard.ready.file_selection",
         "dashboard.ready.recommended_action",
-        "dashboard.ready.other_actions",
-        "dashboard.ready.other_actions_single",
-        "dashboard.ready.other_actions_multi",
-        "dashboard.ready.view_selected",
-        "dashboard.ready.view_selected.tooltip",
         "dashboard.ready.selected_file",
         "dashboard.ready.page_count_one",
         "dashboard.ready.page_count_many",
-        "dashboard.ready.remove_file",
-        "dashboard.ready.remove_file.tooltip",
         "dashboard.ready.add_files",
         "dashboard.ready.add_files.tooltip",
         "dashboard.open_files",
         "dashboard.open_files.tooltip",
         "dashboard.search.placeholder",
         "dashboard.search.accessible",
-        "dashboard.catalog.show",
-        "dashboard.catalog.show.tooltip",
-        "dashboard.catalog.hide",
-        "dashboard.catalog.hide.tooltip",
         "dashboard.planned.show",
         "dashboard.planned.show.tooltip",
         "dashboard.planned.hide",
@@ -325,6 +370,13 @@ def test_available_operation_types_are_all_exposed_once() -> None:
         OperationType.REORDER_PAGES,
         OperationType.INSERT_PDF_PAGES,
         OperationType.INSERT_BLANK_PAGE,
+        OperationType.COMPRESS_PDF,
+        OperationType.OCR_PDF,
+        OperationType.PROTECT_PDF,
+        OperationType.UNLOCK_PDF,
+        OperationType.REMOVE_METADATA,
+        OperationType.REDACT_PDF,
+        OperationType.WATERMARK_PDF,
     }
 
     assert set(TOOL_SPECS_BY_OPERATION) == expected_operations

@@ -1,28 +1,25 @@
 # Dossier Qt / PySide6 / Shiboken — préparation LGPL
 
-Statut au 6 août 2026 : préparation interne, sans distribution publique. Ce
-document décrit un mécanisme de conformité et des gates ; il ne constitue ni
-un avis juridique, ni une déclaration de conformité d'un exécutable qui
-n'existe pas encore sous forme qualifiée.
+Ce document décrit la préparation des notices et sources correspondantes.
+Aucun exécutable public qualifié n'est revendiqué par cette préparation.
 
 ## Baseline effectivement verrouillée
 
-`uv.lock` fixe les paquets suivants à la version 6.11.2 :
+`uv.lock` fixe les paquets suivants à la version 6.11.3 :
 
 | Paquet | Version | Rôle |
 | --- | --- | --- |
-| PySide6 | 6.11.2 | méta-paquet des bindings Qt for Python |
-| PySide6-Addons | 6.11.2 | modules Qt additionnels, dont QtPdf |
-| PySide6-Essentials | 6.11.2 | QtCore, QtGui, QtWidgets et dépendances essentielles |
-| Shiboken6 | 6.11.2 | runtime des bindings |
+| PySide6 | 6.11.3 | méta-paquet des bindings Qt for Python |
+| PySide6-Addons | 6.11.3 | modules Qt additionnels, dont QtPdf |
+| PySide6-Essentials | 6.11.3 | QtCore, QtGui, QtWidgets et dépendances essentielles |
+| Shiboken6 | 6.11.3 | runtime des bindings |
 
 L'analyse AST du code applicatif trouve exactement : `PySide6.QtCore`,
-`PySide6.QtGui`, `PySide6.QtPdf`, `PySide6.QtPdfWidgets` et
-`PySide6.QtWidgets`. `PySide6.QtTest` n'est utilisé que par les tests de
-développement. Aucun import d'un module Qt identifié comme GPL-only n'a été
+`PySide6.QtGui`, `PySide6.QtPdf` et `PySide6.QtWidgets`. `PySide6.QtTest` n'est
+utilisé que par les tests de développement. Aucun import d'un module Qt identifié comme GPL-only n'a été
 trouvé. Le gate compare à nouveau cette liste au lock à chaque changement.
 
-Qt PDF 6.11.2 est proposé par Qt sous licence commerciale ou, notamment, sous
+Qt PDF 6.11.3 est proposé par Qt sous licence commerciale ou, notamment, sous
 GNU LGPL v3 ; PriveoPDF prévoit de s'appuyer sur l'option LGPL pour les
 composants éligibles. Les licences des archives amont et des composants tiers
 qu'elles contiennent restent seules contractuelles.
@@ -50,10 +47,10 @@ preuve de remplacement sont absents ou incompatibles avec le lock.
 | Exigence | Mesure préparée | Gate restant avant diffusion |
 | --- | --- | --- |
 | Avis et textes | `QT-NOTICE.txt`, LGPL v3 et GPL v3 embarqués | vérifier les notices de tous les composants réellement livrés |
-| Séparation des licences | freeware pour le binaire officiel, licence PriveoPDF source-available pour le code propre, licences amont pour les tiers | inspecter l'archive finale et son SBOM |
+| Séparation des licences | Apache-2.0 pour le code propre et les binaires officiels, licences amont pour les tiers | inspecter l'archive finale et son SBOM |
 | Liaison/remplacement | inventaire exige `dynamic` et `replacement_supported=true` ; instructions de remplacement fournies | tester sur chaque OS et architecture |
-| Ingénierie inverse utile | la licence freeware réserve explicitement les droits LGPL | revue juridique de la version finale |
-| Sources correspondantes | bundle complet Qt + Qt for Python 6.11.2, verrouillé par taille et SHA-256 | construire les archives réelles de 1 037 714 800 octets au total et les publier avec le binaire |
+| Ingénierie inverse utile | Apache 2.0 ne restreint pas les droits LGPL des composants tiers | revue juridique de la version finale |
+| Sources correspondantes | bundle complet Qt + Qt for Python 6.11.3, verrouillé par taille et SHA-256 | construire les archives réelles de 1 038 144 400 octets au total et les publier avec le binaire |
 | Modifications amont | le gate n'accepte actuellement que `upstream_modifications=[]` | si un patch existe, l'ajouter aux sources et étendre le gate |
 | Installation information | instructions génériques suivies d'un inventaire propre à la release | prouver qu'une version Qt reconstruite peut être chargée |
 | Code tiers dans Qt | archives amont intégrales conservées | inventorier les plugins/bibliothèques réellement distribués et leurs notices |
@@ -66,10 +63,10 @@ PriveoPDF.
 
 `compliance/third_party_sources.lock.json` fixe deux téléchargements officiels :
 
-1. `qt-everywhere-src-6.11.2.tar.xz`, 1 019 661 552 octets,
-   SHA-256 `6dcfbca271d76a6502741a2c0dc6fc98ef7dd0b7b4cfd0abcebb285a86a26f33` ;
-2. `pyside-setup-everywhere-src-6.11.2.tar.xz`, 18 053 248 octets,
-   SHA-256 `cba47efbaad1bedd529725cbc14e21f156c7a19366f07b3edfbb076ffd7afdf8`.
+1. `qt-everywhere-src-6.11.3.tar.xz`, 1 020 081 224 octets,
+   SHA-256 `ad0112f2aef1b94b42a7ab653cebda2f7fc9ba88ef509ec456b17be80b0bfdab` ;
+2. `pyside-setup-everywhere-src-6.11.3.tar.xz`, 18 063 176 octets,
+   SHA-256 `050819cb05e14d6689f42b56e4fa9c8ff63be2bb339e0c094c45b990b7cabde1`.
 
 Le constructeur est volontairement hors ligne : il ne télécharge rien, exige
 les fichiers dans un cache fourni, vérifie type, taille et hash, puis produit un
@@ -83,7 +80,7 @@ uv run python tools/build_third_party_sources_bundle.py \
   --output-dir /sortie/hors-depot
 
 uv run python tools/build_third_party_sources_bundle.py \
-  --verify-bundle /sortie/hors-depot/PriveoPDF-third-party-sources-qt-6.11.2.zip
+  --verify-bundle /sortie/hors-depot/PriveoPDF-third-party-sources-qt-6.11.3.zip
 ```
 
 La taille des sources officielles interdit de prétendre que le bundle réel a
@@ -116,7 +113,7 @@ au remplacement local.
 un SBOM CycloneDX, l'inventaire Qt qualifié et le bundle réel de sources. Il
 refuse les sources Python, secrets, chemins personnels, symlinks, modules
 GPL-only, liaison statique, versions divergentes et absence de test de
-remplacement. Il embarque la licence freeware française comme `LICENSE.txt`,
+remplacement. Il embarque le texte Apache 2.0 comme `LICENSE.txt`, `NOTICE`,
 les notices tierces, les sources Qt, la confidentialité, la sécurité, le SBOM,
 la provenance et les checksums.
 
@@ -130,16 +127,16 @@ la provenance et les checksums.
 - [ ] Notices propres aux composants et plugins réellement livrés vérifiées.
 - [ ] Bundle Qt/PySide6/Shiboken complet construit deux fois avec hash identique.
 - [ ] Bundle de sources et binaire rendus disponibles ensemble.
-- [ ] Licence freeware, LGPL/GPL, sécurité, confidentialité et provenance présentes.
+- [ ] Licence Apache 2.0, NOTICE, LGPL/GPL, sécurité, confidentialité et provenance présentes.
 - [ ] Revue juridique finale effectuée ; aucune revendication générale de conformité.
 
-## Sources officielles consultées le 2 septembre 2026
+## Sources officielles
 
 - <https://www.qt.io/development/open-source-lgpl-obligations>
 - <https://doc.qt.io/qt-6/licensing.html>
 - <https://doc.qt.io/qt-6/qtpdf-index.html>
 - <https://doc.qt.io/qtforpython-6/index.html>
-- <https://download.qt.io/official_releases/qt/6.11/6.11.2/single/>
-- <https://download.qt.io/official_releases/QtForPython/pyside6/PySide6-6.11.2-src/>
+- <https://download.qt.io/official_releases/qt/6.11/6.11.3/single/>
+- <https://download.qt.io/official_releases/QtForPython/pyside6/PySide6-6.11.3-src/>
 - <https://www.gnu.org/licenses/lgpl-3.0.html>
 - <https://www.gnu.org/licenses/gpl-3.0.html>

@@ -26,6 +26,9 @@ else:
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_SOURCE_LOCK = Path("compliance/third_party_sources.lock.json")
+APACHE_LICENSE_SHA256 = (
+    "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"  # pragma: allowlist secret
+)
 BUFFER_SIZE = 1024 * 1024
 FULL_SHA = re.compile(r"[0-9a-f]{40}")
 SAFE_VERSION = re.compile(r"[0-9][0-9A-Za-z._-]{0,63}")
@@ -87,8 +90,8 @@ SENSITIVE_PATTERNS = (
     re.compile(r"github\.com/godlittleboi/PriveoPDF", re.IGNORECASE),
 )
 REQUIRED_LEGAL_FILES = (
-    "licenses/PriveoPDF-Freeware-License-FR.txt",
-    "licenses/PriveoPDF-Freeware-License-EN.txt",
+    "LICENSE",
+    "NOTICE",
     "licenses/LGPL-3.0.txt",
     "licenses/GPL-3.0.txt",
     "licenses/QT-NOTICE.txt",
@@ -257,7 +260,6 @@ def _validate_inventory(
     }
     if actual_packages != _package_versions(source_lock):
         raise BinaryBundleError("Qt runtime package versions differ from the source lock")
-
     libraries = document.get("bundled_libraries")
     if not isinstance(libraries, list) or not libraries:
         raise BinaryBundleError("Qt runtime inventory must list bundled libraries")
@@ -315,10 +317,10 @@ def _validate_sbom(document: dict[str, Any], source_lock: Any) -> None:
     if not isinstance(licenses, list) or not any(
         isinstance(item, dict)
         and isinstance(item.get("license"), dict)
-        and item["license"].get("name") == "LicenseRef-PriveoPDF-Freeware"
+        and item["license"].get("id") == "Apache-2.0"
         for item in licenses
     ):
-        raise BinaryBundleError("binary SBOM does not identify the freeware license")
+        raise BinaryBundleError("binary SBOM does not identify Apache-2.0")
     versions = _component_versions(document)
     for name, version in _package_versions(source_lock).items():
         if versions.get(name) != version:
@@ -327,9 +329,9 @@ def _validate_sbom(document: dict[str, Any], source_lock: Any) -> None:
 
 def _augment_sbom(document: dict[str, Any]) -> bytes:
     required = {
-        "priveopdf:artifact-license": "LicenseRef-PriveoPDF-Freeware",
-        "priveopdf:internal-project-license-ref": "LicenseRef-PriveoPDF-Source-Available-1.0",
-        "priveopdf:source-code-license": "LicenseRef-PriveoPDF-Source-Available-1.0",
+        "priveopdf:artifact-license": "Apache-2.0",
+        "priveopdf:internal-project-license-ref": "Apache-2.0",
+        "priveopdf:source-code-license": "Apache-2.0",
     }
     raw_properties = document.setdefault("properties", [])
     if not isinstance(raw_properties, list) or any(
@@ -394,10 +396,15 @@ def _legal_items(project_root: Path) -> dict[str, ArchiveItem]:
             "docs/legal/QT_LIBRARY_REPLACEMENT.md": "QT_LIBRARY_REPLACEMENT.md",
         }.get(relative, relative)
         items[target] = ArchiveItem(content=content)
-    freeware = items["licenses/PriveoPDF-Freeware-License-FR.txt"].content
-    if freeware is None:
-        raise BinaryBundleError("canonical freeware license is unavailable")
-    items["LICENSE.txt"] = ArchiveItem(content=freeware)
+    license_text = items.pop("LICENSE").content
+    if license_text is None or hashlib.sha256(license_text).hexdigest() != APACHE_LICENSE_SHA256:
+        raise BinaryBundleError("canonical Apache-2.0 license is unavailable or modified")
+    notice = items["NOTICE"].content
+    if not notice or b"Copyright 2026 godlittleboi" not in notice:
+        raise BinaryBundleError("PriveoPDF NOTICE attribution is missing")
+    if b"THIRD_PARTY_NOTICES.md" not in notice:
+        raise BinaryBundleError("PriveoPDF NOTICE third-party reference is missing")
+    items["LICENSE.txt"] = ArchiveItem(content=license_text)
     return items
 
 
@@ -572,17 +579,17 @@ def build_binary_bundle(
         for path, item in sorted(items.items())
     ]
     provenance_document = {
-        "artifact": f"PriveoPDF-official-freeware-{version}-{platform}",
+        "artifact": f"PriveoPDF-official-{version}-{platform}",
         "entrypoint": f"app/{entrypoint}",
         "files": base_records,
-        "license": "LicenseRef-PriveoPDF-Freeware",
+        "license": "Apache-2.0",
         "platform": platform,
         "qt_source_bundle": {
             "filename": third_party_sources.name,
             "sha256": verified_sources.sha256,
         },
         "schema_version": 1,
-        "source_code_license": "LicenseRef-PriveoPDF-Source-Available-1.0",
+        "source_code_license": "Apache-2.0",
         "source_commit": source_commit,
         "source_date_epoch": source_date_epoch,
         "version": version,
@@ -634,7 +641,7 @@ def build_binary_bundle(
 
 def _parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
-        description="Build a deterministic, compliance-gated PriveoPDF freeware bundle."
+        description="Build a deterministic, compliance-gated PriveoPDF Apache-2.0 bundle."
     )
     parser.add_argument("--project-root", type=Path, default=PROJECT_ROOT)
     parser.add_argument("--payload-dir", type=Path, required=True)

@@ -290,7 +290,7 @@ def _source_availability(lock: BundleLock) -> bytes:
         "",
         "This bundle contains the complete, checksum-verified upstream archives",
         "locked for the Qt/PySide6/Shiboken baseline named below. It is separate",
-        "from PriveoPDF's proprietary source and executable licenses.",
+        "from PriveoPDF's Apache 2.0 source and executable license.",
         "",
     ]
     for source in lock.sources:

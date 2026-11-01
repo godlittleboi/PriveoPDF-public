@@ -1,22 +1,28 @@
 # Décision préalable aux contributions externes
 
-Statut : **NON ACTIF — À FAIRE RELIRE**.
+Statut du futur accord de contribution : **NON ACTIF — À FAIRE RELIRE**.
 
-Le futur dépôt public propre pourra accepter des commentaires, questions, idées
+Apache License 2.0 (`Apache-2.0`) est adoptée (ADR 0010). Elle autorise
+les modifications et redistributions sous ses conditions, y compris commerciales.
+L’ouverture des contributions au canonique reste une décision distincte ;
+le changement de licence n’a pas activé un CLA ni l’acceptation de patches.
+
+Le dépôt public propre peut accepter des commentaires, questions, idées
 et signalements de bugs, mais aucun code externe. Aucun CLA PriveoPDF n'est actif. Une
 pull request, un patch ou du code envoyé dans un commentaire ne doit être ni fusionné,
 ni cherry-pické, ni recopié, ni réécrit dans le produit.
 
 Avant d'accepter du code, le propriétaire devra documenter et faire examiner :
 
-1. une licence source qui autorise réellement la modification ;
-2. l'adéquation de la licence source-available alors en vigueur ;
-3. l'acceptabilité des forks et redistributions non concurrentes ;
+1. le cadre entrant des contributions, en tenant compte de la licence source
+   Apache 2.0 déjà adoptée ;
+2. l'adéquation de la licence Apache 2.0 en vigueur ;
+3. les obligations de notices des forks et redistributions déjà autorisés ;
 4. un Contributor License Agreement adapté au titulaire et aux territoires concernés ;
 5. le choix entre licence des contributions et cession des droits ;
 6. un droit explicite d'utiliser, reproduire, modifier, distribuer, sous-licencier,
-   proposer commercialement et relicencier sous des régimes propriétaire,
-   source-available et, si décidé, open source, ainsi que les droits de brevet utiles ;
+   proposer commercialement et relicencier sous les régimes décidés,
+   ainsi que les droits de brevet utiles ;
 7. les contributions faites dans le cadre d'un emploi et l'autorisation de
    l'employeur ;
 8. la preuve que le contributeur détient les droits nécessaires ;

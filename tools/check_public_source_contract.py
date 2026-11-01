@@ -19,10 +19,15 @@ if str(TOOLS_ROOT) not in sys.path:
     sys.path.insert(0, str(TOOLS_ROOT))
 
 SOURCE_LICENSE_SHA256 = (
-    "0de0a67507065b4af08b64efe6295b4878ff708047a5c93dc9ad784435e601bd"  # pragma: allowlist secret
+    "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"  # pragma: allowlist secret
 )
-SOURCE_LICENSE = "LicenseRef-PriveoPDF-Source-Available-1.0"
-BINARY_LICENSE = "LicenseRef-PriveoPDF-Freeware"
+# Retain reviewed public hashes when updating the template: publication verifies
+# the previous snapshot too. Never authorize a private instructions file here.
+REVIEWED_PUBLIC_AGENTS_SHA256 = (
+    "bc5ba5aa71f4e67a5e5f5cd93f9d5d5e41ef47dbf9ea281c702bc20405c87dbd",  # pragma: allowlist secret
+)
+SOURCE_LICENSE = "Apache-2.0"
+BINARY_LICENSE = "Apache-2.0"
 MANIFEST_NAME = "PUBLIC_SOURCE_MANIFEST.json"
 CHECKSUMS_NAME = "SHA256SUMS"
 OWNER_DECISIONS = "docs/release/PUBLIC_SOURCE_OWNER_DECISIONS.md"
@@ -37,6 +42,7 @@ REQUIRED_FILES = {
     "FEEDBACK.md",
     "GOVERNANCE.md",
     "LICENSE",
+    "NOTICE",
     MANIFEST_NAME,
     "README.md",
     "SECURITY.md",
@@ -59,8 +65,6 @@ REQUIRED_FILES = {
     "docs/security/VULNERABILITY_TRIAGE.md",
     "licenses/GPL-3.0.txt",
     "licenses/LGPL-3.0.txt",
-    "licenses/PriveoPDF-Freeware-License-EN.txt",
-    "licenses/PriveoPDF-Freeware-License-FR.txt",
     "licenses/QT-NOTICE.txt",
     "tools/check_public_source_contract.py",
 }
@@ -85,7 +89,10 @@ SENSITIVE_PATTERNS = (
     re.compile(r"\bgithub_pat_[A-Za-z0-9_]{16,}\b", re.IGNORECASE),
     re.compile(r"(?m)/(?:home|Users)/[A-Za-z0-9._-]+/"),
     re.compile(r"[A-Z]:\\Users\\[A-Za-z0-9._ -]+", re.IGNORECASE),
-    re.compile(r"github\.com/godlittleboi/PriveoPDF", re.IGNORECASE),
+    re.compile(
+        r"github\.com/godlittleboi/PriveoPDF(?!-public(?:\.git)?(?=$|[^\w.%-]))",
+        re.IGNORECASE,
+    ),
     re.compile(
         r"\b(?:password|passwd|token|cookie)\s*[:=]\s*[\"'][^\"']{8,}[\"']",
         re.IGNORECASE,
@@ -253,7 +260,7 @@ def _check_integrity(content: SnapshotContent) -> dict[str, Any]:
     if manifest.get("source_license") != SOURCE_LICENSE:
         raise SourceContractError("manifest source license is not the PriveoPDF source license")
     if manifest.get("binary_license") != BINARY_LICENSE:
-        raise SourceContractError("manifest binary license is not the freeware license")
+        raise SourceContractError("manifest binary license is not Apache-2.0")
     source_commit = manifest.get("private_source_commit")
     if not isinstance(source_commit, str) or re.fullmatch(r"[0-9a-f]{40}", source_commit) is None:
         raise SourceContractError("manifest source provenance SHA is missing or invalid")
@@ -284,6 +291,24 @@ def _check_integrity(content: SnapshotContent) -> dict[str, Any]:
         if hashlib.sha256(content.files[path]).hexdigest() != digest:
             raise SourceContractError(f"SHA256SUMS differs: {path}")
 
+    # Older snapshots have no agent guide. Only this reviewed public template
+    # may occupy the otherwise forbidden root path; metadata alone is insufficient.
+    if "AGENTS.md" in content.files:
+        record = records["AGENTS.md"]
+        generated = manifest.get("generated_files")
+        if (
+            record.get("generated") is not True
+            or record.get("generated_from") != "public_source/AGENTS.public.md"
+            or not isinstance(generated, list)
+            or generated.count("AGENTS.md") != 1
+        ):
+            raise SourceContractError("public agent instructions lack their generated provenance")
+        if (
+            hashlib.sha256(content.files["AGENTS.md"]).hexdigest()
+            not in REVIEWED_PUBLIC_AGENTS_SHA256
+        ):
+            raise SourceContractError("AGENTS.md differs from the reviewed public agent template")
+
     for path in (
         "THIRD_PARTY_NOTICES.md",
         "licenses/GPL-3.0.txt",
@@ -292,13 +317,13 @@ def _check_integrity(content: SnapshotContent) -> dict[str, Any]:
     ):
         if records[path].get("license_expression") == SOURCE_LICENSE:
             raise SourceContractError(
-                f"third-party file is presented as proprietary source: {path}"
+                f"third-party file is presented as PriveoPDF-licensed source: {path}"
             )
-    if content.files["LICENSE"] in {
-        content.files["licenses/PriveoPDF-Freeware-License-FR.txt"],
-        content.files["licenses/PriveoPDF-Freeware-License-EN.txt"],
-    }:
-        raise SourceContractError("source and executable licenses are confused")
+    notice = content.files["NOTICE"]
+    if b"Copyright 2026 godlittleboi" not in notice:
+        raise SourceContractError("PriveoPDF NOTICE attribution is missing")
+    if b"THIRD_PARTY_NOTICES.md" not in notice:
+        raise SourceContractError("PriveoPDF NOTICE third-party reference is missing")
     return manifest
 
 
@@ -324,12 +349,6 @@ def _check_text_policy(content: SnapshotContent) -> None:
         if path == "tools/check_public_source_contract.py":
             continue
         for line in text.splitlines():
-            if _positive_claim(
-                line,
-                ("is open source", "est open source", "licensed as open source"),
-                ("not open source", "n'est pas open source", "pas open source"),
-            ):
-                raise SourceContractError(f"active open-source claim found in {path}")
             if re.search(
                 r"(?i)\b(?:target|cible|licen[cs]e retenue)\s*[:—-]\s*FSL(?:-1\.1-ALv2)?\b",
                 line,
@@ -375,7 +394,14 @@ def _check_paths(content: SnapshotContent) -> None:
         pure = PurePosixPath(path)
         if set(pure.parts) & FORBIDDEN_PATH_PARTS:
             raise SourceContractError(f"forbidden path part found: {path}")
-        if path in FORBIDDEN_PATHS or any(path.startswith(prefix) for prefix in FORBIDDEN_PREFIXES):
+        if path == "AGENTS.md":
+            # _check_integrity validates the exact public template and its provenance.
+            continue
+        if (
+            path in FORBIDDEN_PATHS
+            or pure.name in {"AGENT.md", "AGENTS.md", "PROMPT_SYSTEME_PROJET_CHATGPT.md"}
+            or any(path.startswith(prefix) for prefix in FORBIDDEN_PREFIXES)
+        ):
             raise SourceContractError(f"forbidden public path found: {path}")
 
 
@@ -385,7 +411,7 @@ def _check_governance(content: SnapshotContent) -> None:
     for phrase in (
         "aucune contribution de code externe",
         "external code contributions are not currently accepted",
-        "Aucun CLA n’est actif",
+        "Aucun CLA n\u2019est actif",
         "No CLA is active",
     ):
         if phrase not in normalized_contributing:

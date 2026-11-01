@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Verify a built PriveoPDF official freeware distribution and its sidecars."""
+"""Verify a built PriveoPDF official binary distribution and its sidecars."""
 
 from __future__ import annotations
 
@@ -19,12 +19,17 @@ if __package__:
 else:
     from build_third_party_sources_bundle import BundleError, verify_bundle
 
+APACHE_LICENSE_SHA256 = (
+    "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"  # pragma: allowlist secret
+)
 BUFFER_SIZE = 1024 * 1024
 FULL_SHA = re.compile(r"[0-9a-f]{40}")
 HEX_SHA256 = re.compile(r"[0-9a-f]{64}")
-SAFE_ARTIFACT = re.compile(r"PriveoPDF-official-freeware-[0-9A-Za-z._-]+-[a-z0-9._-]+")
+SAFE_ARTIFACT = re.compile(r"PriveoPDF-official-[0-9A-Za-z._-]+-[a-z0-9._-]+")
+SOURCE_CODE_LICENSE = "Apache-2.0"
 REQUIRED_FILES = {
     "LICENSE.txt",
+    "NOTICE",
     "NETWORK_ACTIVITY.md",
     "PRIVACY.md",
     "PROVENANCE.json",
@@ -37,8 +42,6 @@ REQUIRED_FILES = {
     "THIRD_PARTY_NOTICES.md",
     "licenses/GPL-3.0.txt",
     "licenses/LGPL-3.0.txt",
-    "licenses/PriveoPDF-Freeware-License-EN.txt",
-    "licenses/PriveoPDF-Freeware-License-FR.txt",
     "licenses/QT-NOTICE.txt",
 }
 FORBIDDEN_DISTRIBUTION_SUFFIXES = {
@@ -89,7 +92,7 @@ SENSITIVE_BYTES = (
 
 
 class DistributionContractError(RuntimeError):
-    """Raised when a freeware distribution is incomplete or unsafe."""
+    """Raised when a binary distribution is incomplete or unsafe."""
 
 
 def _regular(path: Path, *, label: str) -> Path:
@@ -185,10 +188,12 @@ def _validate_sbom(document: dict[str, Any], provenance: dict[str, Any]) -> None
         raise DistributionContractError("SBOM application component is missing")
     if component.get("version") != provenance.get("version"):
         raise DistributionContractError("SBOM and provenance versions differ")
+    if component.get("licenses") != [{"license": {"id": "Apache-2.0"}}]:
+        raise DistributionContractError("SBOM application license is not Apache-2.0")
     expected = {
-        "priveopdf:artifact-license": "LicenseRef-PriveoPDF-Freeware",
-        "priveopdf:internal-project-license-ref": "LicenseRef-PriveoPDF-Source-Available-1.0",
-        "priveopdf:source-code-license": "LicenseRef-PriveoPDF-Source-Available-1.0",
+        "priveopdf:artifact-license": "Apache-2.0",
+        "priveopdf:internal-project-license-ref": SOURCE_CODE_LICENSE,
+        "priveopdf:source-code-license": SOURCE_CODE_LICENSE,
     }
     properties = _properties(document)
     if any(properties.get(name) != value for name, value in expected.items()):
@@ -236,9 +241,9 @@ def _validate_provenance(
         raise DistributionContractError("provenance artifact name is invalid")
     if archive.name != f"{artifact}.zip":
         raise DistributionContractError("archive filename and provenance artifact differ")
-    if document.get("license") != "LicenseRef-PriveoPDF-Freeware":
-        raise DistributionContractError("official archive is not under the freeware license")
-    if document.get("source_code_license") != "LicenseRef-PriveoPDF-Source-Available-1.0":
+    if document.get("license") != "Apache-2.0":
+        raise DistributionContractError("official archive is not under Apache-2.0")
+    if document.get("source_code_license") != SOURCE_CODE_LICENSE:
         raise DistributionContractError("source-code license reference is missing")
     source_commit = document.get("source_commit")
     if not isinstance(source_commit, str) or FULL_SHA.fullmatch(source_commit) is None:
@@ -321,7 +326,7 @@ def check_distribution(
                     hashes[path] = _scan_and_hash(stream, label=path)
                 if path in {
                     "LICENSE.txt",
-                    "licenses/PriveoPDF-Freeware-License-FR.txt",
+                    "NOTICE",
                     "PROVENANCE.json",
                     "QT_RUNTIME_INVENTORY.json",
                     "SBOM.cdx.json",
@@ -365,10 +370,12 @@ def check_distribution(
     sbom = _json_bytes(metadata["SBOM.cdx.json"], label="SBOM.cdx.json")
     _validate_sbom(sbom, provenance)
 
-    if metadata["LICENSE.txt"] != metadata["licenses/PriveoPDF-Freeware-License-FR.txt"]:
-        raise DistributionContractError("LICENSE.txt is not the canonical French freeware license")
-    if b"PolyForm" in metadata["LICENSE.txt"]:
-        raise DistributionContractError("PolyForm is incorrectly presented as the binary license")
+    if hashlib.sha256(metadata["LICENSE.txt"]).hexdigest() != APACHE_LICENSE_SHA256:
+        raise DistributionContractError("LICENSE.txt is not the canonical Apache-2.0 license")
+    if b"Copyright 2026 godlittleboi" not in metadata["NOTICE"]:
+        raise DistributionContractError("PriveoPDF NOTICE attribution is missing")
+    if b"THIRD_PARTY_NOTICES.md" not in metadata["NOTICE"]:
+        raise DistributionContractError("PriveoPDF NOTICE third-party reference is missing")
 
     checksums = _checksums(metadata["SHA256SUMS"])
     if set(checksums) != name_set - {"SHA256SUMS"}:

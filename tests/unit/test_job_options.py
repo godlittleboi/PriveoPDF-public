@@ -7,9 +7,10 @@ from typing import assert_never
 
 import pytest
 
-from pdfmod.domain.jobs import (
+from priveopdf.domain.jobs import (
     MAX_BASE_NAME_CHARS,
     MAX_PAGE_NUMBER,
+    CompressionOptions,
     ExtractOptions,
     InsertBlankPageOptions,
     InsertPagesOptions,
@@ -24,7 +25,7 @@ from pdfmod.domain.jobs import (
     allowed_option_keys,
     coerce_operation_options,
 )
-from pdfmod.domain.page_ranges import PageRange
+from priveopdf.domain.page_ranges import PageRange
 
 
 def _inputs(operation: OperationType, root: Path) -> tuple[Path, ...]:
@@ -127,6 +128,7 @@ def test_options_are_deeply_immutable_for_supported_values() -> None:
 
 def test_operation_options_form_an_exhaustive_discriminated_union() -> None:
     options: tuple[OperationOptions, ...] = (
+        CompressionOptions(Path("out.pdf")),
         MergeOptions(),
         ExtractOptions((1,)),
         RemoveOptions((1,)),
@@ -139,6 +141,7 @@ def test_operation_options_form_an_exhaustive_discriminated_union() -> None:
 
     assert tuple(_option_payload(option) for option in options) == (
         (),
+        (),
         (1,),
         (1,),
         (1,),
@@ -150,6 +153,8 @@ def test_operation_options_form_an_exhaustive_discriminated_union() -> None:
 
 
 def _option_payload(options: OperationOptions) -> tuple[int, ...]:
+    if options.operation is OperationType.COMPRESS_PDF:
+        return ()
     if options.operation is OperationType.MERGE_PDFS:
         return ()
     if options.operation is OperationType.EXTRACT_PAGES:
@@ -313,6 +318,20 @@ def test_job_request_validates_input_arity_per_operation(
 
 def test_allowed_option_keys_are_centralized_for_every_operation() -> None:
     assert {operation: allowed_option_keys(operation) for operation in OperationType} == {
+        OperationType.REMOVE_METADATA: frozenset({"output_path", "replace_input"}),
+        OperationType.PHOTOCOPY_PDF: frozenset({"output_path", "replace_input", "source_identity"}),
+        OperationType.OCR_PDF: frozenset(
+            {"output_path", "languages", "page_numbers", "allow_unsigned_copy"}
+        ),
+        OperationType.REDACT_PDF: frozenset(
+            {"output_path", "areas", "source_identity", "allow_unsigned_copy"}
+        ),
+        OperationType.WATERMARK_PDF: frozenset(
+            {"output_path", "text", "layout", "strength", "source_identity", "allow_unsigned_copy"}
+        ),
+        OperationType.COMPRESS_PDF: frozenset({"output_path", "profile"}),
+        OperationType.PROTECT_PDF: frozenset({"output_path", "replace_input"}),
+        OperationType.UNLOCK_PDF: frozenset({"output_path", "replace_input"}),
         OperationType.MERGE_PDFS: frozenset({"output_path"}),
         OperationType.EXTRACT_PAGES: frozenset({"output_path", "page_numbers"}),
         OperationType.REMOVE_PAGES: frozenset({"output_path", "page_numbers"}),

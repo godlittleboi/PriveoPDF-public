@@ -1,7 +1,7 @@
 {
-  "artifact": "PriveoPDF-source-review-0.1.0-95e7e9eee449",
-  "binary_license": "LicenseRef-PriveoPDF-Freeware",
-  "build_date": "2026-09-06T13:54:53Z",
+  "artifact": "PriveoPDF-source-review-0.1.0-d12b02c8748d",
+  "binary_license": "Apache-2.0",
+  "build_date": "2026-11-01T15:17:40Z",
   "excluded_categories": [
     {
       "category": "corpus_and_private_tests",
@@ -9,11 +9,11 @@
     },
     {
       "category": "export_templates",
-      "count": 11
+      "count": 14
     },
     {
       "category": "internal_governance_and_reports",
-      "count": 27
+      "count": 26
     },
     {
       "category": "local_generated_and_secrets_metadata",
@@ -21,11 +21,11 @@
     },
     {
       "category": "not_allowlisted",
-      "count": 133
+      "count": 164
     },
     {
       "category": "private_history_and_workflow",
-      "count": 14
+      "count": 12
     },
     {
       "category": "private_update_and_beta_channels",
@@ -36,7 +36,7 @@
     {
       "bytes": 2959,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": ".github/ISSUE_TEMPLATE/bug.yml",
@@ -46,344 +46,383 @@
       "bytes": 266,
       "generated": true,
       "generated_from": "public_source/issue_config.public.yml",
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": ".github/ISSUE_TEMPLATE/config.yml",
       "sha256": "0b0fc2062af66eff4aa2fc179951daa2fbc3e229f5224d59978b137a178124e3"
     },
     {
-      "bytes": 2118,
+      "bytes": 2168,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": ".github/ISSUE_TEMPLATE/feature.yml",
-      "sha256": "186335f83537381484e9bc557df1ecd7f13fc565d2bc0065698a429ea3808e80"
+      "sha256": "02968ff322247ecb6092ad5491d97af3815d7bf004f41ed429aba2a269f75bf5"
     },
     {
-      "bytes": 5622,
+      "bytes": 7505,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": ".github/PULL_REQUEST_TEMPLATE.md",
-      "sha256": "67471e18b8dd1122249d634555c91f37df135068b5debd571a4bc5844f4b47e1"
+      "sha256": "6d7870102088545e061fb35c04cde1b868162d5dc485f42b0732ffac17a6427f"
     },
     {
-      "bytes": 2046,
+      "bytes": 2350,
       "generated": true,
       "generated_from": "public_source/ci.public.yml",
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": ".github/workflows/ci.yml",
-      "sha256": "9f1196682d9f3353002598d077cf40d538c0701dcd15a826c19bde93bbe600e6"
+      "sha256": "a5a9ca23ae4f16adfa3267480bedb9d3f2e098ec95130b9c0818fc99a00bd3d9"
     },
     {
-      "bytes": 1288,
+      "bytes": 3102,
+      "generated": true,
+      "generated_from": "public_source/AGENTS.public.md",
+      "license_expression": "Apache-2.0",
+      "license_group": "priveopdf-owned",
+      "mode": "0644",
+      "path": "AGENTS.md",
+      "sha256": "bc5ba5aa71f4e67a5e5f5cd93f9d5d5e41ef47dbf9ea281c702bc20405c87dbd"
+    },
+    {
+      "bytes": 1323,
       "generated": true,
       "generated_from": "public_source/CHANGELOG.public.md",
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": "CHANGELOG.md",
-      "sha256": "d243ace3e0c6a5de4fdf3a2c2cbb910ac2a24cc260d0089f6036ab8fefc23547"
+      "sha256": "40fab644f5d5605de2cb4b707fdb18e0c00c42a8c70411f4a00f62ad8953bf4e"
     },
     {
       "bytes": 1891,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": "CODE_OF_CONDUCT.md",
       "sha256": "ff3a0b13ba0da32b57135ddd25c9840c1c95caf469f2d17e57662aea45722546"
     },
     {
-      "bytes": 3138,
+      "bytes": 3656,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": "CONTRIBUTING.md",
-      "sha256": "e4eed1927d8a4d4b55748451105a0ecb2a6a8343cf1d49f7fd561befb7ab504c"
+      "sha256": "bd9aad10354fbeffb06c5d6dca33127c3aeb3b6117fd9d955d9df1aded1710b0"
     },
     {
-      "bytes": 1905,
+      "bytes": 1890,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": "FEEDBACK.md",
-      "sha256": "85b65855a9164782cd88667bc65522b43824b5a5f7b6e3b12ba35c23cd766abf"
+      "sha256": "d1551aaf699aaa1472a90d0f4f82ec255a46af3a22c9cc3138e02c7c6366dd14"
     },
     {
-      "bytes": 2448,
+      "bytes": 2797,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": "GOVERNANCE.md",
-      "sha256": "7b54da0a4f7b31ac1d4e6e1366a9f1d415c5baa373dd84674749d10ced29de3a"
+      "sha256": "b50e73276a949167065e88a233ab0f7170882761bbeaf192b17cc631a5d271e5"
     },
     {
-      "bytes": 9341,
+      "bytes": 11358,
       "generated": true,
       "generated_from": "LICENSE",
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "source-license-text",
       "mode": "0644",
       "path": "LICENSE",
-      "sha256": "0de0a67507065b4af08b64efe6295b4878ff708047a5c93dc9ad784435e601bd"
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
     },
     {
-      "bytes": 7685,
+      "bytes": 90,
+      "generated": false,
+      "license_expression": "Apache-2.0",
+      "license_group": "priveopdf-owned",
+      "mode": "0644",
+      "path": "NOTICE",
+      "sha256": "716bea08ccfcde2700b31e91c91c5f3dc0e370184a58b4a72459b9f1704c0007"
+    },
+    {
+      "bytes": 3710,
       "generated": true,
       "generated_from": "public_source/README.public.md",
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": "README.md",
-      "sha256": "afcf8b8060b86aa647e7b223537a86468aa66c83312587f680fcab17f09908b8"
+      "sha256": "86670d1a465a437c737f7b1b3ba92020c70072ebd451f86d1bbaf54516028436"
     },
     {
-      "bytes": 4369,
+      "bytes": 4079,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": "SECURITY.md",
-      "sha256": "3e9e790eef8fb104b443779840d5bcb04c8e162f3b3e11a96b333dde5affa52e"
+      "sha256": "05e72c5ea5ba2f6f114a1b04c50e1bb36d6cc7a2b2a2db6e17a239df83df8102"
     },
     {
-      "bytes": 2410,
+      "bytes": 2407,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": "SUPPORT.md",
-      "sha256": "59a16413092b49c71dc85bbc9fa47785373d91e3e2880cab6e952f139df6f634"
+      "sha256": "0ea5ad21b172bbcdcdfce588116ca5e3c1dfc31d113f9917e7cff9fefe5e8ea6"
     },
     {
-      "bytes": 8914,
+      "bytes": 9875,
       "generated": false,
       "license_expression": "LicenseRef-Third-Party",
       "license_group": "third-party-notices",
       "mode": "0644",
       "path": "THIRD_PARTY_NOTICES.md",
-      "sha256": "6103ea342a862f58f5bd0ffcba780de1f83a7277c13880be61ae8fbd96fad47a"
+      "sha256": "b159d3ed8c29194a09d26cde630d78e43710cee289a3a400eb4269fc2722e0a6"
     },
     {
-      "bytes": 2490,
+      "bytes": 2462,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": "compliance/third_party_sources.lock.json",
-      "sha256": "4cf05757456c8b21f1d7417afee72f43919862a0d4d7e920bd062d6d5fbb849b"
+      "sha256": "f97c05a7cf3970b3f3426bcdedc8b02869f72b5b82b2f8624ba6605a467ccbdc"
     },
     {
-      "bytes": 2857,
-      "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "bytes": 2775,
+      "generated": true,
+      "generated_from": "public_source/INSTALL_DEV.public.md",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": "docs/INSTALL_DEV.md",
-      "sha256": "48edfa4877dd49ca1fa2269c4e0f08f4018e1a3af293469246c0f3816c4b3e04"
+      "sha256": "13f222ff4365b02eb1222ba89a201170da5f8f2d1aad77daec94b08ea42a2e5a"
     },
     {
-      "bytes": 6711,
-      "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "bytes": 1190,
+      "generated": true,
+      "generated_from": "public_source/INSTALL_USER.public.md",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": "docs/INSTALL_USER.md",
-      "sha256": "cbe377034c17b701c7b40142abcc7d70a17a0c6adb292e60a3c41a7aef6e6bc4"
+      "sha256": "5436fd61c7d1bc1bb28fd3ad177206ce0e77e1647ee7c1bbda6b8cc78d14c667"
     },
     {
-      "bytes": 23744,
+      "bytes": 37763,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": "docs/UI_STYLE_GUIDE.md",
-      "sha256": "5d5dfffc58bb782c96281120fbaff70543a89638e714ad3d58114bebf9ab3e3e"
+      "sha256": "141d2b6db0bdd3fc840596bb20325032a0ac88673d03b337ea470f8153ef12a5"
     },
     {
-      "bytes": 2237,
+      "bytes": 7477,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
+      "license_group": "priveopdf-owned",
+      "mode": "0644",
+      "path": "docs/ai-development.md",
+      "sha256": "39a32db4c0fa8a63adfee55d27c07c40357032f008a0b5465fbdb9462c4f70fe"
+    },
+    {
+      "bytes": 2254,
+      "generated": false,
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": "docs/community/DISCUSSIONS_SETUP.md",
-      "sha256": "fadf77ab12947715690ac48d1ca5d8fde907ad177b0021349c24ce4fe0c5978d"
+      "sha256": "e23240019f7993753608f55a0290e44ed7b051b390f392f73a12f166ba4e4a81"
     },
     {
-      "bytes": 779,
+      "bytes": 819,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": "docs/community/DISCUSSIONS_WELCOME_EN.md",
-      "sha256": "c337287266c9716773b9d4b4e3bfd398d3d17d0d26ab9d78fa83d83fb09bc4c3"
+      "sha256": "b3dd9c32294fced81ec1ffdbabcbe752cfa5c772e16d7ad28fd93e79774b511d"
     },
     {
-      "bytes": 898,
+      "bytes": 921,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": "docs/community/DISCUSSIONS_WELCOME_FR.md",
-      "sha256": "3e919f81f3ea68a60b8247f4849b65fc73ca63924b5894c2ff40047e55016443"
+      "sha256": "d683a366638f16da5d7c1b4fe851036c9aaae9e777cbbca22d75c9d0a28337d2"
     },
     {
       "bytes": 1434,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": "docs/community/MODERATION.md",
       "sha256": "8774eec0aca5e5f7a7cb5d80811a2c673dcc7f65e09c639a3d4565d8acc6d76e"
     },
     {
-      "bytes": 5601,
+      "bytes": 6064,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": "docs/compliance/NETWORK_ACTIVITY.md",
-      "sha256": "cb3a085bf88ad4a47c09432390fba40113d179f43dc17d1e3ed0edcb21fcc783"
+      "sha256": "8a359ac4087396fd90e4322b3e806e6ac4c28a819e38b363c24b1279a934d2f6"
     },
     {
       "bytes": 557,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": "docs/legal/COPYRIGHT.md",
       "sha256": "3b41ec6c1d31610fe36c15dc36ad617ad53c846094dbc62709fcbf56f0d98568"
     },
     {
-      "bytes": 2309,
+      "bytes": 2639,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": "docs/legal/EXTERNAL_CONTRIBUTIONS_DECISION.md",
-      "sha256": "ad777ef08df08c6cff96fe37df54f2b33cfb10915c3646375c18d273560a0094"
+      "sha256": "d6d9a1ff15cd391e2fa133c97a28eb5442d28543e858eba8d9bbdaf5a58d16fb"
     },
     {
-      "bytes": 1605,
+      "bytes": 3693,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
-      "license_group": "priveopdf-owned",
-      "mode": "0644",
-      "path": "docs/legal/FREEWARE_LICENSE_EXPLAINED.md",
-      "sha256": "faa2099d2d52096d759ef06415921815e766f8c0f6dfc6d7f08c5d3de94c0e41"
-    },
-    {
-      "bytes": 3536,
-      "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": "docs/legal/LEGAL_SOURCES.md",
-      "sha256": "577c3c327d823317956559f6882cedc78809186be17a3488fddada71dceba9de"
+      "sha256": "e80c0069c10ff0dee7e4b8e674c62211532490c8671d6d39bfaa15b3af6412fd"
+    },
+    {
+      "bytes": 879,
+      "generated": false,
+      "license_expression": "Apache-2.0",
+      "license_group": "priveopdf-owned",
+      "mode": "0644",
+      "path": "docs/legal/OPEN_SOURCE_MODEL.md",
+      "sha256": "51072fd62abe874f7f84d5a80419cdbe5ec005bc5f9a97f6cce6418c43d24886"
     },
     {
       "bytes": 1724,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": "docs/legal/PUBLIC_HOSTING_IMPACT.md",
       "sha256": "4000c4117a58864bec2023397acb09bab7432c436dd4559dd3ad0def8e470063"
     },
     {
-      "bytes": 7769,
+      "bytes": 7572,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": "docs/legal/QT_LGPL_COMPLIANCE.md",
-      "sha256": "1cba884705ab6c1712eba64b82e362fb0517123ad36df683d39d85ff69ca4fcd"
+      "sha256": "c9844477ad2cb3a27fad69c43f15f6a7c8427bbb5baf74d4b3540d4973252cc8"
     },
     {
-      "bytes": 2775,
+      "bytes": 2780,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": "docs/legal/QT_LIBRARY_REPLACEMENT.md",
-      "sha256": "acf7c48eb16c00c50927fe1d795cdca873141525c8d3685ce6c1237de958df05"
+      "sha256": "cee8b860f17a6e0d30deed5a2a401c6cc4d0beaecf152bf1e341855f8085df05"
     },
     {
-      "bytes": 1507,
+      "bytes": 1102,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
-      "license_group": "priveopdf-owned",
-      "mode": "0644",
-      "path": "docs/legal/SOURCE_AVAILABLE_MODEL.md",
-      "sha256": "9f0e837304245603b4956d4a2947c27438e518363b40ab6418b2f60fed7dc50c"
-    },
-    {
-      "bytes": 1035,
-      "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": "docs/legal/SOURCE_LICENSE_SCOPE.md",
-      "sha256": "b4e4d9d2c334d002785f4a932b0a69efc4f4c6d08293fa3f69e1862150645c7e"
+      "sha256": "fc96502a7eecadb82c50cfb0d4af208edbea9a7cdb9e40d8a8240e5d3211133e"
     },
     {
-      "bytes": 592,
+      "bytes": 1006,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": "docs/legal/SOURCE_LICENSE_SUMMARY_EN.md",
-      "sha256": "789f9c9d97d88df7ef912219725f3142d2efec3b11ab2b0affd87ce90858b68e"
+      "sha256": "efe8bf98ef07a0d522669405748531d750895b3e69f0a5d22bbad5aa4b0e3689"
     },
     {
-      "bytes": 724,
+      "bytes": 1132,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": "docs/legal/SOURCE_LICENSE_SUMMARY_FR.md",
-      "sha256": "617c5d2aa617edf4fc677c1adcb1df67ff4dcbe3e58641ad89d23f5dde0f5635"
+      "sha256": "6c45e432246a3f0dd5d8b16a0aac71da335d1aff1c7dc7bef50b7d4638082129"
     },
     {
-      "bytes": 660,
+      "bytes": 653,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": "docs/legal/TRADEMARKS.md",
-      "sha256": "f6d02321fc7cadb610f9ca992a670572b44015ea20ceefab25e6667b86ffd7fb"
+      "sha256": "1ce3ec1d523f7e7d5f236b6847a962543919b63a3aeac8fad821b66ed83c6447"
     },
     {
-      "bytes": 7050,
+      "bytes": 13735,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": "docs/privacy.md",
-      "sha256": "406297951c64f9e136f3767daa850b2460008134e36416768cfa93c8f00c5df1"
+      "sha256": "cfb59599fa05b5fb6210a76c30c817e5a51e8807b290db3221f6fc41f79bebb7"
     },
     {
-      "bytes": 2621,
+      "bytes": 2614,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": "docs/release/OFFICIAL_BINARY_BUILD.md",
-      "sha256": "8d1b14ebe62e82dbb5d4ba79456565d9a5aca011f42491da5e252e91625c87d4"
+      "sha256": "dbd8119ddbd408ca23e3737a81a8c5bd4f14828af8b58d44c47f6031861c543f"
+    },
+    {
+      "bytes": 30068,
+      "generated": false,
+      "license_expression": "Apache-2.0",
+      "license_group": "priveopdf-owned",
+      "mode": "0644",
+      "path": "docs/screenshots/accueil.png",
+      "sha256": "9c84aae72ae7fa809a72f0452e7456ed9f8f1b20cb3264d9093d786adbaa04cd"
+    },
+    {
+      "bytes": 32471,
+      "generated": false,
+      "license_expression": "Apache-2.0",
+      "license_group": "priveopdf-owned",
+      "mode": "0644",
+      "path": "docs/screenshots/fusionner.png",
+      "sha256": "172e98b3b4d67cd96428dde6e84b4e17ca668ff46787b42dbd65d3cb8eb7c258"
     },
     {
       "bytes": 3933,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": "docs/security/CRA_REPORTING_PLAYBOOK.md",
@@ -392,7 +431,7 @@
     {
       "bytes": 1143,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": "docs/security/VULNERABILITY_REPORT_TEMPLATE.md",
@@ -401,7 +440,7 @@
     {
       "bytes": 3170,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": "docs/security/VULNERABILITY_TRIAGE.md",
@@ -410,7 +449,7 @@
     {
       "bytes": 604,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": "docs/wiki/addons/index.md",
@@ -419,308 +458,434 @@
     {
       "bytes": 502,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": "docs/wiki/en/addons/index.md",
       "sha256": "08d552ed67f18520cc0ff668302142e975c330d184642f37e24cd75cca0e0617"
     },
     {
-      "bytes": 595,
+      "bytes": 1105,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": "docs/wiki/en/faq.md",
-      "sha256": "840a7fbb03ebc671667420035ebd1db1cbdfe485f6cfebdc7be9537c840a2bd3"
+      "sha256": "48af9f4430e3ea676a44953479cbe0f07e826e330e63a60caed1c8d672873b52"
     },
     {
-      "bytes": 462,
+      "bytes": 688,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": "docs/wiki/en/features/README.md",
-      "sha256": "eca5b35ec6a73e6760292f1d74369060f862c460ca8e421630db3e4d7dc8609e"
+      "sha256": "c7b5bc3b06c1ccafc618eb032cc8feb85bda9d0d1d52cbd9b89167baddae1a89"
     },
     {
       "bytes": 456,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": "docs/wiki/en/features/appearance.md",
       "sha256": "927cbff567f7c5fbf72a0781e008eac2a9b10494e3b0c57add71514ad8277edf"
     },
     {
-      "bytes": 425,
+      "bytes": 682,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": "docs/wiki/en/features/blank_page.md",
-      "sha256": "c636cf13c47b8ca1bfefab5222beb1a90d889b2cd92ab6b816d81fe3d7924421"
+      "sha256": "5362d41d47a83e3574381021ad07604d9d1a7a068c6a1c99746f50605de94b5c"
     },
     {
-      "bytes": 438,
+      "bytes": 1758,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
+      "license_group": "priveopdf-owned",
+      "mode": "0644",
+      "path": "docs/wiki/en/features/compress.md",
+      "sha256": "800de98da8e8730d308da9043ae3844d5ea4e83b8d5bac63cff48a1555d20f36"
+    },
+    {
+      "bytes": 642,
+      "generated": false,
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": "docs/wiki/en/features/extract.md",
-      "sha256": "b6150eaaf4bf83ebe96864d40fef7bb09b56e0397f87b4610c40802fc582268f"
+      "sha256": "35037ba3f77546e5591cdd236d9ee701b37f8003558c365da4db34edc4ecf40c"
     },
     {
-      "bytes": 500,
+      "bytes": 771,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": "docs/wiki/en/features/insert.md",
-      "sha256": "f7224ed2ccf735ba299dd3976aa8d56f467a2879daa756ce52698febc9dfb549"
+      "sha256": "f0bc91a1f3ece3497f20466efe5eafaf10f202a9cca36e948ec14ae3a5789d3c"
     },
     {
-      "bytes": 434,
+      "bytes": 1044,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": "docs/wiki/en/features/merge.md",
-      "sha256": "75292f15de73be0f463ee8be62b7799e4573221e4afffea23e473e7af26eebc2"
+      "sha256": "12ede77469ab975a988a13b8acc4ce5c2dcad9b7509b42873b4f08fbe223305b"
     },
     {
-      "bytes": 398,
+      "bytes": 4377,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
+      "license_group": "priveopdf-owned",
+      "mode": "0644",
+      "path": "docs/wiki/en/features/ocr_pdf.md",
+      "sha256": "df94987fe10c8e20676c33a5e8e9c642c8d2d7602e3ea78a6d53cfb881fb92e9"
+    },
+    {
+      "bytes": 1831,
+      "generated": false,
+      "license_expression": "Apache-2.0",
+      "license_group": "priveopdf-owned",
+      "mode": "0644",
+      "path": "docs/wiki/en/features/protect.md",
+      "sha256": "f96510f6c1cde0e31eed691be09a164fe58c79c7ca676d82840f899bad2ebb01"
+    },
+    {
+      "bytes": 2585,
+      "generated": false,
+      "license_expression": "Apache-2.0",
+      "license_group": "priveopdf-owned",
+      "mode": "0644",
+      "path": "docs/wiki/en/features/redact_pdf.md",
+      "sha256": "1e468fc59299a4e3b50bf064a5bb2d8979d473f43ba9c625739aa377e98d9847"
+    },
+    {
+      "bytes": 592,
+      "generated": false,
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": "docs/wiki/en/features/remove.md",
-      "sha256": "3088c8ca9138f4210cbbbea8a90208df5e48d684bc02817bab7205f0bdadff75"
+      "sha256": "1b0c70bf1822a888603db4e319c3898fc51d36623d75dd2f883d855d86ae1544"
     },
     {
-      "bytes": 469,
+      "bytes": 726,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": "docs/wiki/en/features/reorder.md",
-      "sha256": "83b4a85124b118e75366c82358c78abf6321548730503e183c2737eb6b819570"
+      "sha256": "5bbe15ff86d77f2dfa571ceb388ddd97126b95abe9c0141da0368ba95031142b"
     },
     {
-      "bytes": 442,
+      "bytes": 938,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": "docs/wiki/en/features/rotate.md",
-      "sha256": "c831f953a138cca5e5bde5f71375152c33b95ff3c3d7fb33f0f013ee6e4ab2f6"
+      "sha256": "66fd688293f0a681362aad2cc28602ed5b0eaf037270aa32b05e8c8d9f84f166"
     },
     {
-      "bytes": 411,
+      "bytes": 3503,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
+      "license_group": "priveopdf-owned",
+      "mode": "0644",
+      "path": "docs/wiki/en/features/share_check.md",
+      "sha256": "f6ab7f677bc2862d58cc1fece542f90fd1931bd73b4094ed54c2770ba346c659"
+    },
+    {
+      "bytes": 1141,
+      "generated": false,
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": "docs/wiki/en/features/split.md",
-      "sha256": "64a9a343e8bbb662f1360395b86fc1c7cc68a1926abe406b289c2ef4048eb15b"
+      "sha256": "a23218834ba6294af6af659ff5596065f0179b42cd5bc97cdd55d9abfb78cbde"
     },
     {
-      "bytes": 504,
+      "bytes": 1943,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
+      "license_group": "priveopdf-owned",
+      "mode": "0644",
+      "path": "docs/wiki/en/features/unlock_pdf.md",
+      "sha256": "7d4448dc46d5fb729ebb6b543b44eb6c13ba1a565f69a855a207736afe3bdd0d"
+    },
+    {
+      "bytes": 2336,
+      "generated": false,
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": "docs/wiki/en/features/view.md",
-      "sha256": "0ce2f09882793634dc106b36bf3415b8b6c2c81b7beeedadc93e0e6f68025ea0"
+      "sha256": "ef7c263fed65e66de348c9b52008000860d140c7179199f0d5b6c19b94c767dc"
     },
     {
-      "bytes": 1538,
+      "bytes": 2341,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
+      "license_group": "priveopdf-owned",
+      "mode": "0644",
+      "path": "docs/wiki/en/features/watermark.md",
+      "sha256": "6c29d498c4fa9075c0a4a2788d9063311bb32ae100beedb4f96e57fa6f2e95ff"
+    },
+    {
+      "bytes": 3149,
+      "generated": false,
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": "docs/wiki/en/getting-started.md",
-      "sha256": "6c05eac665ca3d472f59afb1ac40e0bbc657d703673b16c175d90fba959efd10"
+      "sha256": "45c29bdd2e0acbd99e403aae6eaa02357209e62bdeed87150fd2b6bc47716ca6"
     },
     {
       "bytes": 467,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": "docs/wiki/en/index.md",
       "sha256": "74a300354dbecb1acf0d0bffa87ec8d12871215a617b8d62aaaa2a12e06c605b"
     },
     {
-      "bytes": 571,
+      "bytes": 1774,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": "docs/wiki/en/privacy.md",
-      "sha256": "5e916999c66c9d0ee211c3cfb0d1fcebf5733dccfb52f5562d62d8d7e9972746"
+      "sha256": "1c3e9407465b72800f1d746e16f9e7532a2df8e4465160ec60ad6d7b14cc678e"
     },
     {
-      "bytes": 683,
+      "bytes": 3271,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": "docs/wiki/en/troubleshooting.md",
-      "sha256": "6168060e0ca5fd0bc3774b21c683f13cb128d42a69548b34076717c679ed790e"
+      "sha256": "751973508fb369ea61954a82b0bf47a511261e9f3f10167d4124ab5cf3d888f9"
     },
     {
-      "bytes": 707,
+      "bytes": 1275,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": "docs/wiki/faq.md",
-      "sha256": "ef9e6848dc5b10ba0f89d1b97cb7ddec53231b20be9e6588efea51e36aefbee9"
+      "sha256": "3982cd4a59350af0592306912dabae040310d8abc5eee6e05fe450a1680ecc68"
     },
     {
-      "bytes": 545,
+      "bytes": 815,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": "docs/wiki/features/README.md",
-      "sha256": "fb8e14f63f2fe9408f9a2fd5842bb45b207f816130d46873ca761e34359b2f4f"
+      "sha256": "ad7c612248ca61df2536f878db35fe7992adcd5550135b76875ebfe6a0300f04"
     },
     {
       "bytes": 540,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": "docs/wiki/features/appearance.md",
       "sha256": "2465b813983b37402b1c730dd8c97570a8c053a8d0e765ccec190ef5839a73e0"
     },
     {
-      "bytes": 528,
+      "bytes": 821,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": "docs/wiki/features/blank_page.md",
-      "sha256": "64ea759a2cc605a92f513c1fe9cde94e0481969bfc69a46bb53ddd23973923e8"
+      "sha256": "45e1fa350a838ff14fa48e14a3812d5cd6193408e6f46a7dd3ed29453b2996ae"
     },
     {
-      "bytes": 502,
+      "bytes": 2042,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
+      "license_group": "priveopdf-owned",
+      "mode": "0644",
+      "path": "docs/wiki/features/compress.md",
+      "sha256": "408207f96c391770ecdec88f2e5faf24c299a28d9074da68321dd72d390f2bc4"
+    },
+    {
+      "bytes": 738,
+      "generated": false,
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": "docs/wiki/features/extract.md",
-      "sha256": "d8b2514ee61283f948ee595da48cdd4cf5f0785a4bc23ff7d24ffda990acfb15"
+      "sha256": "4f7f0c8537ed1f09af364bc8f06a35317bc5d2275a869b8e05979f2563733142"
     },
     {
-      "bytes": 558,
+      "bytes": 896,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": "docs/wiki/features/insert.md",
-      "sha256": "c0137dfbda9044db4c291236a4423c2b50c07b4b52c4f6fa612e2487c97ed2a0"
+      "sha256": "9b3ade7d002794b9ba05a743f258dd2cc7f951935f01fb00d681092d359daf33"
     },
     {
-      "bytes": 504,
+      "bytes": 1186,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": "docs/wiki/features/merge.md",
-      "sha256": "8ad7ad672939ef53f995dd5849b057e97152ac9a77662bb9e4c9f176fad25224"
+      "sha256": "83f0098ecb4ec9ca18e47275fe4049f76ba17af5438f2230f791fd91689799ba"
     },
     {
-      "bytes": 483,
+      "bytes": 4947,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
+      "license_group": "priveopdf-owned",
+      "mode": "0644",
+      "path": "docs/wiki/features/ocr_pdf.md",
+      "sha256": "673ebc8ab687b6fc73e5051a9821fadf19e1eee0bbb8d350a642e8a655ff8174"
+    },
+    {
+      "bytes": 2224,
+      "generated": false,
+      "license_expression": "Apache-2.0",
+      "license_group": "priveopdf-owned",
+      "mode": "0644",
+      "path": "docs/wiki/features/protect.md",
+      "sha256": "f92bbcb998612da81ebc0c7b1d249112107aa44fd7fb0e43b947586ce968a40d"
+    },
+    {
+      "bytes": 2970,
+      "generated": false,
+      "license_expression": "Apache-2.0",
+      "license_group": "priveopdf-owned",
+      "mode": "0644",
+      "path": "docs/wiki/features/redact_pdf.md",
+      "sha256": "8a3f1774a9aa814773c8971cce113aa72583edb7903baf1f24f9104d944562be"
+    },
+    {
+      "bytes": 698,
+      "generated": false,
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": "docs/wiki/features/remove.md",
-      "sha256": "2bcce442d187e5e9143c5b4c188a260eebada9fa7059136c05f52d17c22f7340"
+      "sha256": "b932f47f6765ded6193b1a1d9363beae6d3c46ed2a6aedc14ef6e98aabcbcb19"
     },
     {
-      "bytes": 562,
+      "bytes": 860,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": "docs/wiki/features/reorder.md",
-      "sha256": "52cf362695366afc24eaeb47382cd8b3641ed313fc271e08c74322941d5f0aeb"
+      "sha256": "9da41827ca10d05fe56b221d5e1087bee9484a10ff31cdd53a42581cfa233420"
     },
     {
-      "bytes": 515,
+      "bytes": 1097,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": "docs/wiki/features/rotate.md",
-      "sha256": "5dca88d657820af5b99371487e431ef3ad51f3f8450a8e768e5f05555f4a6898"
+      "sha256": "56dd66c2dc139f7fcae8288dd1d8c1ebfd6ef49e8c3c0145120350625f3786bf"
     },
     {
-      "bytes": 480,
+      "bytes": 4027,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
+      "license_group": "priveopdf-owned",
+      "mode": "0644",
+      "path": "docs/wiki/features/share_check.md",
+      "sha256": "57650c7f5c43e33e896d085e49f7d2a522e79bb1fbdc750e38d787069d150502"
+    },
+    {
+      "bytes": 1348,
+      "generated": false,
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": "docs/wiki/features/split.md",
-      "sha256": "f0fdcf7479b53ea64609ba4b382a80984bf7e0d0f927e665bcb8f57ec3a2517b"
+      "sha256": "f217f8847dd209f77238e8165f651626d3565fa9dbf96783fdac661982de52e3"
     },
     {
-      "bytes": 603,
+      "bytes": 2340,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
+      "license_group": "priveopdf-owned",
+      "mode": "0644",
+      "path": "docs/wiki/features/unlock_pdf.md",
+      "sha256": "9a79b59492fe4e5e5b102c89846b34e2aa7cc8c7d0166fbd6dd363a362684d19"
+    },
+    {
+      "bytes": 2735,
+      "generated": false,
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": "docs/wiki/features/view.md",
-      "sha256": "93e5146644e013d08daee6df46f03c71dbdfc2ecdfc642e89ac8046faaed1703"
+      "sha256": "591a54c695120b7d3d4b8324ce16ae368c730c3b795c4665216512f6e07bce0d"
     },
     {
-      "bytes": 1694,
+      "bytes": 2637,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
+      "license_group": "priveopdf-owned",
+      "mode": "0644",
+      "path": "docs/wiki/features/watermark.md",
+      "sha256": "755d2319238a11af57796fe059b0f9ddd3bc6f30dd793baae381ffb569c5f3d0"
+    },
+    {
+      "bytes": 3506,
+      "generated": false,
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": "docs/wiki/getting-started.md",
-      "sha256": "832cc0905d79dc8d5d2035fe57f45e5e8949dee256ed85d3903e544251e5c53b"
+      "sha256": "2a27f08a399eaf9e25edd54ebebe83523becb2774984c4587b76b02818c0f92b"
     },
     {
       "bytes": 537,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": "docs/wiki/index.md",
       "sha256": "3748089e73a7369c9e3acfa6177aaf3dfb52f3d649df6e12febe2a5b224cb6ec"
     },
     {
-      "bytes": 733,
+      "bytes": 2090,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": "docs/wiki/privacy.md",
-      "sha256": "e9b3e5f0b6d077c8f673aea71d40a8b77fdad7a00ecdd92d5c18c374c7f23b52"
+      "sha256": "d726e536094d8340d049d1e376990b52d91479c66ed02971005d6828ec788e43"
     },
     {
       "bytes": 1165,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": "docs/wiki/stylesheets/extra.css",
       "sha256": "fdac8524d7d939a095daae5c35496143332270b9066b9c8ec2574eb9da807f2d"
     },
     {
-      "bytes": 829,
+      "bytes": 3851,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": "docs/wiki/troubleshooting.md",
-      "sha256": "be6e397888e021506979d4f3ece04f644f5d990a220098121706712e0d5b0654"
+      "sha256": "91d435d65b7ca32bb837a9a0989cbc076ecdb7c15570f207d4b620afa5ea371a"
     },
     {
       "bytes": 35149,
@@ -741,1210 +906,1519 @@
       "sha256": "e3a994d82e644b03a792a930f574002658412f62407f5fee083f2555c5f23118"
     },
     {
-      "bytes": 3680,
-      "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Freeware",
-      "license_group": "freeware-binary-license",
-      "mode": "0644",
-      "path": "licenses/PriveoPDF-Freeware-License-EN.txt",
-      "sha256": "b22ead41dcec55816935d5bf4c622f83fd06df1872b7723e3e0876880397b7dc"
-    },
-    {
-      "bytes": 4093,
-      "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Freeware",
-      "license_group": "freeware-binary-license",
-      "mode": "0644",
-      "path": "licenses/PriveoPDF-Freeware-License-FR.txt",
-      "sha256": "fd10ce0568abacc041b907cc7cc1a39bfcc0eac411fe9f225b80ee1c802cfdd0"
-    },
-    {
-      "bytes": 3044,
+      "bytes": 2970,
       "generated": false,
       "license_expression": "LicenseRef-Third-Party",
       "license_group": "third-party-notices",
       "mode": "0644",
       "path": "licenses/QT-NOTICE.txt",
-      "sha256": "959a63c18352db994c6e099bde05289029140d0a9a9fa86298ef427a92b1d610"
+      "sha256": "eaceee1fe555d12d609487c0f925466f6123c16a883ac52e1a926a8af380eb11"
     },
     {
       "bytes": 280,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": "priveopdf.desktop.in",
       "sha256": "2e2a4ac10d00a71a6294ad9de1eb2f1fc277e91b35c84123db9644378b256edf"
     },
     {
-      "bytes": 1379,
+      "bytes": 1524,
       "generated": true,
       "generated_from": "public_source/pyproject.public.toml",
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": "pyproject.toml",
-      "sha256": "e6de08098480225b87545dd724b2aacbe553afd19905ba6edb65e7b76e266337"
+      "sha256": "efaf44dea860863073108428f66f9eaf3b0ff336dfef85c40561d4f984035bbe"
     },
     {
-      "bytes": 1056,
+      "bytes": 1119,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": "pyrightconfig.json",
-      "sha256": "061af9f9f80c909714cee5f21bc6f3ae93df15a0d95efc61b98c0523f610b074"
+      "sha256": "b7403bd698073d93e7bdff68445536ba9ffb2b4a2afc7d7f82fee04f8c651a89"
     },
     {
       "bytes": 40,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/__init__.py",
+      "path": "src/priveopdf/__init__.py",
       "sha256": "b610922f85e6a5fdc1597850468eade94c776fc10f778f2fc3ed011fb0a85fa0"
     },
     {
       "bytes": 37,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/app/__init__.py",
+      "path": "src/priveopdf/app/__init__.py",
       "sha256": "f1f60275acad4c424d9a88e1b360f2985939eee1bd89fc48ad015fcb732ac175"
     },
     {
-      "bytes": 2693,
+      "bytes": 2667,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/app/app_info.py",
-      "sha256": "17c7683a99dcdf819fa447f36b02fb6e7736bddcdaa60c287652339ea4a7ea51"
+      "path": "src/priveopdf/app/app_info.py",
+      "sha256": "a86222e7f522032cc594f0c32011335b869838be958c276e5d44fd52d19a2aac"
     },
     {
-      "bytes": 22646,
+      "bytes": 22979,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/app/beta_diagnostics.py",
-      "sha256": "3c680f6d0f0cd1edbe2dd81a6f81acddd4a68e93d778aa19ddc47ba934d438cd"
+      "path": "src/priveopdf/app/beta_diagnostics.py",
+      "sha256": "507de11093e8d7b80c7fd9c9bba2dae6e19feba7dae2776ccb69c72d6cff6ce5"
     },
     {
-      "bytes": 6443,
+      "bytes": 6378,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/app/beta_integration.py",
-      "sha256": "d1b734516406b4c7c3603b652e1a669c993b5cee7f2e62972d2bf1c6e9f459a1"
+      "path": "src/priveopdf/app/beta_integration.py",
+      "sha256": "c3616a4284a90ca80526899d33c66fbabd9fcad86c927966da5d3879b74f8860"
     },
     {
-      "bytes": 1036,
+      "bytes": 1114,
       "generated": true,
       "generated_from": "public_source/beta_versions.public.py",
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/app/beta_versions.py",
-      "sha256": "970453e920fa84bda631e1ef7a72e90c80895c5437ceca697dba2486a422a333"
+      "path": "src/priveopdf/app/beta_versions.py",
+      "sha256": "2222806c6632182da60741887a8d59bfb00e45408f4ff5a195adb523d167e61f"
     },
     {
-      "bytes": 3483,
+      "bytes": 3555,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/app/bootstrap.py",
-      "sha256": "d0c893a640cddbe547d07aaf9f29cdb0564fd8c746115243248e109473e29487"
+      "path": "src/priveopdf/app/bootstrap.py",
+      "sha256": "64acf6493c389410d58e64c8b6107ac4b49c946953fd1264874681d72dadef1a"
     },
     {
-      "bytes": 4095,
+      "bytes": 4034,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/app/dev_publication.py",
-      "sha256": "8b79af86015ebbe7b0a165a98c7fff84bdc6babf4c6cba4c620ae2eb7b26cb32"
+      "path": "src/priveopdf/app/dev_publication.py",
+      "sha256": "806c70be53155db1f673397e43e79167bea45018f781aaa53ab857b9e8359d58"
     },
     {
-      "bytes": 1380,
+      "bytes": 1890,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/app/frozen_main.py",
-      "sha256": "4360e69ae0ace29509ce78423b3991667c47c30427333451c365ccf73c9b02ab"
+      "path": "src/priveopdf/app/frozen_main.py",
+      "sha256": "50695bd5aa4203cce44cc45c3bcae7eb2b24897db81fca7d760c0d8cfb3e926e"
     },
     {
-      "bytes": 3939,
+      "bytes": 3942,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/app/instance_lock.py",
-      "sha256": "44a66cf69ecb84c02b154c6a0cd3aa95f5f1bb19f042433e526068d5f181de6a"
+      "path": "src/priveopdf/app/instance_lock.py",
+      "sha256": "9fbde5b2bfc1591a336994a2a29dea570d95781d1ddace69a511a22989cb5521"
     },
     {
-      "bytes": 197,
+      "bytes": 200,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/app/main.py",
-      "sha256": "84062e1edc986a6bc44d705d3b97a56be08930ccd60cc8a4c4b2f881a1b5aa2f"
+      "path": "src/priveopdf/app/main.py",
+      "sha256": "5f360ebcca0075b24d78d24919255f5e348025559796964ed2c2a258cff3cc3c"
     },
     {
-      "bytes": 19566,
+      "bytes": 21284,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/app/network_broker.py",
-      "sha256": "9bb35a1f62692fa21f701b42681193817d6346f5b2a025df0a14ae6a06964f86"
+      "path": "src/priveopdf/app/network_broker.py",
+      "sha256": "a001210d1262f0ca5f794ff70c0038763c81ebf62e5e5ef39170f33a7aaaa9dc"
     },
     {
-      "bytes": 16445,
+      "bytes": 3691,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/app/settings.py",
-      "sha256": "31eb4db529533aada4da24a4b56f908ac67b252d1e6d1db9e7b06f8a13067ab4"
+      "path": "src/priveopdf/app/package_install.py",
+      "sha256": "3844ef1508417a1a7d06ff1ed633cb825cccdae20653919ca6a0d86ae884a6cf"
     },
     {
-      "bytes": 1723,
+      "bytes": 3087,
+      "generated": false,
+      "license_expression": "Apache-2.0",
+      "license_group": "priveopdf-owned",
+      "mode": "0644",
+      "path": "src/priveopdf/app/release_opener.py",
+      "sha256": "003d35015357a40dab3716d5604eaf1a7cfe561df24211172e5fe1532d32aa05"
+    },
+    {
+      "bytes": 18460,
+      "generated": false,
+      "license_expression": "Apache-2.0",
+      "license_group": "priveopdf-owned",
+      "mode": "0644",
+      "path": "src/priveopdf/app/settings.py",
+      "sha256": "9dbfdd4a34af3f3adabe56bd05013a6ea5e3bc07f61b7fbf141db858dcd823a6"
+    },
+    {
+      "bytes": 1828,
       "generated": true,
       "generated_from": "public_source/source_update.public.py",
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/app/source_update.py",
-      "sha256": "e4b9703c196e7f9749fc7aa669516bb1ccaa582acba3f5f654a5a0e83982e794"
+      "path": "src/priveopdf/app/source_update.py",
+      "sha256": "5673f6ed7d71347ab196c6b93cc6979e753dadd984db1b86d324a6886aded122"
     },
     {
-      "bytes": 30633,
+      "bytes": 26829,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/app/update_checker.py",
-      "sha256": "c2e4f4417c8e1a3a97382145d28e17edd688e52cbbba0b7398798b11310a239f"
+      "path": "src/priveopdf/app/update_checker.py",
+      "sha256": "c4a5df58dbdd9ba8b71200b580e5eca4461fc1c723bcbe1cd4da2a5e2c076120"
     },
     {
-      "bytes": 9351,
+      "bytes": 9354,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/app/workspace_session.py",
-      "sha256": "fa02a3335e7e6bb5a562e871f3e5c3a55aca4a51501587da46c6ae62d19a5b4d"
+      "path": "src/priveopdf/app/workspace_session.py",
+      "sha256": "747a745992106a93f13895ba4d3b941cd92bc75c0d288237ae0605f4627a66ab"
     },
     {
       "bytes": 43,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/assets/__init__.py",
+      "path": "src/priveopdf/assets/__init__.py",
       "sha256": "e42f3eda96a75fe7b297636ed31a2bcf5a8ff1f1997b05c4ba7a50c2e45a0416"
     },
     {
       "bytes": 41,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/assets/icons/__init__.py",
+      "path": "src/priveopdf/assets/icons/__init__.py",
       "sha256": "8ae2a363f7b500c559c55c6a978ec25d731e73878e3b27d8887fff1b2af833e7"
     },
     {
       "bytes": 782,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/assets/icons/app_icon.svg",
+      "path": "src/priveopdf/assets/icons/app_icon.svg",
       "sha256": "7a17707039045d75407845ed0cef69a135f16119e02552ac27334fab31652d7b"
     },
     {
       "bytes": 762,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/assets/icons/app_icon_128.png",
+      "path": "src/priveopdf/assets/icons/app_icon_128.png",
       "sha256": "4f5a3f341e01f6622ae25ef23732c3f40b1b169cbe9b2148e9bac31160d49f39"
     },
     {
       "bytes": 194,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/assets/icons/app_icon_16.png",
+      "path": "src/priveopdf/assets/icons/app_icon_16.png",
       "sha256": "30b3242137942c7377e4187ef541a13988ca0335962b25cbecf9039ceae6bb4a"
     },
     {
       "bytes": 243,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/assets/icons/app_icon_24.png",
+      "path": "src/priveopdf/assets/icons/app_icon_24.png",
       "sha256": "9ddcf22b71645162c8ac48fc4397dccf96032763fe9c4310e0c7e6fb34d01837"
     },
     {
       "bytes": 1266,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/assets/icons/app_icon_256.png",
+      "path": "src/priveopdf/assets/icons/app_icon_256.png",
       "sha256": "c54eb4aeda6ecd81ced195be4a0499e2df38bf7660ea6aaac927d7e8b6f23c72"
     },
     {
       "bytes": 289,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/assets/icons/app_icon_32.png",
+      "path": "src/priveopdf/assets/icons/app_icon_32.png",
       "sha256": "3cf9c9cf126fbd8b19d73fe711731042a4fc6c71906164560d9954b3246ddde4"
     },
     {
       "bytes": 425,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/assets/icons/app_icon_48.png",
+      "path": "src/priveopdf/assets/icons/app_icon_48.png",
       "sha256": "88e8ecdc48146a5c620ff0372e8cae2172075020e9d36bccab31d2160a0efb35"
     },
     {
       "bytes": 510,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/assets/icons/app_icon_64.png",
+      "path": "src/priveopdf/assets/icons/app_icon_64.png",
       "sha256": "e5274f091def32002c2dcdc5a283cf6fc2fce1ed9ac83bfd0ec419577c2e3700"
     },
     {
       "bytes": 2177,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/assets/icons/app_icon_beta.svg",
+      "path": "src/priveopdf/assets/icons/app_icon_beta.svg",
       "sha256": "0848cc2b33090730c1feacf2eb80fb525aa48cf16dfbcc92de0d59ee5ed65249"
     },
     {
       "bytes": 1011,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/assets/icons/app_icon_beta_128.png",
+      "path": "src/priveopdf/assets/icons/app_icon_beta_128.png",
       "sha256": "eb8de049ad181d9da6cd3fb322eff8c16a0a40f2bd438befc1a80601e49008d8"
     },
     {
       "bytes": 520,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/assets/icons/app_icon_beta_16.png",
+      "path": "src/priveopdf/assets/icons/app_icon_beta_16.png",
       "sha256": "b70ff793684d91aaeec3b3b8b60c2646a8b731578350fa84dc7237eb53d56e9b"
     },
     {
       "bytes": 710,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/assets/icons/app_icon_beta_24.png",
+      "path": "src/priveopdf/assets/icons/app_icon_beta_24.png",
       "sha256": "3d415d64735bbab0fcf42564b74b32dac353d10d0e77f2f0eae3c1d5e78fe263"
     },
     {
       "bytes": 1334,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/assets/icons/app_icon_beta_256.png",
+      "path": "src/priveopdf/assets/icons/app_icon_beta_256.png",
       "sha256": "c374c8c749cb02b7eb69f5111912da6781b862abce5b4e75bfc310e5efed2075"
     },
     {
       "bytes": 773,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/assets/icons/app_icon_beta_32.png",
+      "path": "src/priveopdf/assets/icons/app_icon_beta_32.png",
       "sha256": "0847739c766f41911f0b31e60b320cb77a62a84d0f123f6ca2a068d2873140e4"
     },
     {
       "bytes": 1118,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/assets/icons/app_icon_beta_48.png",
+      "path": "src/priveopdf/assets/icons/app_icon_beta_48.png",
       "sha256": "3241194574a7c9d610e1da9025072756500021694b585082e90539d0291191c4"
     },
     {
       "bytes": 888,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/assets/icons/app_icon_beta_64.png",
+      "path": "src/priveopdf/assets/icons/app_icon_beta_64.png",
       "sha256": "7f31812de52ac7553f20a67af2f7be671da89e9d3c9d724bb761b6f2d26b9fc1"
     },
     {
       "bytes": 3149,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/assets/icons/app_icon_dev.svg",
+      "path": "src/priveopdf/assets/icons/app_icon_dev.svg",
       "sha256": "a12b2ac5c389aefa8ed7754ddbe3cc08b2826db38002d3b8432c4ba780263a84"
     },
     {
       "bytes": 22,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/domain/__init__.py",
+      "path": "src/priveopdf/domain/__init__.py",
       "sha256": "10a21423d3896f4958598671d6a8af80e01eec375cc945106ba782e54501922f"
     },
     {
-      "bytes": 2008,
+      "bytes": 1429,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/domain/document_context.py",
-      "sha256": "5a4b714a92a358ffe115ed65939fe4626ca7ba6d11573e30ad3fac7210696e6f"
+      "path": "src/priveopdf/domain/document_context.py",
+      "sha256": "068dc3f118e57df6fac9505837b22068e82767e6aaac45dc6fe1444d09e045e0"
     },
     {
-      "bytes": 2645,
+      "bytes": 976,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/domain/errors.py",
-      "sha256": "3d3f2c2cf10dc3906abe8864f99bd9740cc4603e00b5645b580a5f79fd626769"
+      "path": "src/priveopdf/domain/document_inspection.py",
+      "sha256": "9f0013ccbbb0550398462390576f85903924c5c4f69fbadd0628c6bb50fe8c2b"
     },
     {
-      "bytes": 20043,
+      "bytes": 2632,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/domain/jobs.py",
-      "sha256": "6452b0c623dbf05069f7efa73d1160623e1974a7e8f6921b8041e82f79f1084d"
+      "path": "src/priveopdf/domain/errors.py",
+      "sha256": "33f4430b5873410cee20ab2f7e3017f71ac180e1fc9e3c52b060c5522a41b768"
     },
     {
-      "bytes": 2907,
+      "bytes": 38052,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/domain/page_plans.py",
-      "sha256": "028f2d100a78be139f98a6cd3c21b7ad49f758f9dc36b835687bd59e0a7a7727"
+      "path": "src/priveopdf/domain/jobs.py",
+      "sha256": "ddeb34b20b6548f1c1eadce79fc70f0c805aad289ea1c3d2bcfe13146dff13d3"
     },
     {
-      "bytes": 5064,
+      "bytes": 7620,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/domain/page_ranges.py",
-      "sha256": "e22e3936470be6e4ac65cb0566d1bbf5fc7dfc6a760429fb699809a2708ac0e1"
+      "path": "src/priveopdf/domain/ocr_languages.py",
+      "sha256": "831a63d40c8329b56451dd61bb3b27cc87dcbe9087a8774b5dd3ce21e8577b88"
+    },
+    {
+      "bytes": 4051,
+      "generated": false,
+      "license_expression": "Apache-2.0",
+      "license_group": "priveopdf-owned",
+      "mode": "0644",
+      "path": "src/priveopdf/domain/page_plans.py",
+      "sha256": "b139b4279c7eebe0dedb93fee49ec78e3b8ee34dca607bd4f3b40f4d0b9c27e2"
+    },
+    {
+      "bytes": 5780,
+      "generated": false,
+      "license_expression": "Apache-2.0",
+      "license_group": "priveopdf-owned",
+      "mode": "0644",
+      "path": "src/priveopdf/domain/page_ranges.py",
+      "sha256": "a0429428b1d3a786b4514fc62a26f9be72f8ef4d57618dd1caadb98a7f0a60f1"
     },
     {
       "bytes": 1351,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/domain/paper_sizes.py",
+      "path": "src/priveopdf/domain/paper_sizes.py",
       "sha256": "482543e7c4ff01c0203d082db5545bd819e678204c43acab2747e0cea2991c2a"
+    },
+    {
+      "bytes": 1172,
+      "generated": false,
+      "license_expression": "Apache-2.0",
+      "license_group": "priveopdf-owned",
+      "mode": "0644",
+      "path": "src/priveopdf/domain/share_inspection.py",
+      "sha256": "a5bca9b278c3bc133d3bffc489fcea3d00af6ee2c52cda96a19b1bbc82d3b02f"
+    },
+    {
+      "bytes": 4752,
+      "generated": false,
+      "license_expression": "Apache-2.0",
+      "license_group": "priveopdf-owned",
+      "mode": "0644",
+      "path": "src/priveopdf/domain/watermark_layout.py",
+      "sha256": "65d0ac63ef43d31018ec33f4beaf8721e91042f73ea8c87e986b14bfd79c7429"
     },
     {
       "bytes": 26,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/engine/__init__.py",
+      "path": "src/priveopdf/engine/__init__.py",
       "sha256": "8249b78e3e0f421a87b75d1431bd12c267122410f35c06cfef652acfb33ad5c2"
     },
     {
-      "bytes": 9261,
+      "bytes": 8645,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/engine/document_inspection.py",
-      "sha256": "a7f4ebc904f114c13ec35805fd94e7a7f9c834342b4bab9459da53ea7723492a"
+      "path": "src/priveopdf/engine/document_inspection.py",
+      "sha256": "fa80d3f6f3fcd62dd5397a77a5325ccfc19334e3cb62713430b891ed0a15ff4d"
     },
     {
-      "bytes": 29600,
+      "bytes": 7523,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/engine/pdf_structural.py",
-      "sha256": "daf3436c578af2601a3d85f15a1a597e2b215b01eada2b6983cedf7ab6aac4d8"
+      "path": "src/priveopdf/engine/ocr_native.py",
+      "sha256": "0e97056333f4d5dd0704d4c4e642f2c5228dbe8b910f4562e28a95b5f0cce789"
+    },
+    {
+      "bytes": 13110,
+      "generated": false,
+      "license_expression": "Apache-2.0",
+      "license_group": "priveopdf-owned",
+      "mode": "0644",
+      "path": "src/priveopdf/engine/pdf_compression.py",
+      "sha256": "66ae2dfb5de04b6231f9e93d34527ab48a1cccfa6522c03436a6d74828ba29cc"
+    },
+    {
+      "bytes": 17627,
+      "generated": false,
+      "license_expression": "Apache-2.0",
+      "license_group": "priveopdf-owned",
+      "mode": "0644",
+      "path": "src/priveopdf/engine/pdf_ocr.py",
+      "sha256": "fd907064d567cebd5b54bc1c3887d58361b724cf13c359a9a7e64f51ebc06972"
+    },
+    {
+      "bytes": 6358,
+      "generated": false,
+      "license_expression": "Apache-2.0",
+      "license_group": "priveopdf-owned",
+      "mode": "0644",
+      "path": "src/priveopdf/engine/pdf_password.py",
+      "sha256": "d8ce6b6b86ae8847bdd40b999bc442140d041effdb779534a1655082cc2f6bad"
+    },
+    {
+      "bytes": 14764,
+      "generated": false,
+      "license_expression": "Apache-2.0",
+      "license_group": "priveopdf-owned",
+      "mode": "0644",
+      "path": "src/priveopdf/engine/pdf_photocopy.py",
+      "sha256": "915d5a8739a081baae7c79467922f43e3da04c20e3a0541f80e7b92b44f96150"
+    },
+    {
+      "bytes": 10376,
+      "generated": false,
+      "license_expression": "Apache-2.0",
+      "license_group": "priveopdf-owned",
+      "mode": "0644",
+      "path": "src/priveopdf/engine/pdf_redaction.py",
+      "sha256": "251e449d38d3dd088393ed95f85191c4831fb88a5785783ff83792253f9cad7f"
+    },
+    {
+      "bytes": 9695,
+      "generated": false,
+      "license_expression": "Apache-2.0",
+      "license_group": "priveopdf-owned",
+      "mode": "0644",
+      "path": "src/priveopdf/engine/pdf_share.py",
+      "sha256": "0a1d7e0efdeaf4f245061cbaae495b695e9d7e8f7f7056a7227910c624a11445"
+    },
+    {
+      "bytes": 32630,
+      "generated": false,
+      "license_expression": "Apache-2.0",
+      "license_group": "priveopdf-owned",
+      "mode": "0644",
+      "path": "src/priveopdf/engine/pdf_structural.py",
+      "sha256": "e56fb68beaae2ea5cea4469b3d9496d821c9d007f2ccf1dcb4117292bcdfbceb"
+    },
+    {
+      "bytes": 14799,
+      "generated": false,
+      "license_expression": "Apache-2.0",
+      "license_group": "priveopdf-owned",
+      "mode": "0644",
+      "path": "src/priveopdf/engine/pdf_watermark.py",
+      "sha256": "8298d41e61009c0b67779d554667b8b26a0a03e70263920a72a105dff30ab027"
+    },
+    {
+      "bytes": 12287,
+      "generated": false,
+      "license_expression": "Apache-2.0",
+      "license_group": "priveopdf-owned",
+      "mode": "0644",
+      "path": "src/priveopdf/engine/share_inspection.py",
+      "sha256": "176ebdca2249ead41a520ae598239f1372526ceb8c3700ef30ac537fa1743adc"
     },
     {
       "bytes": 52,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/quality/__init__.py",
+      "path": "src/priveopdf/quality/__init__.py",
       "sha256": "2359ed52137530308255fb85978a6424ac2181283c5926f4eaf855896f31f82e"
     },
     {
-      "bytes": 67128,
+      "bytes": 80030,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/quality/corpus_testing.py",
-      "sha256": "87d77be81f7d5749b425f4d01deba791f6378342dd0c88142cb3b84c85f20795"
+      "path": "src/priveopdf/quality/corpus_testing.py",
+      "sha256": "8edb0a8516073936240298f35391a8dd2b9ee8bbe9cadff3136e1d923ceed454"
     },
     {
-      "bytes": 29894,
+      "bytes": 38983,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/quality/pdf_oracles.py",
-      "sha256": "05d594d190260e425b63d4eefe8950f16b3c2296e94cd22880889dc4b5e82575"
+      "path": "src/priveopdf/quality/pdf_oracles.py",
+      "sha256": "3c5c808107ee4d1d089006b024f2d53154c0d3c07873169c59eb660958e8b9e5"
     },
     {
       "bytes": 30,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/ui/__init__.py",
+      "path": "src/priveopdf/ui/__init__.py",
       "sha256": "21f7a59738814391693f8cb347c4874937db11691743fd0bb8c9aa7382f0d892"
     },
     {
-      "bytes": 2856,
+      "bytes": 2995,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/ui/about_dialog.py",
-      "sha256": "3b7ca02e3a4fabc9aa3e446f06621bfba25187ee11ce0639a1f9fef54acb4f4c"
+      "path": "src/priveopdf/ui/about_dialog.py",
+      "sha256": "6601a24ab9369e843096da8de405ed631b4808334b6bfd460d8bfcad4b93d196"
     },
     {
-      "bytes": 8430,
+      "bytes": 7041,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/ui/app_store.py",
-      "sha256": "4897425f466fb416221352b9d0bb122a5c9f4bc5029c81199fcf9f14bfac3d7a"
+      "path": "src/priveopdf/ui/app_store.py",
+      "sha256": "5c5bbe7e42b75922c63a7646d403204f25f87d3a6f569fae1bbe817b314d8df2"
     },
     {
-      "bytes": 6072,
+      "bytes": 6032,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/ui/beta_integration_panel.py",
-      "sha256": "e019fccfb22123139f413940732a189d45487ee2b8cee0221ce62831a4914a46"
+      "path": "src/priveopdf/ui/beta_integration_panel.py",
+      "sha256": "643571eb117217740dd1786f97b84b41fd02c88ef46a801920ae0d51000b97e7"
     },
     {
-      "bytes": 13633,
+      "bytes": 13269,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/ui/branding.py",
-      "sha256": "691b881010b4506650c4f5403c6f5682ecd50e2ffdee6d385d880da9c935a94c"
+      "path": "src/priveopdf/ui/branding.py",
+      "sha256": "b3610d9239bb8cf9a6f474d71c49cd702a7d573b33e86612e46806bcb57a1d0d"
     },
     {
-      "bytes": 10295,
+      "bytes": 10333,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/ui/community_page.py",
-      "sha256": "3a1eeb1244dea65f00fb42cf3b92214f1d6105e13036df254739532302e8d4d1"
+      "path": "src/priveopdf/ui/community_page.py",
+      "sha256": "8f96e4870d544018e1d396cd3d56f7d5e506ba84a1c0712757fd6e3675195820"
     },
     {
-      "bytes": 1826,
+      "bytes": 2488,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/ui/components/__init__.py",
-      "sha256": "21b1fa4fdd02e346bbae0b438c94ba3527e6896ec4f215291e00a6b8b1160f82"
+      "path": "src/priveopdf/ui/components/__init__.py",
+      "sha256": "04d62c1b54261e6345314f46d7fef71334e40910825d7240e49e5244d9617462"
     },
     {
       "bytes": 1798,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/ui/components/buttons.py",
+      "path": "src/priveopdf/ui/components/buttons.py",
       "sha256": "e07d48b98e7d70587b9f1ed62ea363c4bbfedfdbb5ebf22433a3903f3523284a"
     },
     {
-      "bytes": 16533,
+      "bytes": 17131,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/ui/components/cards.py",
-      "sha256": "1f07d4e1c65edeb5d8b3783630b55c49673cb374a67dd210c10363955290bcc4"
+      "path": "src/priveopdf/ui/components/cards.py",
+      "sha256": "0b714783253a3aeb3401704391a71a2baa5a351fb2247dd7ede38a90a5477758"
     },
     {
-      "bytes": 35112,
+      "bytes": 42976,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/ui/components/chrome.py",
-      "sha256": "b1c1ef8c9671b22e268f3dd3c5aad38f90654539baf1d69521579246dfb11ca1"
+      "path": "src/priveopdf/ui/components/chrome.py",
+      "sha256": "e4d520bde96b77c5122d5d54e394e3cf85ef5e7f6a797a084704780482a9a494"
     },
     {
-      "bytes": 8442,
+      "bytes": 8379,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/ui/components/document_pages_panel.py",
-      "sha256": "32f2108f648bd724e896713bd69bfc4efcea49df4a567d5461a21d3ace08086c"
+      "path": "src/priveopdf/ui/components/document_pages_panel.py",
+      "sha256": "092c1a502818d0bd6b3fcd275056b1259eafdcea108dd5ba1dc00f2839fd2687"
     },
     {
-      "bytes": 5308,
+      "bytes": 5549,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/ui/components/dropzone.py",
-      "sha256": "0729b6e509e75c34172f1190cf9bb67ecb7c6c60cc5259a98837897991c39936"
+      "path": "src/priveopdf/ui/components/dropzone.py",
+      "sha256": "805d46ce311cc6a4087f824c88ee0b17db5de537a4f3685ef91bc7b792e4ea70"
     },
     {
-      "bytes": 2310,
+      "bytes": 2426,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/ui/components/feedback.py",
-      "sha256": "96abdec4737eed6eea9fa352c320caca7e91e84b373eaedf2eecb5961d3556d2"
+      "path": "src/priveopdf/ui/components/feedback.py",
+      "sha256": "391f24d3d5f354beb30ab7816c6228c7c5cd78e65696a06c19d685cd8b8724ce"
     },
     {
-      "bytes": 9652,
+      "bytes": 9655,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/ui/components/guided_action_cue.py",
-      "sha256": "1ad245538bf2132186bcbf39736dc9102d7c1ff9fbb16dee22bc3122726481ec"
+      "path": "src/priveopdf/ui/components/guided_action_cue.py",
+      "sha256": "6cfeef8489ca13262ce30baa63fdafe1ae036b6e494ceee02e2f14bb809372e7"
     },
     {
-      "bytes": 11244,
+      "bytes": 32580,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/ui/components/page_groups.py",
-      "sha256": "2bc00c6bce9f69411bfaab5e7be56c34f30af84406e4702a8f939ca4e9e7eb9c"
+      "path": "src/priveopdf/ui/components/isolated_pdf_view.py",
+      "sha256": "1801683d8b5b98a06f12c28b130ea9fbc1bd91c62d78406bc1d54ab55f4ae02e"
     },
     {
-      "bytes": 72066,
+      "bytes": 11212,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/ui/components/page_thumbnails.py",
-      "sha256": "e941918dff5928e6e6a9aa84382c491a4abf17e9398b3013d1b7834871a32b04"
+      "path": "src/priveopdf/ui/components/page_groups.py",
+      "sha256": "41b87ad475580a2265b0da91607955ff4a4da7c9e89da391880322bf935028c2"
     },
     {
-      "bytes": 5388,
+      "bytes": 61973,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/ui/components/pdf_input.py",
-      "sha256": "bb5d6edc584de4d176a418cc40731fe7ad22bf6561799240f8f38d8f5e7efc99"
+      "path": "src/priveopdf/ui/components/page_thumbnails.py",
+      "sha256": "391b4589cc47f01209d7761885ba318a8a0f42908710266e117fa69365de2309"
     },
     {
-      "bytes": 13332,
+      "bytes": 4836,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/ui/components/tool_icons.py",
-      "sha256": "0fa797be611a755af56ee45b4c1f168bd17099e5fd8310393cc350e28138ce7a"
+      "path": "src/priveopdf/ui/components/pdf_input.py",
+      "sha256": "ead0b97b66c7a50f3ab174c295973ddb8f746be1556e76b8b4ee095aa3ae69f8"
     },
     {
-      "bytes": 490,
+      "bytes": 12467,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/ui/controllers/__init__.py",
-      "sha256": "7d3a718a3fcc3fbb0bd9d7615e4a9f812b569c19660937210b6e0f22cdd15fbd"
+      "path": "src/priveopdf/ui/components/source_check.py",
+      "sha256": "c0e04fb4c5484febea9dd1a7577e8a44ac35da9173ae64fdd7d586bec9701026"
     },
     {
-      "bytes": 2732,
+      "bytes": 7212,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/ui/controllers/navigation_controller.py",
-      "sha256": "0190a8d733280d38b6d04381d63ea3fcb6908d46f0f85636b1a5bec071c7304a"
+      "path": "src/priveopdf/ui/components/text_selection.py",
+      "sha256": "749a1181f6ea322fbaaa95e905510ca5accc4ddfd5a116c93740751f928ee0a9"
     },
     {
-      "bytes": 6420,
+      "bytes": 25786,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/ui/controllers/startup_coordinator.py",
-      "sha256": "8d3efd053de74e4f25fde489a81bca472659c0d2363a62bd64a9d799785b788c"
+      "path": "src/priveopdf/ui/components/tool_flow.py",
+      "sha256": "8420b23f7a555703aefeed7d0369411261dcabed2a717a6108be4b645ac7ed32"
     },
     {
-      "bytes": 15684,
+      "bytes": 14348,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/ui/controllers/update_controller.py",
-      "sha256": "2d3518e52e3bc0f6d627e12fcdab5022063fdf2ef8f2f7e4980dd1bddcfe1b90"
+      "path": "src/priveopdf/ui/components/tool_icons.py",
+      "sha256": "24cfb68cbc59b45381a17e8f9b21f0c6c648bdf4ac649aca85debbcb4a011151"
     },
     {
-      "bytes": 4667,
+      "bytes": 9100,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/ui/controllers/workspace_controller.py",
-      "sha256": "a7c789f01819569597b9a637af652100a19df559a1c0d8fc930bfd1670660dd9"
+      "path": "src/priveopdf/ui/components/viewer_tools.py",
+      "sha256": "32def341e04ffacad1f3a0fa9ee97ac7381daf17ffd20c8353d35cd1ee5641e8"
     },
     {
-      "bytes": 19557,
+      "bytes": 505,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/ui/dashboard.py",
-      "sha256": "8e4aaaade0c7890bd5cc36f5530ea5574d7fb067a059f68ce1e6cfbe4be031f3"
+      "path": "src/priveopdf/ui/controllers/__init__.py",
+      "sha256": "1bae898d4b4958d648e68b75cd1b2291781cb1b8328de2c021e43b789782701e"
     },
     {
-      "bytes": 35685,
+      "bytes": 2972,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/ui/document_workspace.py",
-      "sha256": "c00730cefdb3bd215ecd14ef3fd5531cf3fa6d65b29094db50876b9fec3ffdb0"
+      "path": "src/priveopdf/ui/controllers/navigation_controller.py",
+      "sha256": "aef33c076a4459042792d0f0f9ad0f988c0c21cd70f0248c38307ba443619756"
     },
     {
-      "bytes": 3431,
+      "bytes": 5528,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/ui/first_run_dialog.py",
-      "sha256": "a185e3776bf94bdc46163c05d09566eb4e659a89c00c4dcb8b0107e8ca9fb743"
+      "path": "src/priveopdf/ui/controllers/startup_coordinator.py",
+      "sha256": "944eda577502ffe9c27649589a218330c4c85991e4532a71bfd33752efe07a76"
     },
     {
-      "bytes": 90386,
+      "bytes": 16686,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/ui/i18n.py",
-      "sha256": "c40118938a33d51e49e981af4465d042ac66666200e9d414cb40e71a0bfc9243"
+      "path": "src/priveopdf/ui/controllers/update_controller.py",
+      "sha256": "4a4b998c4f84139aef871caa395dd65995f5f7ae13821a4d87aa2067b3e9920a"
     },
     {
-      "bytes": 1353,
+      "bytes": 4943,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/ui/job_registry.py",
-      "sha256": "229941bf82ef9e993278a3da5dd51a7f2cfb4ca64d93dedd3f032d4211007811"
+      "path": "src/priveopdf/ui/controllers/workspace_controller.py",
+      "sha256": "2be290a8c5d5f50902723978e4e76afb8b4c37e2f7534f438ab7f2f7b4e348bd"
     },
     {
-      "bytes": 35906,
+      "bytes": 18273,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/ui/main_window.py",
-      "sha256": "d809f79e7596ecdb8c34d8d42b71806d9e78ad6d8a55ce67bb994941a5ebce6e"
+      "path": "src/priveopdf/ui/dashboard.py",
+      "sha256": "b1f0b664fc34fc8cb1387ce4178fb3ac9b0e12677fc28c05a534e64742473d44"
     },
     {
-      "bytes": 26043,
+      "bytes": 48493,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/ui/options_dialog.py",
-      "sha256": "ac2992d61329d1ab893ed1d28b8eb091e5f0ef1dd15d47996c67f2647109be6d"
+      "path": "src/priveopdf/ui/document_workspace.py",
+      "sha256": "4362ae5805da787550d79b873351445956b385da27a34ce1159f934cad9ac6c2"
     },
     {
-      "bytes": 832,
+      "bytes": 3443,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/ui/page_contracts.py",
-      "sha256": "59c625f1371962556220b6c3f911dfef4e592f37ba43d286b5dd36e5c9eab513"
+      "path": "src/priveopdf/ui/first_run_dialog.py",
+      "sha256": "f4336d96116a6529c30902289a5b8f54921b863d86ae63b16a66e44e012babfa"
     },
     {
-      "bytes": 445,
+      "bytes": 145170,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/ui/theme/__init__.py",
-      "sha256": "6dc1e84074367da692c73209a684f8654b42b09c4f9f679920db91c6d2c79d85"
+      "path": "src/priveopdf/ui/i18n.py",
+      "sha256": "af4cbb3e2a08f4fa13271249d0da8da8a9593ba1e9fff07bfafee0b83e471a51"
     },
     {
-      "bytes": 1367,
+      "bytes": 1356,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/ui/theme/animations.py",
-      "sha256": "c23291400ea78e5f033a8e1617cdfadc460e7a98a3c5f14be1185b6488b8ecd7"
+      "path": "src/priveopdf/ui/job_registry.py",
+      "sha256": "ad9866295e3eee31aa64bd49b0419e9791ed7672b05907ecbe857840d9eb4d62"
+    },
+    {
+      "bytes": 46645,
+      "generated": false,
+      "license_expression": "Apache-2.0",
+      "license_group": "priveopdf-owned",
+      "mode": "0644",
+      "path": "src/priveopdf/ui/main_window.py",
+      "sha256": "bc857017d8a494a6f3fea518c36e2b054b3502f58f8db0af6a9b05a9fb10c5fc"
+    },
+    {
+      "bytes": 7901,
+      "generated": false,
+      "license_expression": "Apache-2.0",
+      "license_group": "priveopdf-owned",
+      "mode": "0644",
+      "path": "src/priveopdf/ui/ocr_language_dialog.py",
+      "sha256": "2c4fb1f5cb9dfc57c6aa9851416598f30a8d1a7cce1701f2a3e8c9ea9a710595"
+    },
+    {
+      "bytes": 27156,
+      "generated": false,
+      "license_expression": "Apache-2.0",
+      "license_group": "priveopdf-owned",
+      "mode": "0644",
+      "path": "src/priveopdf/ui/options_dialog.py",
+      "sha256": "4f2bfa364da4911aca7ae0d582c02cc6160c64e4581edad2d172742d0f6f56e1"
+    },
+    {
+      "bytes": 841,
+      "generated": false,
+      "license_expression": "Apache-2.0",
+      "license_group": "priveopdf-owned",
+      "mode": "0644",
+      "path": "src/priveopdf/ui/page_contracts.py",
+      "sha256": "892bdaf651876ba24e4076d48ca23a99bae3704c5a516da2ab04003e7dfa4b81"
+    },
+    {
+      "bytes": 411,
+      "generated": false,
+      "license_expression": "Apache-2.0",
+      "license_group": "priveopdf-owned",
+      "mode": "0644",
+      "path": "src/priveopdf/ui/theme/__init__.py",
+      "sha256": "d7eec905adb93d572a279c990d934da1932916b0855a5df701eeab6ba355439d"
+    },
+    {
+      "bytes": 1370,
+      "generated": false,
+      "license_expression": "Apache-2.0",
+      "license_group": "priveopdf-owned",
+      "mode": "0644",
+      "path": "src/priveopdf/ui/theme/animations.py",
+      "sha256": "b50b330056155c0acffe54c37b74a878a24379658297b1bca0e08139856664d2"
     },
     {
       "bytes": 705,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/ui/theme/effects.py",
+      "path": "src/priveopdf/ui/theme/effects.py",
       "sha256": "e9efa7ff6d2e4490f9fafe2e54eb105614c25a925b23fd2abaeba6a85522c527"
     },
     {
-      "bytes": 22251,
+      "bytes": 24158,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/ui/theme/styles.py",
-      "sha256": "8983c881795fedc8469accd7e10a600144cb0d33c45e602630f9474eddf6ff78"
+      "path": "src/priveopdf/ui/theme/styles.py",
+      "sha256": "86c219619f5f90b6b4821a89379732d8be19071af08cac18cd896c5ff8fadd90"
     },
     {
-      "bytes": 8003,
+      "bytes": 8107,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/ui/theme/theme_manager.py",
-      "sha256": "a70e3a09f3cba172edb7db040d971fafdef9f4f1c24ab44f930bc05dc7c0fcd5"
+      "path": "src/priveopdf/ui/theme/theme_manager.py",
+      "sha256": "f8f42ffb0ea3010915181147743d6f0e7c411f7379b7fa549f03f854c58a77c4"
     },
     {
-      "bytes": 16006,
+      "bytes": 15989,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/ui/theme/tokens.py",
-      "sha256": "8b2ef7fc7ebb987c446274748c37eafbe06873e0fbed7df9dd95113d291d2add"
+      "path": "src/priveopdf/ui/theme/tokens.py",
+      "sha256": "54e6cc77832e6bac66c26d3515b646fceb41825c23274ff27eb9d786b8bd044f"
     },
     {
       "bytes": 18,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/ui/tool_pages/__init__.py",
+      "path": "src/priveopdf/ui/tool_pages/__init__.py",
       "sha256": "fa46c01d6340b3577ebd27b3cf310320e69c058c2be8cd79100e0f540ef98de4"
     },
     {
-      "bytes": 15458,
+      "bytes": 8029,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/ui/tool_pages/insert_blank_page.py",
-      "sha256": "bd1f558675e263aef32d8dc2384e761933b8440882ea7b97dcb5423b4afb2a5b"
+      "path": "src/priveopdf/ui/tool_pages/compress_pdf_page.py",
+      "sha256": "aeed8f4952c4e26a4f62a24cc9987d42fa1f701b28394c996befd26ea7088ab3"
     },
     {
-      "bytes": 20622,
+      "bytes": 2745,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/ui/tool_pages/insert_pdf_pages_page.py",
-      "sha256": "aee7de1e3cf6b66980a9423d97c14f1f4264195725ad343202c89292cddccea5"
+      "path": "src/priveopdf/ui/tool_pages/form_tool_page.py",
+      "sha256": "9e284e17c38a4adcc34940cb0ac0fda50e89d0820b1859b00a73312f6803b0a6"
     },
     {
-      "bytes": 17413,
+      "bytes": 16751,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/ui/tool_pages/merge_pdf_page.py",
-      "sha256": "8de09ced81b01faa3f16d947d6a1a1994fa64647e7685e37827288f7c67382c0"
+      "path": "src/priveopdf/ui/tool_pages/insert_blank_page.py",
+      "sha256": "3dd6e89d7b79993cde66b271e799956a0dbe2f1579554120b3eca69bdaf2444b"
     },
     {
-      "bytes": 25823,
+      "bytes": 21943,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/ui/tool_pages/page_operation_page.py",
-      "sha256": "b56ad64058117fd09f77be0f10fbda5e5b2f1e138458d655fe0560db79181d39"
+      "path": "src/priveopdf/ui/tool_pages/insert_pdf_pages_page.py",
+      "sha256": "b9c80e36208ed88afaa7469879ec3d8de3b984d8e463717bc645d490ec11ee09"
     },
     {
-      "bytes": 2037,
+      "bytes": 20708,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/ui/tool_pages/pending_tool_page.py",
-      "sha256": "53a2788a8cbb62a91c6dba63ac9d3bfa5b7a58b71a9f4945fa6d38b5195393d8"
+      "path": "src/priveopdf/ui/tool_pages/merge_pdf_page.py",
+      "sha256": "51ebb580bc8e25b777d6c3ad181ad2ee658395fd16f5ffac7110df40603f3f77"
     },
     {
-      "bytes": 24664,
+      "bytes": 19129,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/ui/tool_pages/rotate_pdf_page.py",
-      "sha256": "a2e67c606d31b284b519b37bf978e730bcd5b79fac90fe42cc3113877c747f8f"
+      "path": "src/priveopdf/ui/tool_pages/ocr_pdf_page.py",
+      "sha256": "f8a187c4a5476410fbc61464fce5a552205736185ec516e31c335b0c9cb11198"
     },
     {
-      "bytes": 10503,
+      "bytes": 20809,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/ui/tool_pages/view_pdf_page.py",
-      "sha256": "8e816e957687ada344b728b7189315c88e0aca97dd1e6167ea4cf924d625a13a"
+      "path": "src/priveopdf/ui/tool_pages/page_operation_page.py",
+      "sha256": "23582b9d4653142647ca6d94c188f71ead3d20cfc0b429dd7e27e5d1a2b2f6d4"
     },
     {
-      "bytes": 30149,
+      "bytes": 2773,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/ui/tool_pages/visual_page_operation_page.py",
-      "sha256": "5ab2f81933d50e1257386e1b3d8b3c5f5a3d9356befc5d31cdd157fb256b67fa"
+      "path": "src/priveopdf/ui/tool_pages/page_tool_mixin.py",
+      "sha256": "17a3797a25d6359c418bd8037bd07e804ec6dd2558d18a2ebbe3b3f816b83b15"
     },
     {
-      "bytes": 22884,
+      "bytes": 14050,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/ui/tool_specs.py",
-      "sha256": "876f674a2f4289d27eeee934a8d62acc07b80fde579da40e8cf3b13429ea1464"
+      "path": "src/priveopdf/ui/tool_pages/password_pdf_page.py",
+      "sha256": "b70c963049de951dd050dbe3e151928135c9aecbb5b0ec92964a5bd97704ab81"
     },
     {
-      "bytes": 13205,
+      "bytes": 5111,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/ui/workspace_state.py",
-      "sha256": "c532aec4d83659af2b3f7521d8c18fdcab59fa569ac48c6eddba90f2049edd99"
+      "path": "src/priveopdf/ui/tool_pages/redact_pdf_page.py",
+      "sha256": "58143cce2d2f750d30233842d71bbcc954bf8afe9a669d2f171e2498716370b8"
     },
     {
-      "bytes": 17,
+      "bytes": 22160,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/utils/__init__.py",
-      "sha256": "08035263cbc6abfeaff2b5a159121d9e4f96a392c0d91f568e0d67a9b5aa2cec"
+      "path": "src/priveopdf/ui/tool_pages/rotate_pdf_page.py",
+      "sha256": "b552e1a2a4af8847274d56f8674650c248f553d843a35004458149e58629b828"
     },
     {
-      "bytes": 18131,
+      "bytes": 33641,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/utils/secure_paths.py",
-      "sha256": "00427a0258d04b94e5edb404d8eacf5ad5284968066588831247669596f34f57"
+      "path": "src/priveopdf/ui/tool_pages/share_pdf_page.py",
+      "sha256": "1b4aa43ebd4a36560e7b27b59254ea08867f56ff0ed53c71083f07cd917c4bbf"
     },
     {
-      "bytes": 996,
+      "bytes": 10599,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/utils/validation.py",
-      "sha256": "f6c0cae8a1746c4e6f09b15ad889df7bb0d4dfa6290a87edc7de2070d973aac0"
+      "path": "src/priveopdf/ui/tool_pages/view_pdf_page.py",
+      "sha256": "a4c45c8854da0545f349974135041ebb45140e8b38c214242f60f514cb30a843"
+    },
+    {
+      "bytes": 17485,
+      "generated": false,
+      "license_expression": "Apache-2.0",
+      "license_group": "priveopdf-owned",
+      "mode": "0644",
+      "path": "src/priveopdf/ui/tool_pages/viewer_tool_page.py",
+      "sha256": "18f0d552017268cfe868f190c2732e13fc1f913626d0e2ae8df4fc7f3e8c1770"
+    },
+    {
+      "bytes": 35588,
+      "generated": false,
+      "license_expression": "Apache-2.0",
+      "license_group": "priveopdf-owned",
+      "mode": "0644",
+      "path": "src/priveopdf/ui/tool_pages/visual_page_operation_page.py",
+      "sha256": "ea99d4018e326bca72d835b1e8e175af57b91dad69fc6b82af1bb96e6e81aaa8"
+    },
+    {
+      "bytes": 5630,
+      "generated": false,
+      "license_expression": "Apache-2.0",
+      "license_group": "priveopdf-owned",
+      "mode": "0644",
+      "path": "src/priveopdf/ui/tool_pages/watermark_pdf_page.py",
+      "sha256": "911b42ab7ab909c936202c51fb91310c170c06ea8c67ce636e15f4c64f6d8d30"
+    },
+    {
+      "bytes": 23320,
+      "generated": false,
+      "license_expression": "Apache-2.0",
+      "license_group": "priveopdf-owned",
+      "mode": "0644",
+      "path": "src/priveopdf/ui/tool_specs.py",
+      "sha256": "f2af46df78b2a7793d5040c31641742c2823f40c60d1559708c48d38d80e64ae"
+    },
+    {
+      "bytes": 14092,
+      "generated": false,
+      "license_expression": "Apache-2.0",
+      "license_group": "priveopdf-owned",
+      "mode": "0644",
+      "path": "src/priveopdf/ui/workspace_state.py",
+      "sha256": "a257d1d220dff4bddee42a2bb252f6638f8a7bc2bd04fd0bd33460b0eacfca17"
+    },
+    {
+      "bytes": 496,
+      "generated": false,
+      "license_expression": "Apache-2.0",
+      "license_group": "priveopdf-owned",
+      "mode": "0644",
+      "path": "src/priveopdf/utils/__init__.py",
+      "sha256": "e71d8bbd3281a2b329960ba46cfb156bb39f9279e8d90ac4d32cdec2b8840122"
+    },
+    {
+      "bytes": 23971,
+      "generated": false,
+      "license_expression": "Apache-2.0",
+      "license_group": "priveopdf-owned",
+      "mode": "0644",
+      "path": "src/priveopdf/utils/secure_paths.py",
+      "sha256": "fee9e095d28b85d6276850e549aa7b0c295fb5113005fe7bb80e1308c0767765"
+    },
+    {
+      "bytes": 1002,
+      "generated": false,
+      "license_expression": "Apache-2.0",
+      "license_group": "priveopdf-owned",
+      "mode": "0644",
+      "path": "src/priveopdf/utils/validation.py",
+      "sha256": "e5900ebc457089a4cd22d5bd0bee68a3e8bda5706054ccb0bd0c7c74284ca1fe"
     },
     {
       "bytes": 35,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/workers/__init__.py",
+      "path": "src/priveopdf/workers/__init__.py",
       "sha256": "5384bfdb2df380b6557cc7a71d16891415bccaa87699406e236f752c6415389f"
     },
     {
-      "bytes": 9944,
+      "bytes": 10862,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/workers/document_inspection_runner.py",
-      "sha256": "5e35c55257965be346556225caec0af3dc81e775c97ab00f49a72cd9fa543214"
+      "path": "src/priveopdf/workers/document_inspection_runner.py",
+      "sha256": "24f3b8e7330eaa2ac224ffa6b75bdf2e538d638cf774e51b92af02e7e1faaf01"
     },
     {
-      "bytes": 3886,
+      "bytes": 4273,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/workers/document_metadata_cache.py",
-      "sha256": "c52d05ba933dfb85bc84338604fc07895dc6f256c54a06c96fd05756cf753388"
+      "path": "src/priveopdf/workers/document_metadata_cache.py",
+      "sha256": "d2f087adac14173996da6a69e1d607c1c4a8722441384f02e73b39fc034c694c"
     },
     {
-      "bytes": 8404,
+      "bytes": 10210,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/workers/job_runner.py",
-      "sha256": "d2af901638ef4301c4f5a68f53c57aa5c7548164f5bbecea4f2f75a641e5cd55"
+      "path": "src/priveopdf/workers/job_runner.py",
+      "sha256": "60c4973d28c4b45f79654f7f1d0acec6544c6ed6ff61960fd26e080e2753119c"
+    },
+    {
+      "bytes": 10498,
+      "generated": false,
+      "license_expression": "Apache-2.0",
+      "license_group": "priveopdf-owned",
+      "mode": "0644",
+      "path": "src/priveopdf/workers/local_confinement.py",
+      "sha256": "61d85a476a1881ed4b894c4531e57c40eada0d954d05e95c4a9e0ac3ea006d8b"
     },
     {
       "bytes": 952,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/workers/network_isolation.py",
+      "path": "src/priveopdf/workers/network_isolation.py",
       "sha256": "9071e5cee8673edce645ca0599314bea91d5898355bb4fb770457a7151bccce4"
     },
     {
-      "bytes": 24711,
+      "bytes": 35080,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/workers/pdf_protocol.py",
-      "sha256": "4a1877fd3928f6921f81ca8ed8393f294194c322ffbfe53bd7d79228b0e924f5"
+      "path": "src/priveopdf/workers/pdf_protocol.py",
+      "sha256": "ff91ce2e688da40ce4de9799da1c5b77cb8f9530b2194b42253598bd20cb0cd9"
     },
     {
-      "bytes": 4251,
+      "bytes": 5725,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/workers/pdf_worker.py",
-      "sha256": "80694a5869292118184a0bf92c9a2b6c2f6e73fd47c49c1c6b42384f308fc224"
+      "path": "src/priveopdf/workers/pdf_worker.py",
+      "sha256": "81ff2d4cac3053ea304a95098c0ed70f4b24a2417c1523568713aac345900c39"
     },
     {
-      "bytes": 28782,
+      "bytes": 55071,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/workers/process_supervisor.py",
-      "sha256": "919cbe1392a63c40d3267f67104e587bae3301950870be2a3a22b02ed36389a9"
+      "path": "src/priveopdf/workers/process_supervisor.py",
+      "sha256": "376335b910cf311e570aeee58aadf11bdfbda6260156ed9c75b02a4c7c7706e0"
     },
     {
-      "bytes": 3052,
+      "bytes": 16245,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "src/pdfmod/workers/update_runner.py",
-      "sha256": "8cef4fca1eb4cc71bc5919a427ee84f084ad568c613edb10fc0b659fff311288"
+      "path": "src/priveopdf/workers/render_client.py",
+      "sha256": "05a07a39fb84e1e002fc72c4da560ac75ae9eadf993e9b028e7bce5575e55297"
     },
     {
-      "bytes": 2614,
+      "bytes": 4909,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "tests/unit/test_app_info.py",
-      "sha256": "4c5e8d840903cf3a26de8ed928ebcd4d76680772d0c80c8b8898874dbef3bd64"
+      "path": "src/priveopdf/workers/render_memory.py",
+      "sha256": "6104ad40d065f827c016f7d2f2632aaaa4449d1cff08ed88cef3d8c46562aafe"
     },
     {
-      "bytes": 2562,
+      "bytes": 8431,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "tests/unit/test_bootstrap_cli.py",
-      "sha256": "1c9aa6da25a1374b805f38744b7ff67e6e2730bd18797c5317d70e106cacea35"
+      "path": "src/priveopdf/workers/render_memory_broker.py",
+      "sha256": "62790d20cab89a4008052bba12bb352b6b04ff8262237eff026757eea03f1311"
     },
     {
-      "bytes": 7222,
+      "bytes": 9042,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "tests/unit/test_document_inspection.py",
-      "sha256": "404280644929e9ede62aca73d2c06a63569a35db9acdc6ab8eb4d6d8646057c9"
+      "path": "src/priveopdf/workers/render_worker.py",
+      "sha256": "24e9d9778ab711cb388302121ed7ee28cee0317867c7e5c0f470cf826a152eb8"
     },
     {
-      "bytes": 1733,
+      "bytes": 887,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "tests/unit/test_i18n.py",
-      "sha256": "5b245f6285d60c4c1007ce9fd3266b69e7078c01f2328e39f61911d373ab57b3"
+      "path": "src/priveopdf/workers/thread_shutdown.py",
+      "sha256": "de8625cc4449837cf63d32e62be3364b193212ba8d163b82c62ca2bd40da73b4"
     },
     {
-      "bytes": 10811,
+      "bytes": 3295,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "tests/unit/test_job_options.py",
-      "sha256": "1f2e22e87ce14f6c7c416bcad41e88653f18e1763484931c8b4b2eb05f70cd55"
+      "path": "src/priveopdf/workers/update_runner.py",
+      "sha256": "799241e5df2531e8ef0f61e66d4f4e51e7fa34bc4f573d7a5f709e211c971352"
     },
     {
       "bytes": 2621,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
+      "license_group": "priveopdf-owned",
+      "mode": "0644",
+      "path": "tests/unit/test_app_info.py",
+      "sha256": "906092a27d4b0c47c9d47d1e8491ec77dd26fb53d2571333e4413a7393b36bb2"
+    },
+    {
+      "bytes": 3090,
+      "generated": false,
+      "license_expression": "Apache-2.0",
+      "license_group": "priveopdf-owned",
+      "mode": "0644",
+      "path": "tests/unit/test_bootstrap_cli.py",
+      "sha256": "8c0a3b8cd98063218a7ecae5f39aeb1c462bcb212331128984875cfae3061491"
+    },
+    {
+      "bytes": 7228,
+      "generated": false,
+      "license_expression": "Apache-2.0",
+      "license_group": "priveopdf-owned",
+      "mode": "0644",
+      "path": "tests/unit/test_document_inspection.py",
+      "sha256": "8441b9a85ff07494e482a130b9cb49f299b2c2f00f816598626f53e4061f11ab"
+    },
+    {
+      "bytes": 3637,
+      "generated": false,
+      "license_expression": "Apache-2.0",
+      "license_group": "priveopdf-owned",
+      "mode": "0644",
+      "path": "tests/unit/test_i18n.py",
+      "sha256": "39e2df17b65882b0c3132b77411d925ccf46d574dba84b567e47a13905cd9dcc"
+    },
+    {
+      "bytes": 11818,
+      "generated": false,
+      "license_expression": "Apache-2.0",
+      "license_group": "priveopdf-owned",
+      "mode": "0644",
+      "path": "tests/unit/test_job_options.py",
+      "sha256": "7f1561cbdabffa9bdfde02e340948fd8a42270b4cf817ecc1738207a3dc92938"
+    },
+    {
+      "bytes": 2630,
+      "generated": false,
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": "tests/unit/test_output_validation.py",
-      "sha256": "9fa45ee06a2bbbabe01800dbeba41c1f46c26a853afb0c3f08bd5de6c06cfb2f"
+      "sha256": "c920e2bedd4038dabe56fc2b2204aeaf23b529fa6e2ce50956784e19196359ad"
     },
     {
-      "bytes": 1471,
+      "bytes": 2924,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": "tests/unit/test_page_plans.py",
-      "sha256": "6834c8eed3b5376ae8c4dff0c955dbc51d39f0ea68a2ec9ee31916d5d324eb65"
+      "sha256": "a14ba3dbc120eb4176f6e65202bdd03a31feb5b42e68078f1373286ef007f84c"
     },
     {
-      "bytes": 3075,
+      "bytes": 3871,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": "tests/unit/test_page_ranges.py",
-      "sha256": "6259c317b7b030f2c2c3275a58ac12e49a629db2f328f9d896b7b96777a497a1"
+      "sha256": "9c52671f3598f436ac4ae48fa0abbb986bdfef996b33605c21d8484c31329ed8"
     },
     {
-      "bytes": 15347,
+      "bytes": 17066,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": "tests/unit/test_tool_specs.py",
-      "sha256": "d9548aa98f4d567aa6e743a4abccf3f49094e65b55eada461c24c15ea2716573"
+      "sha256": "5c22d9a2bdfec38cf7c981434368403cf74265879efbca3ec8f8c04de0b33b4c"
     },
     {
-      "bytes": 1274,
+      "bytes": 1280,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": "tests/unit/test_ui_architecture.py",
-      "sha256": "c68e82b9f2451947300139a1a737811e9aa2aedea58ba5273b77221f8708140b"
+      "sha256": "dbd096306f4a3b04cd357d6916ade4a7b355db6a3c5326cb398be5a5a0e549ab"
     },
     {
-      "bytes": 7418,
+      "bytes": 7424,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": "tests/unit/test_workspace_session.py",
-      "sha256": "3d74b8a045c014091f355e71c9964746f0193fffb6ca2700de9d9bb98c87196d"
+      "sha256": "b04c202270b8f3e5493a28fe4c41ed1085b60e8cf2d54cd240b93aff78443feb"
     },
     {
-      "bytes": 6724,
+      "bytes": 8055,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": "tests/unit/test_workspace_state.py",
-      "sha256": "a9458fdf1a80cfbecceb41d6d078fd3442b60a0da42cf1037a49d874ec520d57"
+      "sha256": "3ebbfe2e96d67b6315ead21776c50f2fa31dc6b9db0ef244c3b13255846e503f"
     },
     {
-      "bytes": 858,
+      "bytes": 1153,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": "tests/unit/test_workspace_tools.py",
-      "sha256": "4b81dc29994db14c9ffbb2e76e98c1f145340a560c878ccc84265b23fa3c6be3"
+      "sha256": "c65a022c634254302324b047103edae9d20ae88ba27c77b7b80c5bec73a4cba9"
     },
     {
-      "bytes": 26197,
+      "bytes": 26459,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": "tools/build_official_binary_bundle.py",
-      "sha256": "d246917f40e730a134e1bf94662ad9d6746d78f808602f64a6ab35b13baf59e9"
+      "sha256": "b68753732fb996b066e3a84135f7be9befadce454430bee11fa8d0f98768995c"
     },
     {
-      "bytes": 24817,
+      "bytes": 24815,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": "tools/build_third_party_sources_bundle.py",
-      "sha256": "855e8b93cd129f243ffa880a64506fe4fdb79a307a1a20a2f58e3d7892be810f"
+      "sha256": "a82a52fe4f284b2e0ed436e96bd5b7fbaa36e2efd181d50ecddd44af52bfeea3"
     },
     {
-      "bytes": 19518,
+      "bytes": 19729,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": "tools/check_public_distribution_contract.py",
-      "sha256": "d10f402ba725b5ebd47ce1619b1d2bcb83404b3a73d9dbb763a92cc8c1170ae9"
+      "sha256": "61817179f3155e8168a7079951090818a461af3f15e254e83607a78865e60334"
     },
     {
-      "bytes": 22607,
+      "bytes": 23687,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": "tools/check_public_source_contract.py",
-      "sha256": "2ba8c30a1edc7d3e8ee3853261c0f93727b5675760d5998b51ab20ded735b937"
+      "sha256": "f80ac03758ab48a4e7a612925ca249d549aa1304b4d166d9b4e5164ab0dc7c5b"
     },
     {
-      "bytes": 263038,
+      "bytes": 14202,
       "generated": false,
-      "license_expression": "LicenseRef-PriveoPDF-Source-Available-1.0",
+      "license_expression": "Apache-2.0",
+      "license_group": "priveopdf-owned",
+      "mode": "0755",
+      "path": "tools/launch_priveopdf.sh",
+      "sha256": "f0a2f33cf87fc29384cf32d126595798f1008931c70eb5c36273e9707275fb80"
+    },
+    {
+      "bytes": 279193,
+      "generated": false,
+      "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": "uv.lock",
-      "sha256": "7de3af63212f28b5402a7f8bc080d8cc8bc7dd94ce4a9f445c7c5fac89ba4053"
+      "sha256": "7b999297e60f67a4961a1823c710daf5e97a64a4c6d85ccab12dcf26c03e97a4"
     }
   ],
   "generated_files": [
     ".github/ISSUE_TEMPLATE/config.yml",
     ".github/workflows/ci.yml",
+    "AGENTS.md",
     "CHANGELOG.md",
     "LICENSE",
     "README.md",
+    "docs/INSTALL_DEV.md",
+    "docs/INSTALL_USER.md",
     "pyproject.toml",
-    "src/pdfmod/app/beta_versions.py",
-    "src/pdfmod/app/source_update.py"
+    "src/priveopdf/app/beta_versions.py",
+    "src/priveopdf/app/source_update.py"
   ],
-  "private_source_commit": "95e7e9eee4497c098ee28db90573afc772630e79",
+  "private_source_commit": "d12b02c8748db967969e9a4f4a4fbe44afb615b4",
   "schema_version": 1,
-  "source_license": "LicenseRef-PriveoPDF-Source-Available-1.0",
-  "source_ref": "95e7e9eee4497c098ee28db90573afc772630e79",
+  "source_license": "Apache-2.0",
+  "source_ref": "d12b02c8748db967969e9a4f4a4fbe44afb615b4",
   "version": "0.1.0"
 }

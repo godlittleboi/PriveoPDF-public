@@ -5,7 +5,7 @@ from pathlib import Path
 import pikepdf
 from pikepdf import Array, Dictionary, Name, Stream
 
-from pdfmod.engine.document_inspection import (
+from priveopdf.engine.document_inspection import (
     DocumentInspectionService,
     InspectionBudget,
 )
@@ -215,7 +215,7 @@ def test_document_inspection_has_a_soft_time_budget(
     _write_blank_pdf(source)
     ticks = iter((0.0, 2.0, 2.0, 2.0))
     monkeypatch.setattr(
-        "pdfmod.engine.document_inspection.time.monotonic",
+        "priveopdf.engine.document_inspection.time.monotonic",
         lambda: next(ticks, 2.0),
     )
     service = DocumentInspectionService(InspectionBudget(timeout_seconds=0.1))

@@ -1,25 +1,25 @@
 # Public source snapshot changelog
 
-This file records only material facts relevant to cleaned source-review
-snapshots. It is not a release promise.
+Changes relevant to the current source snapshot. Its exact source commit is
+recorded in `PUBLIC_SOURCE_MANIFEST.json`; this is not an installable binary
+release.
 
-## Unpublished preparation
+## Current source publication
 
-- Prepared a deterministic, history-free export from an exact private commit.
-- Separated the proprietary source-available license, the proprietary freeware
-  executable license, and third-party licenses.
-- Disabled private source-checkout update and internal PR beta paths in the
-  generated snapshot.
-- Added the Qt 6.11.2 LGPL/GPL notices, exact corresponding-source lock and
-  offline deterministic source-bundle verifier; no executable is published.
-- Limited the initial community phase to comments; external code and Pull
-  Requests are not accepted.
-- Added planned Discussions categories and bilingual welcome text without
-  activating Discussions, plus moderation, support, vulnerability-triage,
-  conditional CRA-reporting, network-inventory, and publication-gate documents.
-- Added technical source and official freeware-distribution gates. The source
-  gate still refuses publication while any owner decision remains unchecked.
+- Updated the selected sources, including isolated PDF rendering and atomic
+  publication of split outputs after successful processing.
+- Applied Apache License 2.0 to PriveoPDF-owned code and documentation, with
+  `NOTICE`. Earlier publications retain their original licenses; third-party
+  components retain theirs.
+- Updated public replacement modules to match the application interfaces while
+  keeping private Git updates and internal beta history disabled.
+- Included the Linux source launcher and aligned public installation guides,
+  quality checks and English product description with the exported files.
+- Retained Qt LGPL/GPL notices and the corresponding-source lock. Their exact
+  versions are recorded in `uv.lock` and the third-party source inventory.
+- Public Discussions accept questions, ideas and feedback. External code
+  contributions and pull requests are not accepted. Potential vulnerabilities
+  use the private reporting channel described in `SECURITY.md`.
 
-The roadmap is indicative. Future or pending features are unavailable in the
-current version and may be changed, deferred, or cancelled. No delivery date is
-guaranteed.
+No installable binary is published by this source export. Future features and
+release dates are not promised.

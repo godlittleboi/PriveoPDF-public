@@ -1,130 +1,84 @@
-# Installation developpeur
+# Run the public sources
 
-Cette page documente le lancement manuel de PriveoPDF depuis un checkout Git ou
-un dossier extrait. Pour un usage simple sur Linux Mint / Ubuntu, utiliser plutot
-la commande principale :
+These instructions apply to this public snapshot, on Linux Mint 22 or Ubuntu
+24.04, with Python 3.12 or later. Run commands from the directory containing
+`pyproject.toml`. The snapshot does not include the private development
+installer, beta manager or release-building scripts.
 
-```bash
-bash install_priveopdf.sh
-```
+## Prerequisites
 
-## Prerequis
-
-- Python 3.12 ou plus recent.
-- `python3-venv`.
-- `curl` si `uv` doit etre installe.
-- `bubblewrap` pour tout lancement utilisateur qualifie sous Linux.
-- `uv` pour synchroniser l'environnement Python.
-- Git uniquement pour cloner ou contribuer au projet.
-
-Sur Linux Mint / Ubuntu :
+Install [uv](https://docs.astral.sh/uv/getting-started/installation/) using its
+official instructions, then install the native Linux dependencies:
 
 ```bash
 sudo apt update
-sudo apt install python3 python3-venv python3-pip git curl bubblewrap
+sudo apt install python3 python3-venv bubblewrap libegl1 libgl1 \
+  libxkbcommon-x11-0 libxcb-cursor0
 ```
 
-Installer `uv` manuellement :
+A graphical desktop session is required for normal use. OCR and protected image
+rendering need a working user systemd session and cgroups v2. For English OCR:
 
 ```bash
-curl -LsSf https://astral.sh/uv/install.sh | sh
-source "$HOME/.local/bin/env"
-uv --version
+sudo apt install tesseract-ocr tesseract-ocr-eng
 ```
 
-## Installation manuelle
+Install additional Tesseract language packages as needed, such as
+`tesseract-ocr-fra` for French. The application uses local models.
 
-Depuis la racine du projet :
-
-```bash
-uv sync
-```
-
-Cette commande cree ou met a jour `.venv/` et installe les dependances Python du
-projet. Elle ne traite aucun PDF.
-
-## Lancement manuel
+## Install and launch
 
 ```bash
-bash tools/launch_priveopdf.sh
-bash tools/launch_priveopdf.sh chemin/vers/document.pdf
-./scripts/dev_run.sh
-```
-
-`scripts/dev_run.sh` est un raccourci developpeur non qualifiant autour de
-`uv run pdfmod`. Il active volontairement `PRIVEOPDF_ALLOW_UNSANDBOXED_DEV=1` ;
-ne pas l'utiliser pour traiter un document non fiable ni pour valider la promesse
-de confidentialite.
-
-## Relancer l'installateur
-
-L'installateur peut etre relance depuis la racine du projet :
-
-```bash
-bash install_priveopdf.sh
-```
-
-Il est prevu pour etre idempotent : il resynchronise les dependances, reapplique
-les preferences choisies et reinstalle le lanceur local si necessaire.
-
-Options utiles :
-
-```bash
-bash install_priveopdf.sh --help
-bash install_priveopdf.sh --yes
-bash install_priveopdf.sh --no-color
-bash install_priveopdf.sh --dry-run --yes --no-color
-```
-
-## Lanceur Linux
-
-Le lanceur est installe via le script existant :
-
-```bash
-bash tools/install_linux_launcher.sh
-```
-
-Il cree ou met a jour l'entree desktop utilisateur et les icones locales sous
-`$XDG_DATA_HOME` ou `~/.local/share`. Selon l'environnement de bureau,
-PriveoPDF peut apparaitre dans le menu des applications apres quelques secondes.
-
-## Depannage
-
-### `uv: command not found`
-
-```bash
-source "$HOME/.local/bin/env"
-uv --version
-```
-
-Si `uv` reste absent, relancer l'installation de `uv` :
-
-```bash
-curl -LsSf https://astral.sh/uv/install.sh | sh
-```
-
-### `No module named pdfmod`
-
-Verifier que la commande est lancee depuis la racine du projet :
-
-```bash
-pwd
-uv sync
+uv sync --frozen --dev
 bash tools/launch_priveopdf.sh
 ```
 
-### L'application ne demarre pas
-
-Lancer les checks de base :
+To open a document directly:
 
 ```bash
-uv run pytest
+bash tools/launch_priveopdf.sh /path/to/document.pdf
+```
+
+Dependency installation uses the network. PDF processing uses the Linux
+launcher, which prepares the document sandbox and local helper processes.
+Do not replace it with a direct `uv run priveopdf` launch.
+
+If `network_isolation_unavailable` appears, check that Bubblewrap is installed
+and permitted to create namespaces on this system:
+
+```bash
+bwrap --die-with-parent --unshare-net --ro-bind / / -- /bin/true
+```
+
+A nonzero result means this environment cannot run the required isolation.
+Keep the diagnostic and resolve the system configuration; do not disable the
+application's protections. A container may lack these system facilities.
+
+## Review and build
+
+Check an untouched snapshot before installing dependencies:
+
+```bash
+sha256sum --check SHA256SUMS
+python3 tools/check_public_source_contract.py --snapshot . --technical-only --repository-checkout
+```
+
+After installation:
+
+```bash
+uv run ruff format --check .
 uv run ruff check .
+uv run pyright
+QT_QPA_PLATFORM=offscreen uv run pytest
+uv build
 ```
 
-Fallback si `uv` ne fonctionne pas mais que `.venv` existe :
+`uv build` produces Python source and wheel packages, not an installable Linux
+`.deb`. The included tests are a public subset; passing them does not certify
+all PDF operations or replace a real desktop qualification. Integrity checks
+apply to the published snapshot, and will intentionally reject edited files.
 
-```bash
-PYTHONPATH=src .venv/bin/python -m pytest
-PYTHONPATH=src .venv/bin/python -c "import pdfmod; print('ok')"
-```
+Private Git updates and internal beta switching are disabled. To update this
+source installation, obtain a new published snapshot and follow these steps in
+a separate directory. See [the user guide](wiki/en/getting-started.md) for tools
+and [the package guide](INSTALL_USER.md) for official binary releases.

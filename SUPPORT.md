@@ -5,12 +5,10 @@ de correction. La dernière version officiellement publiée est la seule version
 destinée à recevoir des correctifs ; une branche, une archive de PR ou une
 révision source non publiée n'est pas une version prise en charge.
 
-## Canaux prévus
+## Canaux publics
 
-- Questions, aide et idées : GitHub Discussions, uniquement après son activation
-  manuelle par le propriétaire.
-- Bugs reproductibles : GitHub Issues, uniquement après leur configuration sur
-  le futur dépôt public propre.
+- Questions, aide et idées : [GitHub Discussions](https://github.com/godlittleboi/PriveoPDF-public/discussions).
+- Bugs reproductibles : Discussions ; le mainteneur crée une Issue de suivi si nécessaire.
 - Vulnérabilités : le canal confidentiel décrit dans `SECURITY.md`, seulement
   après vérification de son fonctionnement. Ne jamais utiliser une Issue ou une
   Discussion pour une vulnérabilité non corrigée.
@@ -38,7 +36,8 @@ ni rémunération, ni autre contrepartie.
 
 PriveoPDF comes with no promise of individual support, response time, or fix.
 Only the latest officially published version is intended to receive fixes.
-Planned Discussions are for help and ideas, Issues are for reproducible bugs,
+Public Discussions are for help, ideas and reproducible bugs. Maintainers
+create tracking Issues,
 and potential vulnerabilities must use the confidential route in `SECURITY.md`.
 Those channels must be configured and tested by the owner before publication.
 

@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from pdfmod.ui.main_window import workspace_compatible_tool_specs
+from priveopdf.ui.main_window import workspace_compatible_tool_specs
 
 
 def test_workspace_tools_hide_pending_and_require_enough_pdfs_for_merge() -> None:
@@ -17,6 +17,13 @@ def test_workspace_tools_hide_pending_and_require_enough_pdfs_for_merge() -> Non
         "rotate",
         "reorder",
         "blank_page",
+        "compress",
+        "ocr_pdf",
+        "protect",
+        "unlock_pdf",
+        "share_check",
+        "redact_pdf",
+        "watermark",
     }
     assert {spec.key for spec in two_documents} == {
         "view",
@@ -28,5 +35,12 @@ def test_workspace_tools_hide_pending_and_require_enough_pdfs_for_merge() -> Non
         "rotate",
         "reorder",
         "blank_page",
+        "compress",
+        "ocr_pdf",
+        "protect",
+        "unlock_pdf",
+        "share_check",
+        "redact_pdf",
+        "watermark",
     }
     assert all(spec.status == "available" for spec in two_documents)

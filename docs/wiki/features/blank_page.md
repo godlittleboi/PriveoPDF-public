@@ -6,13 +6,14 @@ Insérer une page vide au début, à la fin ou après une page choisie.
 
 ## Comment faire
 
-Choisissez un format courant ou des dimensions personnalisées, l’orientation et
-la position, puis sélectionnez un nouveau fichier de sortie.
+Choisissez un format courant ou **Personnalisé** (la largeur et la hauteur
+n’apparaissent que pour ce format), l’orientation et la position ; le numéro de
+page n’est demandé que pour **Après la page**. La destination est proposée d’office dans le dossier du PDF ; **CHANGER…** permet d’en choisir une autre.
 
 ## Résultat
 
-Un nouveau PDF contient une page blanche supplémentaire. Le document source
-reste inchangé.
+Un nouveau PDF contient une page blanche supplémentaire. Le résultat s’affiche sous le bouton, avec **OUVRIR LE PDF**, **OUVRIR LE DOSSIER** et **CONTINUER AVEC…**.
+Le document source reste inchangé.
 
 ## Limites
 

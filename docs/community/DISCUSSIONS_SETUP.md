@@ -1,8 +1,8 @@
 # GitHub Discussions — canal unique de retours
 
-Statut : le futur dépôt public doit activer **GitHub Discussions avant toute
-annonce de bêta**. La première publication DEV active la fonctionnalité ; le
-dépôt canonique privé n'utilise pas Discussions comme canal utilisateur.
+Statut : GitHub Discussions est activé sur le dépôt public. Ce canal doit rester
+accessible avant toute annonce de bêta ; le dépôt canonique privé n'utilise pas
+Discussions comme canal utilisateur.
 
 ## Organisation initiale
 
@@ -28,14 +28,14 @@ La sécurité ne doit pas être une catégorie publique. Toute vulnérabilité
 potentielle suit `SECURITY.md` et le canal confidentiel doit avoir été testé
 avant toute annonce publique.
 
-## Gate de première publication
+## Contrôles avant une annonce
 
-- [ ] Discussions est activé sur le dépôt public propre.
-- [ ] Les catégories par défaut sont présentes et permettent Questions, Idées et Retours.
-- [ ] `Announcements` reste réservé aux mainteneurs selon le format GitHub.
-- [ ] `CONTRIBUTING.md`, `FEEDBACK.md`, `SUPPORT.md` et `SECURITY.md` sont accessibles.
-- [ ] Le signalement privé de vulnérabilité est activé et testé séparément.
-- [ ] Aucun PDF utilisateur, secret ou vulnérabilité non corrigée n'est demandé dans Discussions.
+- Vérifier que Discussions reste accessible sur le dépôt public.
+- Vérifier : Les catégories par défaut sont présentes et permettent Questions, Idées et Retours.
+- Vérifier : `Announcements` reste réservé aux mainteneurs selon le format GitHub.
+- Vérifier : `CONTRIBUTING.md`, `FEEDBACK.md`, `SUPPORT.md` et `SECURITY.md` sont accessibles.
+- Vérifier : Le signalement privé de vulnérabilité est activé et testé séparément.
+- Vérifier : Aucun PDF utilisateur, secret ou vulnérabilité non corrigée n'est demandé dans Discussions.
 
 Le publisher DEV peut activer Discussions automatiquement. Les éventuels renommages,
 sections ou formulaires supplémentaires restent des améliorations de communauté et

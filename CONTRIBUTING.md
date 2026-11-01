@@ -1,19 +1,24 @@
 # Commenter PriveoPDF
 
-PriveoPDF est un logiciel propriétaire. La phase communautaire initiale est une
-phase de **commentaires seulement** : les retours factuels sont bienvenus, mais
-aucune contribution de code externe n’est actuellement acceptée.
+Le code publié de PriveoPDF est open source sous Apache License 2.0
+(`Apache-2.0`). Cette licence autorise l'utilisation, la modification et la
+redistribution sous ses conditions ; elle ne crée toutefois aucun droit à faire
+accepter une contribution dans le dépôt canonique.
+
+La phase communautaire initiale est une phase de **commentaires seulement** : les
+retours factuels sont bienvenus, mais aucune contribution de code externe n’est
+actuellement acceptée.
 
 Ce document ne constitue ni un CLA, ni une cession de droits, ni une promesse
 d’intégration. Les mainteneurs et collaborateurs expressément autorisés suivent
-séparément `AGENTS.md` et `docs/GIT_WORKFLOW.md`.
+séparément les instructions applicables à leur copie du projet.
 
 ## Canaux prévus
 
-- utiliser les Discussions, lorsqu’elles auront été activées par le
-  propriétaire, pour les questions, l’aide et les idées ;
-- utiliser les Issues publiques pour un bug reproductible, sans joindre de PDF
-  utilisateur ;
+- utiliser les [Discussions publiques](https://github.com/godlittleboi/PriveoPDF-public/discussions)
+  pour les questions, l’aide et les idées ;
+- signaler les bugs reproductibles dans Discussions, sans PDF utilisateur ;
+  le mainteneur peut créer une Issue de suivi ;
 - suivre `SECURITY.md` pour une vulnérabilité potentielle et ne jamais publier
   une vulnérabilité non corrigée dans une Discussion ou une Issue.
 
@@ -47,15 +52,19 @@ ce jour.
 
 # Commenting on PriveoPDF
 
-PriveoPDF is proprietary software. The initial community phase is
-**comments-only**: factual feedback is welcome, but external code contributions
-are not currently accepted.
+Published PriveoPDF-owned source is open source under Apache License 2.0
+(`Apache-2.0`). That license permits use, modification, and redistribution
+under its terms; it does not create any right to have a contribution accepted
+into the canonical repository.
 
-Use Discussions, once the owner has enabled them, for questions and ideas; use
-Issues for reproducible bugs; follow `SECURITY.md` for potential
-vulnerabilities. Never publish an unpatched vulnerability, a sensitive PDF,
-confidential information, personal data, credentials, private paths, or content
-you are not entitled to share.
+The initial community phase is **comments-only**: factual feedback is welcome,
+but external code contributions are not currently accepted.
+
+Use public Discussions for questions, ideas and reproducible bugs; maintainers
+can create tracking Issues; follow `SECURITY.md` for potential vulnerabilities.
+Never publish an unpatched vulnerability, a sensitive PDF, confidential
+information, personal data, credentials, private paths, or content you are not
+entitled to share.
 
 Do not submit patches, diffs, external Pull Requests, substantial source files,
 or third-party code. External Pull Requests will not be merged, cherry-picked,
@@ -63,4 +72,4 @@ copied, or rewritten. A comment does not promise a response, implementation,
 schedule, payment, consideration, or contractual relationship.
 
 Any future opening to code contributions would require new rules published in
-advance. No CLA is active or final at this time.
+advance. No CLA is active or finalized to date.

@@ -22,3 +22,13 @@ Yes. Essential pages are bundled with the application.
 
 Not yet. [The Extensions page](addons/index.md) clearly separates planned work
 from available features.
+
+## What is PriveoPDF's license?
+
+The code, documentation and official executables are open source under Apache
+License 2.0 (`Apache-2.0`). You may use, modify and redistribute them under its
+terms, preserving the applicable notices. Third-party components retain their
+own licenses, including Qt under LGPL. The name and logo are not covered by
+the license (section 6). Previously published versions retain their original
+license. Feedback remains comments-only: external code contributions are not
+accepted.

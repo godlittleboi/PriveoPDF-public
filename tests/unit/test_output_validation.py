@@ -5,9 +5,9 @@ from pathlib import Path
 import pikepdf
 import pytest
 
-import pdfmod.engine.pdf_structural as pdf_structural
-from pdfmod.domain.errors import DangerousOutputError, OutputWriteError
-from pdfmod.utils.validation import validate_pdf_output_path
+import priveopdf.engine.pdf_structural as pdf_structural
+from priveopdf.domain.errors import DangerousOutputError, OutputWriteError
+from priveopdf.utils.validation import validate_pdf_output_path
 
 
 def _write_pdf(path: Path) -> None:

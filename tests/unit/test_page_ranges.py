@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import pytest
 
-from pdfmod.domain.page_ranges import (
+from priveopdf.domain.page_ranges import (
     parse_page_order,
     parse_page_range_groups,
     parse_page_ranges,
@@ -99,3 +99,30 @@ def test_validate_complete_page_order_rejects_page_out_of_bounds() -> None:
 def test_parse_page_order_rejects_invalid_character() -> None:
     with pytest.raises(ValueError):
         parse_page_order("1,a,2")
+
+
+@pytest.mark.parametrize(
+    "expression",
+    [
+        "1-1000000000",
+        "99999999999999999999",
+        "1-100000,1-100000",
+        "100001",
+        "\u0663",  # Arabic-Indic three
+        "\uff11-\uff12",  # fullwidth 1-2
+    ],
+)
+def test_parse_refuses_huge_or_non_ascii_page_numbers_quickly(expression: str) -> None:
+    import time
+
+    started = time.perf_counter()
+    with pytest.raises(ValueError):
+        parse_page_ranges(expression)
+    # B27: "1-10000000" took 2.6 s on the GUI thread; "1-10^9" exhausted memory.
+    assert time.perf_counter() - started < 0.5
+
+
+def test_parse_accepts_the_largest_supported_document() -> None:
+    from priveopdf.domain.page_ranges import MAX_PAGE_NUMBER
+
+    assert len(parse_page_ranges(f"1-{MAX_PAGE_NUMBER}")) == MAX_PAGE_NUMBER

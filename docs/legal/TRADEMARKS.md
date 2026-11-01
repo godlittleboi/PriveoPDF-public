@@ -1,7 +1,7 @@
 # Noms et signes distinctifs
 
 PriveoPDF, son nom et ses éléments visuels ne font l'objet d'aucune licence de
-marque du seul fait de la visibilité du dépôt. Leur présence permet uniquement
+marque par Apache License 2.0 (section 6). Leur présence permet uniquement
 d'identifier fidèlement le logiciel et sa documentation.
 
 Aucune marque enregistrée n'est revendiquée par ce document. Aucun droit d'utiliser

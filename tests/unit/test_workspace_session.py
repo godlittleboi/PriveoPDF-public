@@ -3,12 +3,12 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-from pdfmod.app.workspace_session import (
+from priveopdf.app.workspace_session import (
     MAX_SESSION_PAYLOAD_BYTES,
     restore_workspace_session,
     serialize_workspace_session,
 )
-from pdfmod.ui.workspace_state import MAX_DOCUMENTS_PER_WORKSPACE, WorkspaceState
+from priveopdf.ui.workspace_state import MAX_DOCUMENTS_PER_WORKSPACE, WorkspaceState
 
 
 def _write_pdf(path: Path, content: bytes = b"%PDF-1.4\n") -> Path:

@@ -50,10 +50,17 @@ jobs:
         run: uv sync --frozen --dev
       - name: Lint
         run: uv run ruff check .
+      - name: Format
+        run: uv run ruff format --check .
       - name: Type check
         run: uv run pyright
+      - name: Import application and update broker
+        run: |
+          uv run python -c 'import priveopdf.app.main; import priveopdf.app.network_broker'
       - name: Tests
         run: uv run pytest
+      - name: Build source archive and wheel
+        run: uv build --sdist --wheel
       - name: Dependency audit
         run: |
           uv export --frozen --all-groups --no-emit-project \

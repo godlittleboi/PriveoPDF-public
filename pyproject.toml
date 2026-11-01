@@ -1,47 +1,52 @@
 [project]
-name = "pdf-modificator"
+name = "priveopdf"
 version = "0.1.0"
-description = "Local desktop PDF application; cleaned source-review snapshot."
+description = "Local desktop PDF application; cleaned auditable source snapshot."
 readme = "README.md"
-license = "LicenseRef-PriveoPDF-Source-Available-1.0"
+license = "Apache-2.0"
 requires-python = ">=3.12"
 dependencies = [
   "cryptography>=50.0.0",
-  "packaging>=24",
+  "packaging>=26.3",
   "pikepdf>=10.9.0",
   "Pillow>=12.3.0",
   "PySide6>=6.7",
 ]
 
+[project.urls]
+Repository = "https://github.com/godlittleboi/PriveoPDF-public"
+Issues = "https://github.com/godlittleboi/PriveoPDF-public/issues"
+
 [project.scripts]
-pdfmod = "pdfmod.app.main:main"
+priveopdf = "priveopdf.app.main:main"
 
 [dependency-groups]
 dev = [
-  "bandit[toml]>=1.8.6",
+  "bandit[toml]>=1.9.4",
   "cyclonedx-bom>=7.1.0",
   "detect-secrets>=1.5.0",
   "pip-audit>=2.9.0",
   "mkdocs==1.6.1",
-  "pyright>=1.1.410",
-  "pytest>=8.0",
-  "ruff>=0.5",
+  "pyright>=1.1.411",
+  "pytest>=9.1.1",
+  "ruff>=0.16.1",
 ]
 
 [build-system]
-requires = ["hatchling"]
+requires = ["hatchling==1.32.4"]
 build-backend = "hatchling.build"
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/pdfmod"]
+packages = ["src/priveopdf"]
 
 [tool.hatch.build.targets.wheel.force-include]
-"docs/wiki" = "pdfmod/assets/wiki"
+"docs/wiki" = "priveopdf/assets/wiki"
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 addopts = "-q"
 pythonpath = ["src", "."]
+filterwarnings = ["error::DeprecationWarning:priveopdf"]
 
 [tool.ruff]
 line-length = 100
@@ -53,8 +58,8 @@ select = ["E", "F", "I", "B", "UP", "SIM", "S", "PERF", "RUF", "PTH", "C4"]
 ignore = ["RUF100"]
 
 [tool.ruff.lint.per-file-ignores]
+"src/priveopdf/ui/i18n.py" = ["E501"]
 "tests/**/*.py" = ["S101", "S105", "S106", "S108", "S314", "S603", "S607"]
-"src/pdfmod/ui/options_dialog.py" = ["I001"] # Existing canonical import-order debt only.
 
 [tool.ruff.format]
 quote-style = "double"

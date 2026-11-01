@@ -29,6 +29,28 @@ Lister les fichiers ou groupes de fichiers importants.
 
 Lister uniquement les commandes réellement exécutées et leur résultat exact.
 
+- [ ] Corpus PDF : `bash scripts/run_tests.sh` (porte du corpus incluse) ou, sans bubblewrap, `scripts/corpus_smoke_test.py` comparé à `main` ; résultat :
+- [ ] Liste « Fonctionnalité livrée à 360° » d'`AGENTS.md` : chaque point fait, ou déclaré `Sans objet` avec sa raison :
+
+## Niveau de validation humaine
+
+Cocher un seul choix ; les niveaux sont définis dans `docs/GIT_WORKFLOW.md`
+(section Valider).
+
+- [ ] <!-- validation-level-1 --> Niveau 1 — logique sans effet visuel nouveau
+- [ ] Niveau 2 — texte visible ou mise en page
+- [ ] Niveau 3 — surface sensible
+- [ ] Exemption sans effet observable
+
+## Test humain Beta
+
+Cases courtes, concrètes et observables, adaptées au niveau retenu ; elles
+alimentent directement le volet de validation de PriveoPDF Bêta (six au plus).
+
+- [ ] Effectuer l'action principale concernée par cette PR.
+- [ ] Vérifier le résultat visible attendu.
+- [ ] Vérifier la non-régression la plus importante.
+
 ## Validation manuelle
 
 Décrire le scénario, l’environnement, le résultat et les preuves jointes.
@@ -48,16 +70,32 @@ Ajouter des captures si l’interface change, sinon indiquer `Sans objet`.
 Le validateur de contrat détecte dans le diff toute modification de l’interface,
 des ressources visibles ou de la localisation. Dans ce cas, cocher les deux
 premières cases et fournir des preuves ciblées. Sinon, cocher `Sans objet` et
-en expliquer la raison sur la même ligne. La validation est refusée si la déclaration
-contredit les fichiers modifiés ou si cette section est incomplète.
+en expliquer la raison sur la même ligne. Au niveau 1, ne cocher aucune case ici
+et justifier l’absence d’effet visuel dans les preuves ciblées. La validation est
+refusée si la déclaration contredit les fichiers modifiés ou si cette section est
+incomplète.
 
 - [ ] <!-- localization-all-languages --> Tous les textes visibles ajoutés ou modifiés sont présents dans chaque langue disponible, sans clé manquante ni texte codé en dur.
-- [ ] <!-- ui-all-presets --> Les vues affectées ont été validées dans chaque combinaison langue × preset sélectionnable déclaré dans `src/pdfmod/ui/theme/tokens.py`.
+- [ ] <!-- ui-all-presets --> Les vues affectées ont été validées dans chaque combinaison langue × preset sélectionnable déclaré dans `src/priveopdf/ui/theme/tokens.py`.
 - [ ] <!-- localization-ui-not-applicable --> Sans objet, raison : <!-- expliquer pourquoi aucun texte visible ni aucune interface ne change -->
 
 Preuves ciblées (tests, captures ou validation manuelle) :
 
 - A_REMPLACER
+
+## Contrat UX — outils PDF et ergonomie
+
+Obligatoire si la PR ajoute un outil, modifie le parcours d'un outil ou change
+une partie visible de l'application (`docs/ux/UX_CONTRACT.md`). Sinon, cocher
+`Sans objet` avec la raison.
+
+- [ ] Les onze règles d'outil sont appliquées telles quelles.
+- [ ] Les règles d'ergonomie E1 à E12 sont appliquées.
+- [ ] Règles adaptées, numéros et raison (écrite avant le code) : A_PRECISER
+- [ ] `tests/unit/test_ux_contract.py` passe et la liste des écarts connus n'a pas grandi.
+- [ ] Test d'usage obligatoire exécuté ; résultats, captures et points non testés : A_PRECISER
+- [ ] Écarts du contrat corrigés par cette PR, lignes retirées : A_PRECISER
+- [ ] Sans objet, raison : <!-- aucun outil ni partie visible modifiés -->
 
 ## Wiki multilingue — obligatoire
 
@@ -100,7 +138,7 @@ ajoutés et les risques résiduels. Minimum 40 caractères.
 
 - [ ] Le diff complet a été relu.
 - [ ] Les controles locaux pertinents passent et, lorsque requise, la CI Linux manuelle correspond au SHA exact.
-- [ ] Le scénario manuel pertinent a été exécuté, ou l'exemption sans effet observable est démontrée dans la section Validation manuelle.
+- [ ] La validation humaine du niveau retenu a été réalisée sur le SHA exact, ou l'exemption sans effet observable est démontrée dans la section Validation manuelle.
 - [ ] La logique PDF n’a pas été déplacée dans l’UI.
 - [ ] Le design system `docs/UI_STYLE_GUIDE.md` est respecté.
 - [ ] Aucun badge `100 % local` n’est dupliqué.

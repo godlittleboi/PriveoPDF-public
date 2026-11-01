@@ -1,6 +1,6 @@
 # Préparer une distribution binaire officielle
 
-Cette procédure prépare un futur exécutable gratuit sous licence freeware. Elle
+Cette procédure prépare un futur exécutable gratuit sous Apache License 2.0. Elle
 ne transforme pas l'archive bêta interne, ne publie rien et ne remplace aucune
 validation humaine.
 
@@ -22,7 +22,7 @@ Le bundle de sources Qt réel doit avoir été construit et vérifié depuis
 ```bash
 uv run python tools/build_official_binary_bundle.py \
   --payload-dir /staging/priveopdf-linux-x86_64 \
-  --third-party-sources /sortie/PriveoPDF-third-party-sources-qt-6.11.2.zip \
+  --third-party-sources /sortie/PriveoPDF-third-party-sources-qt-6.11.3.zip \
   --output-dir /sortie-officielle \
   --version <version-qualifiee> \
   --platform linux-x86_64 \
@@ -33,7 +33,7 @@ uv run python tools/build_official_binary_bundle.py \
 
 Le constructeur refuse l'écrasement. Il produit le ZIP, son checksum SHA-256,
 le SBOM et la provenance externes. L'archive contient aussi ces éléments, la
-licence freeware canonique, les textes LGPL/GPL, les notices, les instructions
+licence Apache 2.0 canonique, NOTICE, les textes LGPL/GPL, les notices, les instructions
 de remplacement, le bundle complet de sources tierces, la politique de
 sécurité, le support, l'inventaire réseau, la confidentialité et un manifeste
 de checksums.
@@ -45,14 +45,14 @@ publication :
 
 ```bash
 uv run python tools/check_public_distribution_contract.py \
-  --archive /sortie-officielle/PriveoPDF-official-freeware-<version>-<plateforme>.zip \
-  --checksum /sortie-officielle/PriveoPDF-official-freeware-<version>-<plateforme>.zip.sha256 \
-  --provenance /sortie-officielle/PriveoPDF-official-freeware-<version>-<plateforme>.provenance.json \
-  --sbom /sortie-officielle/PriveoPDF-official-freeware-<version>-<plateforme>.sbom.cdx.json
+  --archive /sortie-officielle/PriveoPDF-official-<version>-<plateforme>.zip \
+  --checksum /sortie-officielle/PriveoPDF-official-<version>-<plateforme>.zip.sha256 \
+  --provenance /sortie-officielle/PriveoPDF-official-<version>-<plateforme>.provenance.json \
+  --sbom /sortie-officielle/PriveoPDF-official-<version>-<plateforme>.sbom.cdx.json
 ```
 
 Le gate refuse notamment un chemin ZIP dangereux, un payload source, une fuite
-évidente, un manifeste incohérent, une confusion freeware/source-available, un Qt non
+évidente, un manifeste incohérent, une licence Apache 2.0 ou un NOTICE manquant ou altéré, un Qt non
 remplaçable dynamiquement, un module GPL-only, une modification amont non
 couverte ou un bundle de sources correspondant mal au verrou.
 

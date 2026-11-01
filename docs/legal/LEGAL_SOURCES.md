@@ -5,6 +5,7 @@ de toute publication, car leur contenu ou leur version peut évoluer.
 
 | Sujet | Source primaire contrôlée | Point utilisé |
 | --- | --- | --- |
+| Apache 2.0 (vérifié le 11 octobre 2026) | <https://www.apache.org/licenses/LICENSE-2.0> | Texte intégral ; redistribution, NOTICE, brevets et marques |
 | Définition open source | <https://opensource.org/osd> | Redistribution, modification et absence de discrimination par domaine |
 | Droits sur les logiciels en France | <https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006278919> | CPI, article L. 122-6, version en vigueur depuis le 11 mai 1994 |
 | Exceptions logicielles en France | <https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000044365559> | CPI, article L. 122-6-1, version en vigueur depuis le 26 novembre 2021 |
@@ -16,9 +17,9 @@ de toute publication, car leur contenu ou leur version peut évoluer.
 | Qt et LGPL | <https://www.qt.io/development/open-source-lgpl-obligations> | Notices, sources correspondantes, reliaison et absence de restriction |
 | Licences Qt 6.11 | <https://doc.qt.io/qt-6/licensing.html> | Modules LGPL/GPL et liste GPL-only |
 | Qt for Python | <https://doc.qt.io/qtforpython-6/index.html> | PySide6/Shiboken sous LGPLv3/GPLv3 ou licence commerciale |
-| Sources Qt 6.11.2 | <https://download.qt.io/official_releases/qt/6.11/6.11.2/single/> | Nom, taille et hash officiels de `qt-everywhere-src-6.11.2.tar.xz` |
-| Sources Qt for Python 6.11.2 | <https://download.qt.io/official_releases/QtForPython/pyside6/PySide6-6.11.2-src/> | Nom, taille et hash officiels de l'archive PySide6/Shiboken6 |
-| Qt PDF 6.11.2 | <https://doc.qt.io/qt-6/qtpdf-index.html> | Options de licence du module Qt PDF utilisé |
+| Sources Qt 6.11.3 | <https://download.qt.io/official_releases/qt/6.11/6.11.3/single/> | Nom, taille et hash officiels de `qt-everywhere-src-6.11.3.tar.xz` |
+| Sources Qt for Python 6.11.3 | <https://download.qt.io/official_releases/QtForPython/pyside6/PySide6-6.11.3-src/> | Nom, taille et hash officiels de l'archive PySide6/Shiboken6 |
+| Qt PDF 6.11.3 | <https://doc.qt.io/qt-6/qtpdf-index.html> | Options de licence du module Qt PDF utilisé |
 | LGPLv3/GPLv3 | <https://www.gnu.org/licenses/lgpl-3.0.html> et <https://www.gnu.org/licenses/gpl-3.0.html> | Textes de licence amont |
 | Cyber Resilience Act | <https://eur-lex.europa.eu/eli/reg/2024/2847/oj> | Règlement (UE) 2024/2847, articles 14, 16 et 71 |
 | Signalement CRA | <https://digital-strategy.ec.europa.eu/en/policies/cra-reporting> | 24 h, 72 h et plateforme unique à compter du 11 septembre 2026 |

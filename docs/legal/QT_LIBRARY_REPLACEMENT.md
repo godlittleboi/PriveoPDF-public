@@ -15,7 +15,7 @@ prioritaire sur tout exemple générique de cette page.
 
 PriveoPDF doit charger les composants Qt concernés comme bibliothèques partagées.
 Le destinataire peut les remplacer par une version compatible qu'il a modifiée
-ou reconstruite conformément à leur licence. La licence freeware PriveoPDF
+ou reconstruite conformément à leur licence. La licence Apache 2.0 de PriveoPDF
 n'interdit ni ce remplacement, ni la reliaison, ni l'ingénierie inverse
 nécessaire au débogage de ces modifications.
 

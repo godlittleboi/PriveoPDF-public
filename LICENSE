@@ -1,211 +1,202 @@
-LICENCE PROPRIÉTAIRE PRIVEOPDF — UTILISATION GRATUITE ET CODE CONSULTABLE
-Version 1.0 — 3 septembre 2026
 
-Copyright © 2026 godlittleboi
+                                 Apache License
+                           Version 2.0, January 2004
+                        http://www.apache.org/licenses/
 
-La version française ci-dessous est le texte contractuel de référence. La
-traduction anglaise qui suit est informative.
+   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
 
-1. Définitions
+   1. Definitions.
 
-« Code PriveoPDF » désigne les fichiers de ce dépôt sur lesquels le titulaire
-détient les droits, à l'exclusion des composants et ressources tiers.
+      "License" shall mean the terms and conditions for use, reproduction,
+      and distribution as defined by Sections 1 through 9 of this document.
 
-« Version non modifiée » désigne le Code PriveoPDF obtenu depuis une révision
-publiée par le titulaire, sans changement autre que les opérations techniques
-strictement nécessaires à sa compilation ou à son exécution.
+      "Licensor" shall mean the copyright owner or entity authorized by
+      the copyright owner that is granting the License.
 
-« Exécutable officiel » désigne un paquet binaire publié comme officiel par le
-titulaire. Il peut être accompagné d'une licence freeware distincte.
+      "Legal Entity" shall mean the union of the acting entity and all
+      other entities that control, are controlled by, or are under common
+      control with that entity. For the purposes of this definition,
+      "control" means (i) the power, direct or indirect, to cause the
+      direction or management of such entity, whether by contract or
+      otherwise, or (ii) ownership of fifty percent (50%) or more of the
+      outstanding shares, or (iii) beneficial ownership of such entity.
 
-2. Droit d'utiliser PriveoPDF
+      "You" (or "Your") shall mean an individual or Legal Entity
+      exercising permissions granted by this License.
 
-Sous réserve du respect de cette licence, le titulaire accorde gratuitement un
-droit non exclusif d'installer et d'utiliser une Version non modifiée de
-PriveoPDF, à titre personnel ou pour les besoins professionnels internes d'une
-personne ou d'une organisation.
+      "Source" form shall mean the preferred form for making modifications,
+      including but not limited to software source code, documentation
+      source, and configuration files.
 
-Ce droit comprend les copies techniques, d'installation et de sauvegarde
-raisonnablement nécessaires. Il ne promet ni support, ni maintenance, ni
-gratuité ou disponibilité d'une version future.
+      "Object" form shall mean any form resulting from mechanical
+      transformation or translation of a Source form, including but
+      not limited to compiled object code, generated documentation,
+      and conversions to other media types.
 
-3. Consultation du code
+      "Work" shall mean the work of authorship, whether in Source or
+      Object form, made available under the License, as indicated by a
+      copyright notice that is included in or attached to the work
+      (an example is provided in the Appendix below).
 
-Le Code PriveoPDF est rendu consultable afin de permettre son étude, son audit
-de sécurité et l'évaluation de son fonctionnement. Vous pouvez le consulter,
-le télécharger ou le cloner, et conserver les copies privées raisonnablement
-nécessaires à ces seules finalités ou à l'utilisation autorisée à l'article 2.
+      "Derivative Works" shall mean any work, whether in Source or Object
+      form, that is based on (or derived from) the Work and for which the
+      editorial revisions, annotations, elaborations, or other modifications
+      represent, as a whole, an original work of authorship. For the purposes
+      of this License, Derivative Works shall not include works that remain
+      separable from, or merely link (or bind by name) to the interfaces of,
+      the Work and Derivative Works thereof.
 
-Les copies et forks techniques fournis par la plateforme d'hébergement sont
-autorisés uniquement pour consulter ou auditer une Version non modifiée. Les
-mentions de droit d'auteur, cette licence et les notices tierces doivent rester
-intactes.
+      "Contribution" shall mean any work of authorship, including
+      the original version of the Work and any modifications or additions
+      to that Work or Derivative Works thereof, that is intentionally
+      submitted to Licensor for inclusion in the Work by the copyright owner
+      or by an individual or Legal Entity authorized to submit on behalf of
+      the copyright owner. For the purposes of this definition, "submitted"
+      means any form of electronic, verbal, or written communication sent
+      to the Licensor or its representatives, including but not limited to
+      communication on electronic mailing lists, source code control systems,
+      and issue tracking systems that are managed by, or on behalf of, the
+      Licensor for the purpose of discussing and improving the Work, but
+      excluding communication that is conspicuously marked or otherwise
+      designated in writing by the copyright owner as "Not a Contribution."
 
-Cette mise à disposition est « source available » / « code source
-consultable ». Elle n'est pas une licence open source.
+      "Contributor" shall mean Licensor and any individual or Legal Entity
+      on behalf of whom a Contribution has been received by Licensor and
+      subsequently incorporated within the Work.
 
-4. Usages non accordés
+   2. Grant of Copyright License. Subject to the terms and conditions of
+      this License, each Contributor hereby grants to You a perpetual,
+      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+      copyright license to reproduce, prepare Derivative Works of,
+      publicly display, publicly perform, sublicense, and distribute the
+      Work and such Derivative Works in Source or Object form.
 
-Sauf autorisation écrite distincte du titulaire ou droit impératif, cette
-licence n'autorise pas à :
+   3. Grant of Patent License. Subject to the terms and conditions of
+      this License, each Contributor hereby grants to You a perpetual,
+      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+      (except as stated in this section) patent license to make, have made,
+      use, offer to sell, sell, import, and otherwise transfer the Work,
+      where such license applies only to those patent claims licensable
+      by such Contributor that are necessarily infringed by their
+      Contribution(s) alone or by combination of their Contribution(s)
+      with the Work to which such Contribution(s) was submitted. If You
+      institute patent litigation against any entity (including a
+      cross-claim or counterclaim in a lawsuit) alleging that the Work
+      or a Contribution incorporated within the Work constitutes direct
+      or contributory patent infringement, then any patent licenses
+      granted to You under this License for that Work shall terminate
+      as of the date such litigation is filed.
 
-- modifier le Code PriveoPDF ou créer une œuvre dérivée ;
-- publier ou redistribuer le Code PriveoPDF, une Version modifiée ou un binaire
-  compilé par un tiers, au-delà des copies techniques autorisées à l'article 3 ;
-- vendre, louer, sous-licencier ou céder PriveoPDF ;
-- fournir PriveoPDF ou une fonction substantiellement équivalente comme
-  service à des tiers ;
-- supprimer ou altérer les mentions de propriété, de licence ou d'attribution ;
-- utiliser la marque, le nom ou les éléments visuels PriveoPDF pour laisser
-  croire qu'une version tierce est officielle.
+   4. Redistribution. You may reproduce and distribute copies of the
+      Work or Derivative Works thereof in any medium, with or without
+      modifications, and in Source or Object form, provided that You
+      meet the following conditions:
 
-Aucun droit de contribution, de distribution commerciale, de brevet ou de
-marque n'est accordé implicitement. Tous les droits non expressément accordés
-sont réservés.
+      (a) You must give any other recipients of the Work or
+          Derivative Works a copy of this License; and
 
-5. Composants et ressources tiers
+      (b) You must cause any modified files to carry prominent notices
+          stating that You changed the files; and
 
-Les composants, bibliothèques, polices, corpus, exemples et autres ressources
-tiers restent régis exclusivement par leurs licences et notices propres. Cette
-licence ne réduit aucun droit accordé par ces textes, notamment les droits
-applicables aux composants Qt, PySide6 et Shiboken sous la GNU LGPL. Consultez
-THIRD_PARTY_NOTICES.md, le dossier licenses/ et les notices incluses avec toute
-distribution.
+      (c) You must retain, in the Source form of any Derivative Works
+          that You distribute, all copyright, patent, trademark, and
+          attribution notices from the Source form of the Work,
+          excluding those notices that do not pertain to any part of
+          the Derivative Works; and
 
-6. Contributions et signalements
+      (d) If the Work includes a "NOTICE" text file as part of its
+          distribution, then any Derivative Works that You distribute must
+          include a readable copy of the attribution notices contained
+          within such NOTICE file, excluding those notices that do not
+          pertain to any part of the Derivative Works, in at least one
+          of the following places: within a NOTICE text file distributed
+          as part of the Derivative Works; within the Source form or
+          documentation, if provided along with the Derivative Works; or,
+          within a display generated by the Derivative Works, if and
+          wherever such third-party notices normally appear. The contents
+          of the NOTICE file are for informational purposes only and
+          do not modify the License. You may add Your own attribution
+          notices within Derivative Works that You distribute, alongside
+          or as an addendum to the NOTICE text from the Work, provided
+          that such additional attribution notices cannot be construed
+          as modifying the License.
 
-La visibilité du dépôt n'autorise pas l'envoi de code. Les contributions de code
-externes ne sont acceptées que si des conditions distinctes sont publiées par le
-titulaire. Les retours factuels et signalements de bugs suivent CONTRIBUTING.md.
-Les vulnérabilités potentielles suivent exclusivement SECURITY.md.
+      You may add Your own copyright statement to Your modifications and
+      may provide additional or different license terms and conditions
+      for use, reproduction, or distribution of Your modifications, or
+      for any such Derivative Works as a whole, provided Your use,
+      reproduction, and distribution of the Work otherwise complies with
+      the conditions stated in this License.
 
-7. Cessation
+   5. Submission of Contributions. Unless You explicitly state otherwise,
+      any Contribution intentionally submitted for inclusion in the Work
+      by You to the Licensor shall be under the terms and conditions of
+      this License, without any additional terms or conditions.
+      Notwithstanding the above, nothing herein shall supersede or modify
+      the terms of any separate license agreement you may have executed
+      with Licensor regarding such Contributions.
 
-Les droits accordés cessent en cas de violation substantielle non corrigée dans
-les trente jours suivant une notification écrite suffisamment précise. La
-cessation n'affecte pas les droits que les licences tierces ou la loi applicable
-accordent indépendamment.
+   6. Trademarks. This License does not grant permission to use the trade
+      names, trademarks, service marks, or product names of the Licensor,
+      except as required for reasonable and customary use in describing the
+      origin of the Work and reproducing the content of the NOTICE file.
 
-8. Garantie et responsabilité
+   7. Disclaimer of Warranty. Unless required by applicable law or
+      agreed to in writing, Licensor provides the Work (and each
+      Contributor provides its Contributions) on an "AS IS" BASIS,
+      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+      implied, including, without limitation, any warranties or conditions
+      of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
+      PARTICULAR PURPOSE. You are solely responsible for determining the
+      appropriateness of using or redistributing the Work and assume any
+      risks associated with Your exercise of permissions under this License.
 
-PriveoPDF est fourni sans garantie volontaire supplémentaire, sous réserve des
-garanties, responsabilités et recours qui ne peuvent pas être exclus ou limités
-par le droit applicable. Dans la mesure permise par ce droit, le titulaire ne
-répond que des dommages directs raisonnablement prévisibles qui lui sont
-juridiquement imputables. Aucune clause n'exclut une responsabilité qui ne peut
-légalement l'être.
+   8. Limitation of Liability. In no event and under no legal theory,
+      whether in tort (including negligence), contract, or otherwise,
+      unless required by applicable law (such as deliberate and grossly
+      negligent acts) or agreed to in writing, shall any Contributor be
+      liable to You for damages, including any direct, indirect, special,
+      incidental, or consequential damages of any character arising as a
+      result of this License or out of the use or inability to use the
+      Work (including but not limited to damages for loss of goodwill,
+      work stoppage, computer failure or malfunction, or any and all
+      other commercial damages or losses), even if such Contributor
+      has been advised of the possibility of such damages.
 
-9. Droits impératifs et divisibilité
+   9. Accepting Warranty or Additional Liability. While redistributing
+      the Work or Derivative Works thereof, You may choose to offer,
+      and charge a fee for, acceptance of support, warranty, indemnity,
+      or other liability obligations and/or rights consistent with this
+      License. However, in accepting such obligations, You may act only
+      on Your own behalf and on Your sole responsibility, not on behalf
+      of any other Contributor, and only if You agree to indemnify,
+      defend, and hold each Contributor harmless for any liability
+      incurred by, or claims asserted against, such Contributor by reason
+      of your accepting any such warranty or additional liability.
 
-Cette licence ne limite pas l'observation, l'étude, le test, la copie de
-sauvegarde, l'interopérabilité, la correction ou toute autre opération que la
-loi applicable autorise malgré une stipulation contractuelle. Si une clause est
-inapplicable, les autres restent en vigueur dans la mesure permise.
+   END OF TERMS AND CONDITIONS
 
-10. Langue
+   APPENDIX: How to apply the Apache License to your work.
 
-La version française est canonique. La traduction anglaise est informative. En
-cas de divergence, la version française prévaut dans la mesure autorisée par le
-droit applicable.
+      To apply the Apache License to your work, attach the following
+      boilerplate notice, with the fields enclosed by brackets "[]"
+      replaced with your own identifying information. (Don't include
+      the brackets!)  The text should be enclosed in the appropriate
+      comment syntax for the file format. We also recommend that a
+      file or class name and description of purpose be included on the
+      same "printed page" as the copyright notice for easier
+      identification within third-party archives.
 
-------------------------------------------------------------------------
+   Copyright [yyyy] [name of copyright owner]
 
-PRIVEOPDF PROPRIETARY LICENSE — FREE USE AND SOURCE REVIEW
-Version 1.0 — 3 September 2026
-Informative English translation
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
 
-Copyright © 2026 godlittleboi
+       http://www.apache.org/licenses/LICENSE-2.0
 
-1. Definitions
-
-“PriveoPDF Code” means the files in this repository in which the rightsholder
-owns the relevant rights, excluding third-party components and resources.
-
-“Unmodified Version” means PriveoPDF Code obtained from a revision published by
-the rightsholder, without changes other than technical operations strictly
-necessary to compile or run it.
-
-“Official Executable” means a binary package published as official by the
-rightsholder. It may be accompanied by a separate freeware license.
-
-2. Right to use PriveoPDF
-
-Subject to this license, the rightsholder grants a royalty-free, non-exclusive
-right to install and use an Unmodified Version of PriveoPDF for personal use or
-the internal professional needs of a person or organization.
-
-This right includes reasonably necessary technical, installation, and backup
-copies. It promises no support, maintenance, or availability or free licensing
-of any future version.
-
-3. Source review
-
-PriveoPDF Code is made viewable so that its operation can be studied, evaluated,
-and audited for security. You may view, download, or clone it and keep private
-copies reasonably necessary only for those purposes or for the use permitted by
-section 2.
-
-Technical copies and forks provided by the hosting platform are permitted only
-to review or audit an Unmodified Version. Copyright notices, this license, and
-third-party notices must remain intact.
-
-This is a source-available license. It is not an open-source license.
-
-4. Rights not granted
-
-Unless separately authorized in writing by the rightsholder or allowed by
-mandatory law, this license does not permit you to:
-
-- modify PriveoPDF Code or create a derivative work;
-- publish or redistribute PriveoPDF Code, a modified version, or a binary
-  compiled by a third party beyond the technical copies allowed by section 3;
-- sell, rent, sublicense, or transfer PriveoPDF;
-- provide PriveoPDF, or a substantially equivalent function, as a service to
-  third parties;
-- remove or alter ownership, license, or attribution notices; or
-- use the PriveoPDF name, marks, or visual assets to imply that a third-party
-  version is official.
-
-No contribution, commercial distribution, patent, or trademark right is
-granted by implication. All rights not expressly granted are reserved.
-
-5. Third-party components and resources
-
-Third-party components, libraries, fonts, corpora, examples, and other resources
-remain governed solely by their own licenses and notices. This license does not
-reduce rights granted by those terms, including applicable GNU LGPL rights for
-Qt, PySide6, and Shiboken components. See THIRD_PARTY_NOTICES.md, the licenses/
-directory, and the notices supplied with any distribution.
-
-6. Contributions and reports
-
-Repository visibility does not authorize code submissions. External code is
-accepted only if the rightsholder publishes separate terms. Factual feedback
-and bug reports follow CONTRIBUTING.md. Potential vulnerabilities must follow
-SECURITY.md.
-
-7. Termination
-
-The rights granted terminate upon a material breach that remains uncured thirty
-days after sufficiently specific written notice. Termination does not affect
-rights independently granted by third-party licenses or applicable law.
-
-8. Warranty and liability
-
-PriveoPDF is supplied without an additional voluntary warranty, subject to any
-warranties, liabilities, and remedies that applicable law does not allow to be
-excluded or limited. To the extent permitted by that law, the rightsholder is
-liable only for direct, reasonably foreseeable harm legally attributable to it.
-Nothing excludes liability that cannot lawfully be excluded.
-
-9. Mandatory rights and severability
-
-This license does not restrict observation, study, testing, backup,
-interoperability, correction, or any other operation that applicable law permits
-despite a contractual term. If a term is unenforceable, the remaining terms
-continue to the extent permitted.
-
-10. Language
-
-The French text is canonical. This English translation is informative. If they
-differ, the French text prevails to the extent allowed by applicable law.
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.

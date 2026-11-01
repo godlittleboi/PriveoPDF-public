@@ -48,7 +48,7 @@ body:
     id: manual_test
     attributes:
       label: Scénario de validation manuelle
-      description: Décrivez le parcours réel qui prouvera le résultat.
+      description: Décrivez la preuve qui démontrera le résultat, selon le niveau de validation de docs/GIT_WORKFLOW.md.
     validations:
       required: true
 

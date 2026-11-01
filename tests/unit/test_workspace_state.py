@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from pathlib import Path
 
-from pdfmod.ui.workspace_state import MAX_WORKSPACES, WorkspaceState
+from priveopdf.ui.workspace_state import MAX_WORKSPACES, WorkspaceState
 
 
 def test_workspace_adds_pdfs_once_and_selects_first(tmp_path: Path) -> None:
@@ -197,3 +197,33 @@ def test_persistence_revision_tracks_only_session_changes(tmp_path: Path) -> Non
     assert state.persistence_revision() == 1
     assert state.rename_workspace(state.active_workspace_id(), "Renamed")
     assert state.persistence_revision() == 2
+
+
+def test_page_count_and_lock_reach_every_session_holding_the_pdf(tmp_path: Path) -> None:
+    """#399: the same PDF open in two sessions was updated in the first only."""
+    from PySide6.QtCore import QSettings
+
+    from priveopdf.app.settings import AppSettings
+    from priveopdf.domain.errors import EncryptedPdfError
+    from priveopdf.ui.controllers.workspace_controller import WorkspaceController
+
+    source = tmp_path / "source.pdf"
+    source.write_bytes(b"%PDF-1.4\n")
+    settings = AppSettings(QSettings(str(tmp_path / "s.ini"), QSettings.Format.IniFormat))
+    controller = WorkspaceController(settings)
+    store = controller.store
+    first = store.active_workspace_id()
+    store.add_documents([source])
+    store.add_workspace()
+    second = store.active_workspace_id()
+    store.add_documents([source])
+
+    assert controller.set_page_count_ready(source, 4)
+    for workspace_id in (first, second):
+        assert store.select_workspace(workspace_id)
+        assert [(d.page_count, d.page_count_status) for d in store.documents()] == [(4, "ready")]
+
+    assert controller.set_page_count_failed(source, EncryptedPdfError.technical_code)
+    for workspace_id in (first, second):
+        assert store.select_workspace(workspace_id)
+        assert [d.page_count_status for d in store.documents()] == ["locked"]

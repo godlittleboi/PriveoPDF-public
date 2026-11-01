@@ -10,21 +10,23 @@ Seule la dernière version publiée est destinée à recevoir des correctifs de 
 branche de développement ou une archive non publiée ne constitue pas une version prise en
 charge.
 
+Clé OpenPGP de signature des versions : son empreinte complète sera inscrite ici avec la
+première Release signée. Aucune n'est publiée à ce jour ; un fichier signé par une autre clé
+n'est pas officiel.
+
 ## Signaler une vulnérabilité
 
-Après publication, utiliser exclusivement le bouton **Report a vulnerability /
+Utiliser exclusivement le bouton **Report a vulnerability /
 Signaler une vulnérabilité** de l'onglet **Security** du dépôt public propre. Il
 ouvre un avis de sécurité privé visible seulement par le mainteneur et les
 personnes autorisées. Ce canal est utilisé uniquement si son fonctionnement a
 été vérifié ; la publication publique doit rester bloquée jusque-là.
 
 Si ce bouton n'est pas affiché, ne pas ouvrir d'Issue, de Discussion ou de Pull
-Request avec les détails. GitHub réserve cette activation aux dépôts publics :
-elle devra donc être activée et testée immédiatement après le passage public du
-nouveau dépôt propre, avant toute annonce. Si elle ne peut pas l'être, ce seul
-nouveau dépôt revient en privé ; le dépôt canonique reste privé dans tous les
-cas. Aucune adresse de sécurité ou adresse postale n'est inventée ici. Utiliser
-`docs/security/VULNERABILITY_REPORT_TEMPLATE.md` dans le rapport privé.
+Request avec les détails. Le mainteneur doit rétablir le canal privé avant de
+publier une nouvelle version. Utiliser
+[le modèle de rapport](docs/security/VULNERABILITY_REPORT_TEMPLATE.md) dans
+le rapport privé ; aucune adresse électronique n'est présumée.
 
 Le rapport doit contenir :
 
@@ -63,19 +65,15 @@ disponibilité peuvent être signalées comme bugs ordinaires.
   final décrites dans le playbook ; ce dispositif ne prouve aucune conformité
   d'ensemble.
 
-Voir `docs/security/threat_model.md`, `docs/security/security_lab.md`,
-`docs/security/incident_response.md`, `docs/security/pull_request_security.md`, ainsi que
-`docs/security/VULNERABILITY_TRIAGE.md` et
-`docs/security/CRA_REPORTING_PLAYBOOK.md`.
+Voir [le triage des vulnérabilités](docs/security/VULNERABILITY_TRIAGE.md) et
+[le playbook de signalement](docs/security/CRA_REPORTING_PLAYBOOK.md).
 
 ---
 
-After publication, potential vulnerabilities must use **Report a
-vulnerability** in the clean public repository's Security tab. If that button
-is absent, do not publish details in an Issue, Discussion, or pull request.
-GitHub makes activation available to public repositories, so it must be enabled
-and tested immediately after the new repository becomes public and before it is
-announced; otherwise that new repository returns to private. The canonical
-repository remains private throughout. Never send a real user PDF, credential,
-private path, unnecessary personal data, or unreviewed log. No security email
-or postal address is implied by this policy.
+Potential vulnerabilities must use **Report a vulnerability** in the
+[public repository's Security tab](https://github.com/godlittleboi/PriveoPDF-public/security).
+If that private reporting channel is unavailable, do not publish details in an
+Issue, Discussion or pull request. The maintainer must restore it before a new
+publication. Never send a real user PDF, credential, private path, unnecessary
+personal data or unreviewed log. No security email or postal address is implied
+by this policy.

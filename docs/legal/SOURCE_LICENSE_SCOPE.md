@@ -2,13 +2,13 @@
 
 | Groupe | Régime | Preuve |
 | --- | --- | --- |
-| Code et documentation détenus par PriveoPDF | `LicenseRef-PriveoPDF-Source-Available-1.0` | `LICENSE` |
-| Version non modifiée construite depuis le dépôt | Usage personnel ou professionnel interne autorisé par `LICENSE` | `LICENSE` |
-| Exécutable officiel PriveoPDF | Licence freeware propriétaire FR canonique, si elle accompagne le paquet | Licence fournie avec la distribution |
-| Qt, PySide6 et Shiboken | Licences amont, dont LGPLv3/GPLv3 selon les composants | Textes LGPL/GPL, notice Qt et offre ou bundle de sources |
+| Code et documentation détenus par PriveoPDF | Apache License 2.0 (`Apache-2.0`) | `LICENSE`, `NOTICE` |
+| Copies et versions modifiées | Usage, modification et redistribution, y compris commerciaux, sous les conditions d'Apache 2.0 | `LICENSE`, section 4 |
+| Exécutables officiels PriveoPDF | Apache-2.0, en plus des licences des composants tiers | `LICENSE` ou `LICENSE.txt`, `NOTICE` fournis avec la distribution |
+| Nom et logo PriveoPDF | Non couverts par la licence, section 6 | `docs/legal/TRADEMARKS.md` |
+| Qt, PySide6 et Shiboken | Licences amont, dont LGPLv3/GPLv3 selon les composants | Textes LGPL/GPL, notice Qt et sources correspondantes |
 | Autres dépendances | Licence amont de chaque composant | `THIRD_PARTY_NOTICES.md` et SBOM |
 | Corpus et ressources tiers | Licence et attribution propres à chaque ressource | Manifestes et attributions |
 
-L'identifiant `LicenseRef-PriveoPDF-Source-Available-1.0` est un identifiant
-SPDX local. La licence PriveoPDF ne s'applique jamais au code tiers et ne
-réduit jamais les droits que les licences tierces accordent.
+Les versions déjà publiées gardent leur licence d'origine. La licence
+PriveoPDF ne remplace ni ne restreint les licences et droits des composants tiers.

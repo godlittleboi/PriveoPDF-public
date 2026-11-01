@@ -3,7 +3,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 from pathlib import Path
 
-from pdfmod.ui.job_registry import BusyDocumentRegistry
+from priveopdf.ui.job_registry import BusyDocumentRegistry
 
 
 @dataclass
@@ -35,7 +35,7 @@ def test_busy_document_registry_uses_public_page_contract(tmp_path: Path) -> Non
 
 
 def test_main_window_does_not_probe_private_page_structure() -> None:
-    source = (Path(__file__).parents[2] / "src" / "pdfmod" / "ui" / "main_window.py").read_text(
+    source = (Path(__file__).parents[2] / "src" / "priveopdf" / "ui" / "main_window.py").read_text(
         encoding="utf-8"
     )
 

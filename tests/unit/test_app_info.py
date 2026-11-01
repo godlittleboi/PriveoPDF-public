@@ -3,7 +3,7 @@ from __future__ import annotations
 from importlib import metadata
 from pathlib import Path
 
-from pdfmod.app import app_info
+from priveopdf.app import app_info
 
 
 def test_app_version_uses_package_metadata_first(monkeypatch, tmp_path: Path) -> None:  # noqa: ANN001
@@ -44,7 +44,7 @@ def test_runtime_identity_distinguishes_public_dev_and_beta(monkeypatch, tmp_pat
 
     marker.write_text("private canonical marker\n", encoding="utf-8")
     assert app_info.is_dev_runtime() is True
-    assert app_info.get_runtime_app_id() == app_info.APP_ID
+    assert app_info.get_runtime_app_id() == app_info.DEV_APP_ID
     assert app_info.get_runtime_display_name() == app_info.DEV_APP_DISPLAY_NAME
 
     monkeypatch.setenv(app_info.BETA_RUNTIME_ENV, "1")
