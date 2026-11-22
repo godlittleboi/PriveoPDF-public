@@ -1,83 +1,31 @@
 # PriveoPDF
 
-**Your PDFs, processed on your computer.** PriveoPDF is a Linux desktop
-application for viewing, organizing, compressing, protecting and recognizing
-text in PDF files. No account, document upload or telemetry.
+PriveoPDF is an open source Linux app for reading, organizing and protecting PDFs. Your documents stay on your computer, and all PDF tools work offline without an account.
 
-**[Télécharger PriveoPDF pour Linux Mint (.deb)](https://github.com/godlittleboi/PriveoPDF-public/releases/latest/download/priveopdf_amd64.deb)**
+## Install on Linux
 
-Sur Linux Mint 22.x ou Ubuntu 24.04 (PC Intel ou AMD 64 bits), double-cliquez
-sur le fichier téléchargé, puis cliquez sur **Installer le paquet**.
-Ouvrez ensuite **PriveoPDF** depuis le menu des applications.
+**[Download the latest stable PriveoPDF (.deb)](https://github.com/godlittleboi/PriveoPDF-public/releases/latest/download/priveopdf_amd64.deb)**
 
-Empreinte de la clé de signature PriveoPDF : `34A3 6EB8 81F3 5C88 DA61 0396 0285 072F 74B3 80F2`.
+On **Linux Mint 22.x** or **Ubuntu 24.04** (64-bit Intel or AMD), double-click the downloaded file and follow the installation prompts. Then open **PriveoPDF** from the applications menu.
 
-![PriveoPDF home screen](docs/screenshots/accueil.png)
+![PriveoPDF home screen with a PDF drop area and tools grouped by task](docs/screenshots/home.png)
 
-## Features
+## What you can do
 
-| Task | Tools |
-| --- | --- |
-| Read | Continuous scrolling, zoom, text selection, search and open documents |
-| Organize | Merge, split, extract, remove, rotate, reorder, duplicate and insert pages; add blank pages |
-| Optimize | Compress, with a before-and-after size comparison |
-| Recognize text | Local OCR using installed Tesseract language models |
-| Protect and share | Password protection, unlocking, metadata inspection and removal, image-only copies, redaction and text watermarks |
+- **Read and organize.** Search for text, merge documents, split a PDF, or extract, reorder and rotate pages.
+- **Make scans searchable.** Use local text recognition (OCR) with the languages installed on your computer.
+- **Prepare a copy to share.** Compress a file, add a password or watermark, remove metadata, or redact sensitive areas.
 
-Each operation creates a new copy and preserves the original by default.
-Redaction produces an image-only copy: the resulting text is not selectable.
-General PDF editing, annotation, format conversion and digital signatures are
-not available. Windows and macOS are not supported.
+PriveoPDF saves changes to a new file by default, so you keep the original.
 
-![Merge result with the output file and its location](docs/screenshots/fusionner.png)
+![The Merge PDF tool showing three documents combined into one PDF](docs/screenshots/merge.png)
 
-## Run from source
+## Guides and support
 
-The public source snapshot includes the Linux launcher. You need Python 3.12 or
-later, [uv](https://docs.astral.sh/uv/getting-started/installation/), the native
-Qt libraries and working Bubblewrap isolation. See the
-[source installation guide](docs/INSTALL_DEV.md) for prerequisites.
+- [PDF tools guide](docs/wiki/en/features/README.md) · [Troubleshooting](docs/wiki/en/troubleshooting.md) · [Ask a question](https://github.com/godlittleboi/PriveoPDF-public/discussions)
+- [Run from source](docs/INSTALL_DEV.md) if you cloned the repository or downloaded the source ZIP.
+- [Verify the download](https://github.com/godlittleboi/PriveoPDF-public/releases/latest) using the signing key with fingerprint `34A3 6EB8 81F3 5C88 DA61 0396 0285 072F 74B3 80F2`.
 
-From the extracted or cloned project directory:
+## License
 
-```bash
-uv sync --frozen --dev
-bash tools/launch_priveopdf.sh
-```
-
-Use the launcher for PDF processing: the Python entry point alone does not
-prepare the required isolation. OCR and image rendering also require the
-system facilities described in the installation guide.
-
-**Code → Download ZIP** downloads the source files used by the instructions above.
-For the Debian package, see the [installation guide](docs/INSTALL_USER.md).
-
-## Privacy
-
-PDF processing stays on your computer. The Linux launcher isolates the document
-process from the network; it refuses to start when isolation is unavailable.
-Optional update checks require consent and send no document, content or path.
-Installing dependencies requires Internet access. See the
-[network inventory](docs/compliance/NETWORK_ACTIVITY.md) for details.
-
-## Help and feedback
-
-- [User guide](docs/wiki/en/getting-started.md) · [Guide en français](docs/wiki/getting-started.md)
-- [Discussions](https://github.com/godlittleboi/PriveoPDF-public/discussions): help, ideas and feedback.
-- [Security policy](SECURITY.md): private vulnerability reporting.
-
-Use synthetic examples and never attach a sensitive PDF. External code
-contributions are not currently accepted; see [CONTRIBUTING.md](CONTRIBUTING.md).
-
-## License and provenance
-
-PriveoPDF is open source. Its own code and documentation are licensed under **Apache-2.0**
-([LICENSE](LICENSE), [NOTICE](NOTICE)). Earlier publications retain their
-original licenses. Third-party components retain their own licenses, including
-Qt under LGPL; see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
-The [name and logo](docs/legal/TRADEMARKS.md) are separate from the code license.
-
-This repository contains selected source snapshots, without private development
-history. `PUBLIC_SOURCE_MANIFEST.json` identifies the exact source commit,
-generated files and exclusions; `SHA256SUMS` records file integrity. Private Git
-updates and internal beta history are disabled in this snapshot.
+PriveoPDF's code and documentation use the [Apache 2.0 license](LICENSE). See the [third-party notices](THIRD_PARTY_NOTICES.md) for bundled components and the [trademark policy](docs/legal/TRADEMARKS.md) for the name and logo.

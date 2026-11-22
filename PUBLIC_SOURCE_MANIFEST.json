@@ -1,7 +1,7 @@
 {
-  "artifact": "PriveoPDF-source-review-0.1.0-99dc105cca3c",
+  "artifact": "PriveoPDF-source-review-0.1.0-2538c1edbbc6",
   "binary_license": "Apache-2.0",
-  "build_date": "2026-11-22T15:08:18Z",
+  "build_date": "2026-11-22T15:17:59Z",
   "excluded_categories": [
     {
       "category": "corpus_and_private_tests",
@@ -156,14 +156,14 @@
       "sha256": "716bea08ccfcde2700b31e91c91c5f3dc0e370184a58b4a72459b9f1704c0007"
     },
     {
-      "bytes": 3957,
+      "bytes": 1911,
       "generated": true,
       "generated_from": "public_source/README.public.md",
       "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": "README.md",
-      "sha256": "e4aca855c3e2355e9342f9da7dcf530d8266640b089471e7b208c205566bc4b2"
+      "sha256": "a263ac1a59b91d5671760d9072e5d0b87d18770ec2f88791ede9e45ae9cf5950"
     },
     {
       "bytes": 4061,
@@ -411,22 +411,22 @@
       "sha256": "7d31611baa25eb1918146abb399c1bb1950ee62fef2e4d30af44ec8cb0ae32e9"
     },
     {
-      "bytes": 30068,
+      "bytes": 66772,
       "generated": false,
       "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "docs/screenshots/accueil.png",
-      "sha256": "9c84aae72ae7fa809a72f0452e7456ed9f8f1b20cb3264d9093d786adbaa04cd"
+      "path": "docs/screenshots/home.png",
+      "sha256": "220994d07a84f256b32426559b1baddfab35263cde7cf43400f59d8d0896c0fe"
     },
     {
-      "bytes": 32471,
+      "bytes": 79611,
       "generated": false,
       "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
-      "path": "docs/screenshots/fusionner.png",
-      "sha256": "172e98b3b4d67cd96428dde6e84b4e17ca668ff46787b42dbd65d3cb8eb7c258"
+      "path": "docs/screenshots/merge.png",
+      "sha256": "fefec474e8741fb95769c2d76f8b781cf6591724ce368eadfb1f9a6fbea5fec0"
     },
     {
       "bytes": 3933,
@@ -2425,9 +2425,9 @@
     "src/priveopdf/app/beta_versions.py",
     "src/priveopdf/app/source_update.py"
   ],
-  "private_source_commit": "99dc105cca3cac3146a21e6f2970e4b3940eaaf8",
+  "private_source_commit": "2538c1edbbc6ec0ca95c75e1cd0f66678552f3f7",
   "schema_version": 1,
   "source_license": "Apache-2.0",
-  "source_ref": "99dc105cca3cac3146a21e6f2970e4b3940eaaf8",
+  "source_ref": "2538c1edbbc6ec0ca95c75e1cd0f66678552f3f7",
   "version": "0.1.0"
 }
