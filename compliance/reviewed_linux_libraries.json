@@ -1,0 +1,77 @@
+[
+  {
+    "paths": [
+      "app/_internal/PySide6/Qt/lib/libQt6Network.so.6",
+      "app/_internal/libQt6Network.so.6"
+    ],
+    "sha256": "d19f38938321cd546630be758af2b855b35d28351d54eb48957e720e7aad27d1",
+    "upstream_member": "PySide6/Qt/lib/libQt6Network.so.6",
+    "upstream_package": "pyside6_essentials-6.11.3-cp310-abi3-manylinux_2_34_x86_64.whl",
+    "upstream_package_sha256": "c6a5c3b58bf55aef6e09a7de690ff6133335014ab81a7f22f56363ea08e8f6a3"
+  },
+  {
+    "paths": [
+      "app/_internal/PySide6/Qt/lib/libQt6Quick.so.6",
+      "app/_internal/libQt6Quick.so.6"
+    ],
+    "sha256": "4d31ce6cbbda701f6d576f60c8c159c7d6ebbc7a0d31daa8fe08d73679f46410",
+    "upstream_member": "PySide6/Qt/lib/libQt6Quick.so.6",
+    "upstream_package": "pyside6_essentials-6.11.3-cp310-abi3-manylinux_2_34_x86_64.whl",
+    "upstream_package_sha256": "c6a5c3b58bf55aef6e09a7de690ff6133335014ab81a7f22f56363ea08e8f6a3"
+  },
+  {
+    "paths": [
+      "app/_internal/PySide6/Qt/lib/libQt6Widgets.so.6",
+      "app/_internal/libQt6Widgets.so.6"
+    ],
+    "sha256": "690cd8c67b6e90d02e4ad7ebc38cea5bde29f61f08aa44d7d1b4f7bc932720fe",
+    "upstream_member": "PySide6/Qt/lib/libQt6Widgets.so.6",
+    "upstream_package": "pyside6_essentials-6.11.3-cp310-abi3-manylinux_2_34_x86_64.whl",
+    "upstream_package_sha256": "c6a5c3b58bf55aef6e09a7de690ff6133335014ab81a7f22f56363ea08e8f6a3"
+  },
+  {
+    "paths": [
+      "app/_internal/PySide6/Qt/plugins/imageformats/libqtiff.so"
+    ],
+    "sha256": "9595327529b6277245dd9d1cafcf0f412616d13e7853464b0f7c831fea415a9a",
+    "upstream_member": "PySide6/Qt/plugins/imageformats/libqtiff.so",
+    "upstream_package": "pyside6_essentials-6.11.3-cp310-abi3-manylinux_2_34_x86_64.whl",
+    "upstream_package_sha256": "c6a5c3b58bf55aef6e09a7de690ff6133335014ab81a7f22f56363ea08e8f6a3"
+  },
+  {
+    "paths": [
+      "app/_internal/PySide6/Qt/plugins/tls/libqopensslbackend.so"
+    ],
+    "sha256": "b26c114d093659d484af85969021f633e40be097aad488ab54cf8c133e70226b",
+    "upstream_member": "PySide6/Qt/plugins/tls/libqopensslbackend.so",
+    "upstream_package": "pyside6_essentials-6.11.3-cp310-abi3-manylinux_2_34_x86_64.whl",
+    "upstream_package_sha256": "c6a5c3b58bf55aef6e09a7de690ff6133335014ab81a7f22f56363ea08e8f6a3"
+  },
+  {
+    "paths": [
+      "app/_internal/libgnutls.so.30"
+    ],
+    "sha256": "ddbae2995750875c07bc218d12a062d73f8250678f54dedda7e9be5068781c98",
+    "upstream_member": "usr/lib/x86_64-linux-gnu/libgnutls.so.30.37.1",
+    "upstream_package": "libgnutls30t64:amd64=3.8.3-1.1ubuntu3.6",
+    "upstream_package_sha256": "b8944756260c5ea6b7fac019745f931f905aa7a4df0763676b1b25c911b692e2"
+  },
+  {
+    "paths": [
+      "app/_internal/libgtk-3.so.0"
+    ],
+    "sha256": "0611fd19d1354a39a7cfafceffa3bdf4289d4c497c7f69ff337f86e99cf37d93",
+    "upstream_member": "usr/lib/x86_64-linux-gnu/libgtk-3.so.0.2409.32",
+    "upstream_package": "libgtk-3-0t64:amd64=3.24.41-4ubuntu1.3",
+    "upstream_package_sha256": "fd61e308234b12d243160798216d0efcb605d83af185bf3414ac99c2ed5166fc"
+  },
+  {
+    "paths": [
+      "app/_internal/libssh.so.4"
+    ],
+    "sha256": "b82bd54edb908605b8142be1a6d242df65501af0e9bb7581cc36ebf4d8a5ecfd",
+    "upstream_member": "usr/lib/x86_64-linux-gnu/libssh.so.4.9.6",
+    "upstream_package": "libssh-4:amd64=0.10.6-2ubuntu0.5",
+    "upstream_package_sha256": "2448ce5f99e49721d12f8b227f2472dd08ed7a78184dd819fd03a42693024a16"
+  }
+]

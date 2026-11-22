@@ -1,18 +1,12 @@
 # Linux package installation
 
-The first installable `.deb` beta is still in preparation. There is currently no
-public binary release to download. Public source snapshots can be inspected and
-run using the [source installation guide](INSTALL_DEV.md).
+[Download the latest stable Debian package](https://github.com/godlittleboi/PriveoPDF-public/releases/latest/download/priveopdf_amd64.deb)
+for Linux Mint 22.x or Ubuntu 24.04 on a 64-bit Intel or AMD PC.
 
-Official packages will be published only in
-[PriveoPDF Releases](https://github.com/godlittleboi/PriveoPDF-public/releases),
-with their version, supported systems, checksums and verification instructions.
-Linux Mint 22 and Ubuntu 24.04 on Intel/AMD 64-bit PCs are the target systems.
-
-When a package is available, follow the instructions for that exact release,
-verify its published checksums and signature, then open the `.deb` with the
+Follow the instructions in the [release notes](https://github.com/godlittleboi/PriveoPDF-public/releases/latest),
+verify the published checksums and signature, then open the `.deb` with the
 system package manager. PriveoPDF will appear in the application menu. The
-release-signing key fingerprint will be listed in [SECURITY.md](../SECURITY.md).
+release-signing key fingerprint is listed in [SECURITY.md](../SECURITY.md).
 
 Updates require installing a newer official package. Removing the package
 preserves your PDF files and preferences. Mandatory Linux isolation must be

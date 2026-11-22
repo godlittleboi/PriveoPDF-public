@@ -10,9 +10,9 @@ Seule la dernière version publiée est destinée à recevoir des correctifs de 
 branche de développement ou une archive non publiée ne constitue pas une version prise en
 charge.
 
-Clé OpenPGP de signature des versions : son empreinte complète sera inscrite ici avec la
-première Release signée. Aucune n'est publiée à ce jour ; un fichier signé par une autre clé
-n'est pas officiel.
+La clé OpenPGP **PriveoPDF Release Signing** a pour empreinte
+`34A3 6EB8 81F3 5C88 DA61 0396 0285 072F 74B3 80F2`.
+Vérifiez cette empreinte avant de contrôler la signature de `SHA256SUMS`.
 
 ## Signaler une vulnérabilité
 

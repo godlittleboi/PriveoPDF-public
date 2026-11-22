@@ -4,6 +4,14 @@
 application for viewing, organizing, compressing, protecting and recognizing
 text in PDF files. No account, document upload or telemetry.
 
+**[Télécharger PriveoPDF pour Linux Mint (.deb)](https://github.com/godlittleboi/PriveoPDF-public/releases/latest/download/priveopdf_amd64.deb)**
+
+Sur Linux Mint 22.x ou Ubuntu 24.04 (PC Intel ou AMD 64 bits), double-cliquez
+sur le fichier téléchargé, puis cliquez sur **Installer le paquet**.
+Ouvrez ensuite **PriveoPDF** depuis le menu des applications.
+
+Empreinte de la clé de signature PriveoPDF : `34A3 6EB8 81F3 5C88 DA61 0396 0285 072F 74B3 80F2`.
+
 ![PriveoPDF home screen](docs/screenshots/accueil.png)
 
 ## Features
@@ -41,12 +49,8 @@ Use the launcher for PDF processing: the Python entry point alone does not
 prepare the required isolation. OCR and image rendering also require the
 system facilities described in the installation guide.
 
-The first installable `.deb` beta is still in preparation. Official packages,
-when published, will appear in
-[Releases](https://github.com/godlittleboi/PriveoPDF-public/releases).
-The [package installation guide](docs/INSTALL_USER.md) describes that separate
-route. Public source availability does not mean an installable beta has been
-released or qualified on your computer.
+**Code → Download ZIP** downloads the source files used by the instructions above.
+For the Debian package, see the [installation guide](docs/INSTALL_USER.md).
 
 ## Privacy
 

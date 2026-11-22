@@ -18,11 +18,13 @@ if __package__:
         BundleError as SourceBundleError,
     )
     from .build_third_party_sources_bundle import load_lock, verify_bundle
+    from .check_public_distribution_contract import DistributionContractError, _scan_and_hash
 else:
     from build_third_party_sources_bundle import (
         BundleError as SourceBundleError,
     )
     from build_third_party_sources_bundle import load_lock, verify_bundle
+    from check_public_distribution_contract import DistributionContractError, _scan_and_hash
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_SOURCE_LOCK = Path("compliance/third_party_sources.lock.json")
@@ -188,14 +190,11 @@ def _scan_text(label: str, content: bytes) -> None:
 
 
 def _scan_file(label: str, path: Path) -> None:
-    carry = ""
     with path.open("rb") as stream:
-        for chunk in iter(lambda: stream.read(BUFFER_SIZE), b""):
-            candidate = carry + chunk.decode("latin-1")
-            for pattern in SENSITIVE_PATTERNS:
-                if pattern.search(candidate):
-                    raise BinaryBundleError(f"sensitive or private value found in {label}")
-            carry = candidate[-512:]
+        try:
+            _scan_and_hash(stream, label=f"app/{label}")
+        except DistributionContractError as error:
+            raise BinaryBundleError(str(error)) from error
 
 
 def _walk_json_strings(value: object) -> Iterator[str]:

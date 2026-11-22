@@ -91,6 +91,18 @@ SENSITIVE_BYTES = (
 )
 
 
+# Trusted verifier data from the repository, never from the archive or --project-root.
+_REVIEWED_LIBRARIES = {
+    path: entry["sha256"]
+    for entry in json.loads(
+        (
+            Path(__file__).resolve().parents[1] / "compliance/reviewed_linux_libraries.json"
+        ).read_text(encoding="utf-8")
+    )
+    for path in entry["paths"]
+}
+
+
 class DistributionContractError(RuntimeError):
     """Raised when a binary distribution is incomplete or unsafe."""
 
@@ -125,6 +137,10 @@ def _sha256_file(path: Path) -> str:
 
 
 def _scan_and_hash(stream: IO[bytes], *, label: str) -> str:
+    if expected := _REVIEWED_LIBRARIES.get(label):
+        if hashlib.file_digest(stream, "sha256").hexdigest() != expected:
+            raise DistributionContractError(f"reviewed upstream library differs: {label}")
+        return expected
     digest = hashlib.sha256()
     overlap = b""
     for chunk in iter(lambda: stream.read(BUFFER_SIZE), b""):

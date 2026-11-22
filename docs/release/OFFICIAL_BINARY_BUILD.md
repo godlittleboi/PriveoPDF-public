@@ -56,6 +56,6 @@ Le gate refuse notamment un chemin ZIP dangereux, un payload source, une fuite
 remplaçable dynamiquement, un module GPL-only, une modification amont non
 couverte ou un bundle de sources correspondant mal au verrou.
 
-L'absence actuelle d'un payload compilé et du gigaoctet de sources Qt vérifiées
-est un blocage normal : aucun hash d'exécutable réel n'est affirmé dans cette
-préparation.
+Pour les bibliothèques Ubuntu et PySide6 identifiées dans
+`compliance/reviewed_linux_libraries.json`, les chemins de compilation et constantes de test
+amont ont été examinés. Toute différence de SHA-256 à ces emplacements bloque la diffusion.
