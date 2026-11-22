@@ -136,7 +136,8 @@ ajoutés et les risques résiduels. Minimum 40 caractères.
 
 ## Checklist finale
 
-- [ ] Le diff complet a été relu.
+- [ ] Revue Demande du diff complet, critères, preuves et limites consignés selon `docs/ai-development.md`.
+- [ ] Revue Dépôt du diff complet, contrats, régressions et limites consignés selon `docs/ai-development.md`.
 - [ ] Les controles locaux pertinents passent et, lorsque requise, la CI Linux manuelle correspond au SHA exact.
 - [ ] La validation humaine du niveau retenu a été réalisée sur le SHA exact, ou l'exemption sans effet observable est démontrée dans la section Validation manuelle.
 - [ ] La logique PDF n’a pas été déplacée dans l’UI.

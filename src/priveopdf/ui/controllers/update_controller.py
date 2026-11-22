@@ -16,7 +16,7 @@ from PySide6.QtWidgets import (
     QWidget,
 )
 
-from priveopdf.app.app_info import is_beta_runtime
+from priveopdf.app.app_info import get_app_channel, get_app_version, is_beta_runtime
 from priveopdf.app.network_broker import request_open_release, request_source_install
 from priveopdf.app.settings import AppSettings
 from priveopdf.app.source_update import (
@@ -130,6 +130,8 @@ class UpdateController:
         cached_result = self._settings.cached_update_check()
         if (
             cached_result is not None
+            and cached_result.installed_version == get_app_version()
+            and cached_result.channel == get_app_channel()
             and cached_result.source != SOURCE_UPDATE_KIND
             and cached_result.status != "update_available"
         ):

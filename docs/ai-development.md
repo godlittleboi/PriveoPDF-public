@@ -1,10 +1,8 @@
 # Développement avec un agent IA
 
-Socle commun, version du 17 octobre 2026. Ces règles guident le travail de code,
-de maintenance et de revue. Les contrats propres au projet restent dans
-`AGENTS.md` et les documents qu'il désigne. Ils complètent ce socle ; les
-permissions de la plateforme et les décisions explicites de l'utilisateur
-continuent de s'appliquer. Un fichier de consignes ne peut pas les élargir.
+Socle commun du 16 novembre 2026 pour le code, la maintenance et la revue.
+Les contrats du projet restent dans `AGENTS.md` et ses renvois. Appliquer les permissions
+de la plateforme et les décisions explicites de l'utilisateur, qui bornent les autorisations.
 
 ## 1. Partir du dépôt réel
 
@@ -16,8 +14,9 @@ continuent de s'appliquer. Un fichier de consignes ne peut pas les élargir.
   réinitialiser, écraser ou forcer une branche pour contourner une divergence.
 - Déduire les commandes des manifestes, scripts, lockfiles et workflows actuels.
   Ne pas inventer de commande, d'API, de résultat de test ou de capacité d'outil.
-- Lire le contexte utile progressivement avec une recherche ciblée. La mémoire
-  donne des préférences stables ; elle ne remplace pas l'état présent du dépôt.
+- À chaque reprise, lire le contexte utile par recherche ciblée et vérifier le commit courant.
+  Garder dans `AGENTS.md` les contraintes durables, commandes vérifiées et renvois ciblés.
+  Actualiser à la source les règles rendues fausses. La mémoire ne prouve pas l'état du dépôt.
 
 ## 2. Définir un changement vérifiable
 
@@ -61,18 +60,22 @@ continuent de s'appliquer. Un fichier de consignes ne peut pas les élargir.
   un nouveau test artificiel ; les obligations existantes ne deviennent pas
   facultatives. Ne jamais retirer une assertion, ignorer une panne ou diminuer
   un seuil uniquement pour obtenir du vert.
-- Pour une interface, vérifier le parcours et le rendu réel, y compris les états
-  d'erreur concernés. Une compilation, une maquette, un test avec simulacre et
-  une application installée sont des preuves distinctes.
+- Si l'interface change, exécuter le parcours affecté et inspecter son rendu dans les thèmes,
+  langues et tailles requis par le projet, avec les états vides, chargements et erreurs concernés.
+  Contrôler contraste, lisibilité, débordements, superpositions et focus. Consigner scénario,
+  version, captures autorisées et limites. Une compilation seule ne valide pas le rendu.
 - Rapporter commande, résultat et périmètre. Séparer réussi, échoué et non exécuté,
   avec la cause du blocage. Une absence de CI n'est pas une CI réussie. Pour une
   qualification de livraison, relier la preuve au commit et à l'artefact exacts.
 
 ## 5. Relire et livrer
 
-- Relire le diff final pour les régressions, contrats, erreurs, données, sécurité
-  et complexité ajoutée. Utiliser une revue indépendante quand elle apporte une
-  valeur réelle ; elle peut conclure sans anomalie et ses suggestions se vérifient.
+- Avant chaque livraison ou revue de PR, identifier base et révision du diff et donner deux verdicts.
+  **Demande** vérifie le résultat et chaque critère d'acceptation depuis l'entrée normale.
+  **Dépôt** vérifie architecture, conventions, contrats, compatibilité, régressions, sécurité et complexité.
+  Pour chacun, rapporter preuves, écarts ou éléments non vérifiés. Des tests verts ne suffisent
+  pas à établir la conformité à la demande. Si celle-ci manque, préciser la limite.
+  Une revue indépendante utile peut conclure sans anomalie. Vérifier ses suggestions.
 - Déléguer des sous-tâches indépendantes avec un périmètre et un livrable précis.
   Éviter les éditions concurrentes des mêmes fichiers et les ressources de test
   partagées. Le responsable de l'intégration vérifie le résultat assemblé.
@@ -82,15 +85,13 @@ continuent de s'appliquer. Un fichier de consignes ne peut pas les élargir.
   Une autorisation déjà donnée pour ce chantier n'est pas à redemander. Fusion,
   déploiement, publication et activation d'une automatisation sont des opérations
   distinctes dont le périmètre doit être autorisé.
-- Garder les consignes courtes et exactes. Après une erreur récurrente, corriger
-  la règle à sa source et enlever les doublons obsolètes ; ne pas accumuler les
-  rapports de session ou les noms de branches temporaires dans `AGENTS.md`.
+- Garder les consignes courtes et exactes. Corriger la règle à sa source après une erreur récurrente.
+  Conserver les détails dans les documents existants et retirer les doublons obsolètes.
+  Garder les états de session et branches temporaires dans la PR ou le suivi de tâche.
 
 ## Sources et portée
 
-Les pratiques ci-dessus synthétisent des recommandations d'éditeurs et des
-principes d'ingénierie. Elles ne garantissent ni absence de bugs ni gain chiffré
-de productivité. Leur application est adaptée au risque et aux contrats du dépôt.
+Adapter ces recommandations d'ingénierie au risque et aux contrats du dépôt.
 
 - [OpenAI — bonnes pratiques](https://learn.chatgpt.com/guides/best-practices)
   et [instructions AGENTS.md](https://learn.chatgpt.com/docs/agent-configuration/agents-md) :
@@ -104,7 +105,5 @@ de productivité. Leur application est adaptée au risque et aux contrats du dé
 - [GitHub — risques des agents](https://docs.github.com/en/copilot/concepts/security-governance-and-network-settings/risks-and-mitigations) :
   injections de consignes et contrôles d'accès.
 
-Le chargement automatique dépend de l'outil et de sa configuration. Ne pas
-supposer que Work, Codex, Claude Code et Copilot chargent tous les mêmes fichiers.
-Les commandes et particularités locales doivent être maintenues dans le dépôt ;
-ne pas télécharger des instructions distantes non versionnées à chaque exécution.
+Vérifier le chargement des consignes dans l'agent utilisé. Maintenir commandes et règles
+locales dans le dépôt, avec des références versionnées disponibles sans téléchargement récurrent.

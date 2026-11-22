@@ -1,7 +1,7 @@
 {
-  "artifact": "PriveoPDF-source-review-0.1.0-d12b02c8748d",
+  "artifact": "PriveoPDF-source-review-0.1.0-58fdd500f297",
   "binary_license": "Apache-2.0",
-  "build_date": "2026-11-01T15:17:40Z",
+  "build_date": "2026-11-22T14:58:09Z",
   "excluded_categories": [
     {
       "category": "corpus_and_private_tests",
@@ -62,13 +62,13 @@
       "sha256": "02968ff322247ecb6092ad5491d97af3815d7bf004f41ed429aba2a269f75bf5"
     },
     {
-      "bytes": 7505,
+      "bytes": 7693,
       "generated": false,
       "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": ".github/PULL_REQUEST_TEMPLATE.md",
-      "sha256": "6d7870102088545e061fb35c04cde1b868162d5dc485f42b0732ffac17a6427f"
+      "sha256": "d7a48d52c3b3088b911993db623115adc58be642579ea378821912a3d0eb5b45"
     },
     {
       "bytes": 2350,
@@ -231,13 +231,13 @@
       "sha256": "141d2b6db0bdd3fc840596bb20325032a0ac88673d03b337ea470f8153ef12a5"
     },
     {
-      "bytes": 7477,
+      "bytes": 7727,
       "generated": false,
       "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": "docs/ai-development.md",
-      "sha256": "39a32db4c0fa8a63adfee55d27c07c40357032f008a0b5465fbdb9462c4f70fe"
+      "sha256": "65b2ff6b4bc536a8d9fe4eddca5b6cd08b0f980125424709469047004d80ab3a"
     },
     {
       "bytes": 2254,
@@ -384,13 +384,13 @@
       "sha256": "1ce3ec1d523f7e7d5f236b6847a962543919b63a3aeac8fad821b66ed83c6447"
     },
     {
-      "bytes": 13735,
+      "bytes": 13788,
       "generated": false,
       "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": "docs/privacy.md",
-      "sha256": "cfb59599fa05b5fb6210a76c30c817e5a51e8807b290db3221f6fc41f79bebb7"
+      "sha256": "36a91c0db81ef3b45cdbe311f03526603a631d196a4d771cfac7febabe715c05"
     },
     {
       "bytes": 2614,
@@ -961,13 +961,13 @@
       "sha256": "f1f60275acad4c424d9a88e1b360f2985939eee1bd89fc48ad015fcb732ac175"
     },
     {
-      "bytes": 2667,
+      "bytes": 3020,
       "generated": false,
       "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": "src/priveopdf/app/app_info.py",
-      "sha256": "a86222e7f522032cc594f0c32011335b869838be958c276e5d44fd52d19a2aac"
+      "sha256": "a0730d629af5fd78509844c6f689b5fb7946e93ef609a95fb2204d10589d9f15"
     },
     {
       "bytes": 22979,
@@ -1746,13 +1746,13 @@
       "sha256": "944eda577502ffe9c27649589a218330c4c85991e4532a71bfd33752efe07a76"
     },
     {
-      "bytes": 16686,
+      "bytes": 16848,
       "generated": false,
       "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": "src/priveopdf/ui/controllers/update_controller.py",
-      "sha256": "4a4b998c4f84139aef871caa395dd65995f5f7ae13821a4d87aa2067b3e9920a"
+      "sha256": "9bb1a69ba8954d22ed98cfb5111b2a0ccd2400a917c1ce9ac7b7944e9f5e33bd"
     },
     {
       "bytes": 4943,
@@ -2079,13 +2079,13 @@
       "sha256": "e71d8bbd3281a2b329960ba46cfb156bb39f9279e8d90ac4d32cdec2b8840122"
     },
     {
-      "bytes": 23971,
+      "bytes": 24724,
       "generated": false,
       "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": "src/priveopdf/utils/secure_paths.py",
-      "sha256": "fee9e095d28b85d6276850e549aa7b0c295fb5113005fe7bb80e1308c0767765"
+      "sha256": "45ef8258a9fa54e26492fdf07a84e00f8f77a17ea6b28a093862c947a8f26c11"
     },
     {
       "bytes": 1002,
@@ -2232,13 +2232,13 @@
       "sha256": "799241e5df2531e8ef0f61e66d4f4e51e7fa34bc4f573d7a5f709e211c971352"
     },
     {
-      "bytes": 2621,
+      "bytes": 3755,
       "generated": false,
       "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": "tests/unit/test_app_info.py",
-      "sha256": "906092a27d4b0c47c9d47d1e8491ec77dd26fb53d2571333e4413a7393b36bb2"
+      "sha256": "cda74de5095d3ffcfd9339d93890dad19de1ec930e94f63c7f3b1a3c27f2ff22"
     },
     {
       "bytes": 3090,
@@ -2349,13 +2349,13 @@
       "sha256": "c65a022c634254302324b047103edae9d20ae88ba27c77b7b80c5bec73a4cba9"
     },
     {
-      "bytes": 26459,
+      "bytes": 27211,
       "generated": false,
       "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": "tools/build_official_binary_bundle.py",
-      "sha256": "b68753732fb996b066e3a84135f7be9befadce454430bee11fa8d0f98768995c"
+      "sha256": "61b7fdab717470c31628fb1912ff37a4d2f2ec87073766c72ddf00ad7743cf63"
     },
     {
       "bytes": 24815,
@@ -2367,22 +2367,22 @@
       "sha256": "a82a52fe4f284b2e0ed436e96bd5b7fbaa36e2efd181d50ecddd44af52bfeea3"
     },
     {
-      "bytes": 19729,
+      "bytes": 19757,
       "generated": false,
       "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": "tools/check_public_distribution_contract.py",
-      "sha256": "61817179f3155e8168a7079951090818a461af3f15e254e83607a78865e60334"
+      "sha256": "d96fba2611e28cd8a0b928e3d775df3e6e61a472f82d11ebed85a6af8f78a6bb"
     },
     {
-      "bytes": 23687,
+      "bytes": 23640,
       "generated": false,
       "license_expression": "Apache-2.0",
       "license_group": "priveopdf-owned",
       "mode": "0644",
       "path": "tools/check_public_source_contract.py",
-      "sha256": "f80ac03758ab48a4e7a612925ca249d549aa1304b4d166d9b4e5164ab0dc7c5b"
+      "sha256": "8486b2c3bda2ce53bdd072dc1335ba96714682be6b7fe1f199cdab5b9a87938d"
     },
     {
       "bytes": 14202,
@@ -2416,9 +2416,9 @@
     "src/priveopdf/app/beta_versions.py",
     "src/priveopdf/app/source_update.py"
   ],
-  "private_source_commit": "d12b02c8748db967969e9a4f4a4fbe44afb615b4",
+  "private_source_commit": "58fdd500f297b0e8219f2fa59be85f47e1f905f7",
   "schema_version": 1,
   "source_license": "Apache-2.0",
-  "source_ref": "d12b02c8748db967969e9a4f4a4fbe44afb615b4",
+  "source_ref": "58fdd500f297b0e8219f2fa59be85f47e1f905f7",
   "version": "0.1.0"
 }

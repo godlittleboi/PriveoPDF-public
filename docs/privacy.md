@@ -93,10 +93,10 @@ Un arrêt brutal de toute l'application ne garantit pas ce nettoyage.
 La compression ne retire ni métadonnées ni couche OCR ; elle n'est pas une
 sanitisation. Les PDF chiffrés et signatures détectées sont refusés.
 
-Le moteur ecrit dans un temporaire aleatoire en mode `0600`, dans le dossier de sortie, force
-les donnees sur disque puis publie par une operation atomique sans remplacement. Le temporaire
-est nettoye dans un bloc `finally`. Le processus PDF dispose en outre d'un repertoire temporaire
-prive et de limites de ressources.
+Le moteur écrit dans un temporaire privé `0600`, anonyme si sa création et sa publication
+sont supportées, sinon nommé aléatoirement. Il synchronise les données puis publie atomiquement
+sans remplacement ; les temporaires nommés sont nettoyés dans un bloc `finally`. Le processus
+PDF dispose en outre d'un répertoire temporaire privé et de limites de ressources.
 
 ## Logs
 

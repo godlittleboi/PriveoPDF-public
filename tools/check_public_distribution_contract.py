@@ -87,7 +87,7 @@ SENSITIVE_BYTES = (
     re.compile(rb"\bgithub_pat_[A-Za-z0-9_]{16,}\b", re.IGNORECASE),
     re.compile(rb"/(?:home|Users)/[A-Za-z0-9._-]+/"),
     re.compile(rb"[A-Z]:\\Users\\[A-Za-z0-9._ -]+", re.IGNORECASE),
-    re.compile(rb"github\.com/godlittleboi/PriveoPDF", re.IGNORECASE),
+    re.compile(rb"github\.com/godlittleboi/PriveoPDF(?:\.git)?(?![A-Za-z0-9_.-])", re.IGNORECASE),
 )
 
 

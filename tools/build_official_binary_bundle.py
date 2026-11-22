@@ -87,7 +87,7 @@ SENSITIVE_PATTERNS = (
     re.compile(r"-----BEGIN (?:RSA |OPENSSH |EC )?PRIVATE KEY-----"),
     re.compile(r"\b(?:ghp|gho|ghu|ghs|ghr)_[A-Za-z0-9]{16,}\b", re.IGNORECASE),
     re.compile(r"\bgithub_pat_[A-Za-z0-9_]{16,}\b", re.IGNORECASE),
-    re.compile(r"github\.com/godlittleboi/PriveoPDF", re.IGNORECASE),
+    re.compile(r"github\.com/godlittleboi/PriveoPDF(?:\.git)?(?![A-Za-z0-9_.-])", re.IGNORECASE),
 )
 REQUIRED_LEGAL_FILES = (
     "LICENSE",
@@ -273,9 +273,27 @@ def _validate_inventory(
         seen_paths.add(relative)
         library = payload_dir.joinpath(*PurePosixPath(relative).parts)
         _regular_file(library, label="inventoried Qt library")
+        if item.get("sha256") != _sha256_file(library):
+            raise BinaryBundleError(f"Qt library SHA-256 is missing or differs: {relative}")
         expression = item.get("license_expression")
         if not isinstance(expression, str) or "LGPL-3.0" not in expression:
             raise BinaryBundleError("Qt library lacks an LGPL-3.0 license expression")
+
+    # Linux runtime libraries, bindings and plugins; ICU has its own attribution.
+    patterns = (
+        "**/libQt6*.so*",
+        "**/PySide6/*.so*",
+        "**/PySide6/Qt/plugins/**/*.so*",
+        "**/shiboken6/*.so*",
+    )
+    actual_paths = {
+        path.relative_to(payload_dir).as_posix()
+        for pattern in patterns
+        for path in payload_dir.glob(pattern)
+        if path.is_file() and not path.is_symlink()
+    }
+    if missing := actual_paths - seen_paths:
+        raise BinaryBundleError(f"Qt runtime inventory omits libraries: {sorted(missing)}")
 
     replacement = document.get("replacement_test")
     if not isinstance(replacement, dict):

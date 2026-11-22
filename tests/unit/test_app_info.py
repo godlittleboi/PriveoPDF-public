@@ -3,6 +3,8 @@ from __future__ import annotations
 from importlib import metadata
 from pathlib import Path
 
+import pytest
+
 from priveopdf.app import app_info
 
 
@@ -55,6 +57,38 @@ def test_runtime_identity_distinguishes_public_dev_and_beta(monkeypatch, tmp_pat
 
 
 def test_display_version_keeps_installed_version_separate(monkeypatch) -> None:  # noqa: ANN001
-    monkeypatch.setattr(app_info, "get_app_version", lambda: "0.1.0")
+    monkeypatch.setattr(app_info, "get_app_version", lambda: "0.1.0b1")
 
-    assert app_info.get_display_version("en") == "v0.1.0 beta"
+    assert app_info.get_display_version("en") == "v0.1.0b1 beta"
+
+
+@pytest.mark.parametrize(
+    ("version", "channel"),
+    [
+        ("0.1.0", "stable"),
+        ("1.0.0", "stable"),
+        ("1.0.0.post1", "stable"),
+        ("1.0.0b1", "beta"),
+        ("1.0.0rc1", "beta"),
+        ("1.0.0a1", "alpha"),
+        ("1.0.0.dev1", "alpha"),
+        ("unknown", "beta"),
+    ],
+)
+def test_release_channel_and_label_follow_installed_version(
+    monkeypatch, version: str, channel: str
+) -> None:  # noqa: ANN001
+    monkeypatch.delenv(app_info.BETA_RUNTIME_ENV, raising=False)
+    monkeypatch.delenv(app_info.DEV_RUNTIME_ENV, raising=False)
+    monkeypatch.setattr(app_info.metadata, "version", lambda _distribution: version)
+
+    assert app_info.get_app_channel() == channel
+    for locale in ("fr", "en"):
+        assert app_info.get_display_version(locale) == f"v{version} {channel}"
+
+
+def test_local_beta_keeps_its_channel_with_final_source_version(monkeypatch) -> None:  # noqa: ANN001
+    monkeypatch.setenv(app_info.BETA_RUNTIME_ENV, "1")
+    monkeypatch.setattr(app_info.metadata, "version", lambda _distribution: "1.0.0")
+
+    assert app_info.get_app_channel() == "beta"

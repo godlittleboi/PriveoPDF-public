@@ -566,6 +566,26 @@ def _require_absent_at(directory_fd: int, filename: str) -> None:
 
 
 def _create_anonymous_temporary(directory_fd: int) -> int:
+    """Probe linking with an empty inode before choosing anonymous publication."""
+    probe_fd = _open_anonymous_temporary(directory_fd)
+    if probe_fd < 0:
+        return -1
+    name = None
+    try:
+        info = os.fstat(probe_fd)
+        name = _named_link_for_anonymous(probe_fd, directory_fd)
+    except FileNotFoundError:
+        # Some confined hosts accept O_TMPFILE but refuse its proc-fd link.
+        return -1
+    finally:
+        if name is not None:
+            _unlink_if_same(directory_fd, name, (info.st_dev, info.st_ino))
+        os.close(probe_fd)
+    # A previously linked then unlinked inode cannot be published again.
+    return _open_anonymous_temporary(directory_fd)
+
+
+def _open_anonymous_temporary(directory_fd: int) -> int:
     """A private file with no name in the directory (``O_TMPFILE``), or -1.
 
     It disappears if the process dies before publication. Linking it later

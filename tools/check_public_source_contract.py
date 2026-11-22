@@ -227,10 +227,10 @@ def _checksums(raw: str) -> dict[str, str]:
         match = re.fullmatch(r"([0-9a-f]{64})  (.+)", line)
         if match is None:
             raise SourceContractError(f"invalid SHA256SUMS line: {line!r}")
-        path = PurePosixPath(match.group(2))
-        if path.is_absolute() or ".." in path.parts or path.as_posix() in result:
-            raise SourceContractError(f"unsafe or duplicate checksum path: {path}")
-        result[path.as_posix()] = match.group(1)
+        path = _safe_snapshot_path(match.group(2))
+        if path in result or path == CHECKSUMS_NAME:
+            raise SourceContractError(f"duplicate or self checksum: {path}")
+        result[path] = match.group(1)
     return result
 
 
@@ -242,10 +242,10 @@ def _manifest_records(document: dict[str, Any]) -> dict[str, dict[str, Any]]:
     for item in raw:
         if not isinstance(item, dict) or not isinstance(item.get("path"), str):
             raise SourceContractError("public manifest has a malformed file record")
-        path = PurePosixPath(item["path"])
-        if path.is_absolute() or ".." in path.parts or path.as_posix() in records:
-            raise SourceContractError(f"unsafe or duplicate manifest path: {path}")
-        records[path.as_posix()] = item
+        path = _safe_snapshot_path(item["path"])
+        if path in records or path in {MANIFEST_NAME, CHECKSUMS_NAME}:
+            raise SourceContractError(f"manifest contains a duplicate or self record: {path}")
+        records[path] = item
     return records
 
 

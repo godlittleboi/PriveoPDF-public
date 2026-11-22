@@ -7,6 +7,8 @@ from importlib import metadata
 from pathlib import Path
 from typing import Literal
 
+from packaging.version import InvalidVersion, Version
+
 from priveopdf.ui.i18n import Locale
 
 ProductChannel = Literal["alpha", "beta", "stable"]
@@ -63,7 +65,15 @@ def get_app_version() -> str:
 
 
 def get_app_channel() -> ProductChannel:
-    return "beta"
+    if is_beta_runtime():
+        return "beta"
+    try:
+        version = Version(get_app_version())
+    except InvalidVersion:
+        return "beta"
+    if version.is_devrelease or (version.pre is not None and version.pre[0] == "a"):
+        return "alpha"
+    return "beta" if version.is_prerelease else "stable"
 
 
 def get_display_version(locale: Locale) -> str:
